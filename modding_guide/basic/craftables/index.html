@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Adding recipes</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Adding recipes</h1>
          <p>We've covered how to create our own items in <a href="../adding_items/index.html">this previous section</a>. Of course, you can add whichever components you want for those items and, if you create the models from scratch, make sure to check the <a href="../art/modeling/index.html">modeling guide</a> and the guide on <a href="../../intermediate/regions/index.html">collision regions</a> so that your models are correctly exported and aligned in the world. Here's <a href="../adding_items/item_scale/index.html">how to change the scale</a> of an item too, if you need it.</p>
@@ -97,7 +97,7 @@
                <p><strong>"workshop" : "uri_of_the_workbench"</strong>. This is the qualified alias of the workbench that the crafter will be using in order to craft the item. We can only specify one alias. You can find the alias for the existing workbenches in the stonehearth manifest. Remember to prefix it here with the namespace of the mod that defines it (in this case, stonehearth).</p>
             </li>
          </ul>
-         <p><img src="/images/common/edit_big.png" alt="icon"/>If we don't add the "workshop" field to the recipe file, the crafter will craft the item with their hands instead. This is normally used to craft the initial workbenches.</p>
+         <p><img src="/modding_guide/images/common/edit_big.png" alt="icon"/>If we don't add the "workshop" field to the recipe file, the crafter will craft the item with their hands instead. This is normally used to craft the initial workbenches.</p>
          <ul>
             <li>
                <p><strong>"ingredients" : [{...}]</strong>. This is the list of ingredients for the recipe. It is an array of objects. You can use either <a href="../generic_resources/index.html">generic resources</a> like in our custom table recipe (with the material tags of the resource's entity_data), or specific URIs as ingredients, like this:</p>
@@ -170,7 +170,7 @@
   }
   ...
 </code></pre>
-         <p><img src="/images/common/gold.png" alt="icon"/> If you add a <a href="../../intermediate/jobs/crafting_jobs/index.html">custom crafting job</a>, the recipes for it won't need to be added via a mixinto, but rather via a property of a component.</p>
+         <p><img src="/modding_guide/images/common/gold.png" alt="icon"/> If you add a <a href="../../intermediate/jobs/crafting_jobs/index.html">custom crafting job</a>, the recipes for it won't need to be added via a mixinto, but rather via a property of a component.</p>
          <p>Lastly, let's test that the mason can craft our recipe using debugtools:</p>
          <ul>
             <li>Start a new game.</li>
@@ -178,20 +178,20 @@
             <li>Open the default console and type <strong>promote_to mason</strong>, then press Enter.</li>
             <li>Use the item stamper to spawn a mason workbench and some hunks of stone, or simply let the hearthlings harvest some stone.</li>
             <li>Open the mason workbench and check that the recipe is there and shows correctly the image and text:
-               <img src="/images/basic/craftables/recipe_added.png" alt="recipe_added"/>
+               <img src="/modding_guide/images/basic/craftables/recipe_added.png" alt="recipe_added"/>
             </li>
             <li>Our mason doesn't have enough level to craft it, so we shift-click on him, and click on "Level Up".
-               <img src="/images/basic/craftables/level_up.png" alt="level_up"/>
+               <img src="/modding_guide/images/basic/craftables/level_up.png" alt="level_up"/>
             </li>
             <li>Now we can order to craft our new item and check that the iconic is generated correctly.
-               <img src="/images/basic/craftables/testing_crafting.png" alt="level_up"/>
+               <img src="/modding_guide/images/basic/craftables/testing_crafting.png" alt="level_up"/>
             </li>
          </ul>
          <h2><a name="SHED"></a>Using SHED to add recipes</h2>
          <p>As explained in the <a href="../adding_items/cloning_with_shed/index.html">creating items section</a>, we can create an item and a recipe for it in one step.
             Otherwise, we can uncheck any unwanted files that we don't want to create from the clone popup, leaving only the recipe file checked.
          </p>
-         <p><img src="/images/common/row_alert2.png" alt="icon"/> At the time this guide was written, cloning the recipes list or single recipes from an existing job from the base mods won't make them appear in the tree view for our mod, and we'll need to edit them outside of SHED. Of course, the mixintos also have to be set up outside of SHED. If we clone the recipe with the item that it produces, the item will be shown in the tree view since an alias will be created, so we'll be able to edit it within SHED.</p>
+         <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> At the time this guide was written, cloning the recipes list or single recipes from an existing job from the base mods won't make them appear in the tree view for our mod, and we'll need to edit them outside of SHED. Of course, the mixintos also have to be set up outside of SHED. If we clone the recipe with the item that it produces, the item will be shown in the tree view since an alias will be created, so we'll be able to edit it within SHED.</p>
       </main>
    </body>
 </html>

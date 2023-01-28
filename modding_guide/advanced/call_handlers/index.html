@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Call handlers</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Call handlers</h1>
          <p>In this section we'll talk about what are call handlers and provide examples of usage. Existing call handlers can be found under <code>stonehearth/call_handlers</code>.</p>
@@ -96,7 +96,7 @@
      }
   }
 </code></pre>
-         <p><img src="/images/common/gold.png" alt="icon"/><a name="StartMenu"></a>Notice that we can mixinto the <code>start\_menu.json</code> file to add any new option to the start menu. There are some optional fields, like <strong>"required_job"</strong> and <strong>"required_job_text"</strong> which are only used in zones to disable them until the player has promoted someone to that job. For the crafting menu, they'll work right away, but for the rest of options it's tricky since it involves UI files.</p>
+         <p><img src="/modding_guide/images/common/gold.png" alt="icon"/><a name="StartMenu"></a>Notice that we can mixinto the <code>start\_menu.json</code> file to add any new option to the start menu. There are some optional fields, like <strong>"required_job"</strong> and <strong>"required_job_text"</strong> which are only used in zones to disable them until the player has promoted someone to that job. For the crafting menu, they'll work right away, but for the rest of options it's tricky since it involves UI files.</p>
          <p>The name of the entry (<code>create_pasture</code> in the example above) will become the action that is called when that item is chosen (alternatively, some menus have a <strong>"menu_action"</strong> field with the action to be called). The handlers for these actions are in <code>stonehearth/ui/game/start_menu/start_menu.js</code>:</p>
          <pre><code>  menuActions: {
      // ...
@@ -130,7 +130,7 @@
      });
   },
 </code></pre>
-         <p><img src="/images/common/edit_big.png" alt="icon"/>Now you'll be wondering, if the functions are read from <code>start_menu.js</code>, how can we add a custom function for our new menu to it, from our mod? See <a href="../ui/index.html#AddingToExistingViews">this page</a> to solve your doubts.</p>
+         <p><img src="/modding_guide/images/common/edit_big.png" alt="icon"/>Now you'll be wondering, if the functions are read from <code>start_menu.js</code>, how can we add a custom function for our new menu to it, from our mod? See <a href="../ui/index.html#AddingToExistingViews">this page</a> to solve your doubts.</p>
          <h3><a name="DesignatingZone"></a>Designating the zone in the client</h3>
          <p>The UI called a client side Lua function to draw the zone. This function is declared in the <strong>"functions"</strong> section of the manifest:</p>
          <pre><code>  "functions": {
@@ -193,7 +193,7 @@
          <p>Note that it runs on the client (client endpoint), and will only have access to client-available Lua items.</p>
          <p>The function allows the player to click in the world and designate a zone. It will draw the zone according to the Color4(r, g, b, a) you pass in.</p>
          <p>Once the player releases the mouse, this function calls a server function to actually create the zone. Since we're communicating between client and server, it'll need to be defined in a call handler too.</p>
-         <p><img src="/images/common/row_alert2.png" alt="icon"/>Note that for these examples we're using the stonehearth namespace, you'd be using your mod namespace when writing this in your code. Make sure to change any references that should point to your mod, if you're making a custom type of zone.</p>
+         <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>Note that for these examples we're using the stonehearth namespace, you'd be using your mod namespace when writing this in your code. Make sure to change any references that should point to your mod, if you're making a custom type of zone.</p>
          <h3><a name="CreatingZone"></a>Creating the zone</h3>
          <p>The function to create the zone lives on the server:</p>
          <p><code>_radiant.call('stonehearth:create_pasture', box.min, size)</code>.</p>
@@ -311,7 +311,7 @@
 </code></pre>
          <p>In <code>stonehearth/ui/game/modes/zones_mode/zones_mode.js</code> there's the <code>_examineEntity</code> function. You'll need to add another <code>if</code> to it so that it shows your custom UI view when selecting your new zone. Make sure that your UI view extends <code>StonehearthBaseZonesModeView</code> so that it has the common functionality for zones.</p>
          <p>Also, make sure the zone type is registered as a zone in <code>stonehearth/ui/game/modes/mode_manager.js</code>'s <code>_getModeForEntity</code> function.</p>
-         <p><img src="/images/common/row_alert2.png" alt="icon"/>At the moment this guide was written, the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1577375188">ACE</a> mod overrides <code>mode_manager.js</code> to make it easier to change the UI mode based on selected entities. If you base your code in that, players will need to have the ACE mod installed and enabled in order to play your mod.</p>
+         <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>At the moment this guide was written, the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1577375188">ACE</a> mod overrides <code>mode_manager.js</code> to make it easier to change the UI mode based on selected entities. If you base your code in that, players will need to have the ACE mod installed and enabled in order to play your mod.</p>
       </main>
    </body>
 </html>

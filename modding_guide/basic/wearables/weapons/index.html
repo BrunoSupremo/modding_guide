@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Weapons</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Weapons</h1>
             <ul>
@@ -32,7 +32,7 @@
                 <li>
                     <p>We rename the files and folders, let's call it magic_sword, for example. Notice that there are 2 models, one is for the iconic/default version, and the other one will be shown when the weapon is equipped.</p>
                     <p>  <a name="EquippedModel"></a>Notice its orientation and position. The point where the hearthlings will grab it should be at (0,0,0) on your modeling program, no matter the model size. The orientation will make it face forward in the game, so that hearthlings will swing it in the correct direction:
-                        <img src="/images/basic/wearables/weapon.png" alt="weapon"/>
+                        <img src="/modding_guide/images/basic/wearables/weapon.png" alt="weapon"/>
                     </p>
                     <p>  The JSON file for the iconic doesn't have anything special. The other JSON file will have the usual properties for the net worth and catalog entries in "entity_data".</p>
                     <p>  The weapon will only have a default model variant, which is the 'equipped' QB model.</p>
@@ -111,7 +111,7 @@
                 </li>
                 <li>
                     <p>Test your new weapon in the game:
-                        <img src="/images/basic/wearables/armor.png" alt="armor"/>
+                        <img src="/modding_guide/images/basic/wearables/armor.png" alt="armor"/>
                     </p>
                 </li>
             </ol>
@@ -162,15 +162,15 @@
             <p>Notice the <strong>"chance_of_success"</strong> property here. This is a percentage that will be used to calculate the chances to run this defense, which will block the enemy attack on that turn.</p>
             <p>The "chance_of_success" property is exclusive for melee defenses.</p>
             <p>Remember to position the shield model over the (0,0,0) coordinates in your modeling program:
-                <img src="/images/basic/wearables/shield.png" alt="shield"/>
+                <img src="/modding_guide/images/basic/wearables/shield.png" alt="shield"/>
             </p>
             <h3><a name="RangedWeapons"></a>Ranged weapons</h3>
             <p>To implement a ranged weapon, copy <code>stonehearth/weapons/bow</code> to your mod (ignore the bow_talisman.json file, it's used for the archer because this bow is their default weapon).</p>
             <p>For the most part, it's like the other weapons. Rename the files and edit them. Mind the position and orientation of the QB model for the equipped version:
-                <img src="/images/basic/wearables/ranged_weapon.png" alt="ranged_weapon"/>
+                <img src="/modding_guide/images/basic/wearables/ranged_weapon.png" alt="ranged_weapon"/>
             </p>
             <blockquote>
-                <p><img src="/images/common/gold.png" alt="icon"/><a name="NoDrop"></a>In the equipment piece component, you may notice this field:</p>
+                <p><img src="/modding_guide/images/common/gold.png" alt="icon"/><a name="NoDrop"></a>In the equipment piece component, you may notice this field:</p>
                 <pre><code>    "no_drop": true
 </code></pre>
                 <p>This is used for default weapons or armor of the combat classes, which have no "roles" field either.</p>
@@ -222,7 +222,7 @@
 </code></pre>
                     <p>  It's an entity with very few properties. Notice the <strong>"stonehearth:projectile" : {}</strong> component. We can create our own projectiles this way.</p>
                     <p>  The arrow.qb model is positioned over (0,0,0), with the tip of the arrow overflowing, which will be the part that will get sunk into the enemy before the arrow disappears:
-                        <img src="/images/basic/wearables/arrow.png" alt="arrow"/>
+                        <img src="/modding_guide/images/basic/wearables/arrow.png" alt="arrow"/>
                     </p>
                 </li>
                 <li>

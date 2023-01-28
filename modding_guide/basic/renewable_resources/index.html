@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Renewable resources</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Renewable resources</h1>
          <p>By renewable resources we mean any item like the berry bushes or the sheep, which once harvested, will regrow after some time and we'll be able to harvest it again.</p>
@@ -94,7 +94,7 @@
    }
 }
 </code></pre>
-               <p>  <img src="/images/common/row_alert2.png" alt="icon"/>If we add a <strong>"durability"</strong> field to the renewable_resource_node component, we'll be able to harvest the entity N times, after which it will get destroyed. If we don't include it we'll be able to keep harvesting it indefinitely every time it regrows.</p>
+               <p>  <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>If we add a <strong>"durability"</strong> field to the renewable_resource_node component, we'll be able to harvest the entity N times, after which it will get destroyed. If we don't include it we'll be able to keep harvesting it indefinitely every time it regrows.</p>
             </li>
             <li>
                <p>We added an alias for our mushroom in our mod's manifest:</p>
@@ -108,7 +108,7 @@
             </li>
             <li>
                <p>Finally, we added the plant to the biome (as seen <a href="../plants/index.html#Plants">here</a>. How to create your own biome is explained <a href="../../intermediate/biomes/index.html">here</a>) and included some <a href="../color_maps/index.html#RenderMaterials">material maps</a> so that the mushroom glows. Make sure to test that it can be correctly harvested and that it renews its resource.
-                  <img src="/images/basic/color_maps/render_materials.png" alt="render_materials"/>
+                  <img src="/modding_guide/images/basic/color_maps/render_materials.png" alt="render_materials"/>
                </p>
             </li>
          </ol>
@@ -181,12 +181,12 @@
          <ol>
             <li>
                <p>First we find an existing plant from which we want to copy the seeds. In this case, notice that we'll have 4 growing stages plus the ripe wintermoss:
-                  <img src="/images/basic/renewable_resources/evolve_stages.png" alt="evolve_stages"/>
+                  <img src="/modding_guide/images/basic/renewable_resources/evolve_stages.png" alt="evolve_stages"/>
                </p>
             </li>
             <li>
                <p>First let's modify the files inside the "seed" folder:
-                  <img src="/images/basic/renewable_resources/seed_files.png" alt="seed_files"/>
+                  <img src="/modding_guide/images/basic/renewable_resources/seed_files.png" alt="seed_files"/>
                   We rename them to reference our plant's name, leaving the suffix of the name untouched so we know what does each file reference.
                </p>
                <p>  wintermoss_plant_seed_iconic.json :</p>
@@ -322,7 +322,7 @@
                   <li>
                      <p><strong>"stonehearth:evolve": {}"</strong> -- this component is in charge of growing the seeds into a plant, as well as growing a plant stage into the next stage. It has no properties, they're defined in the <strong>"stonehearth:evolve_data"</strong> section of the "entity_data" instead, because they're reusable for all the seeds of this type of plant.</p>
                      <p> The properties for the evolve data are: <strong>"next_stage"</strong>, which points to the full alias of the next growth stage, in this case "stonehearth:plants:wintermoss:sprout", and <strong>"evolve_time"</strong>, which is a <a href="../misc_json/index.html#TimeExpressions">time expression</a> for how much time it takes for the seed to grow to the next stage once planted. Remember to add the aliases to your manifest if you haven't already.</p>
-                     <p> <img src="/images/common/gold.png" alt="icon"/>We can also specify an array of URIs for the <strong>"next_stage"</strong> property. This way the entity will randomly evolve to one of those entities, for example, an egg that can evolve to a poyo or to a dinosaur.</p>
+                     <p> <img src="/modding_guide/images/common/gold.png" alt="icon"/>We can also specify an array of URIs for the <strong>"next_stage"</strong> property. This way the entity will randomly evolve to one of those entities, for example, an egg that can evolve to a poyo or to a dinosaur.</p>
                   </li>
                   <li>
                      <p><strong>"stonehearth:entity_forms" : { ... }</strong> -- as a reminder, here we added two optional fields: <strong>"placeable_on_ground"</strong>, which allows this item to be placed on the ground, and <strong>"hide_undeploy_ui"</strong>, which will hide the undeploy button from the unit frame once the entity is placed down.</p>

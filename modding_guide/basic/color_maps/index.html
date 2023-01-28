@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Color and material maps</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Color and material maps</h1>
          <p><strong>Color maps</strong> are something that we can use for adding color variety to our items. They are used together with <strong>material maps</strong>. The existing color maps and material maps can be found inside <code>stonehearth/data/materials</code>.</p>
@@ -85,14 +85,14 @@
             </li>
          </ol>
          <blockquote>
-            <p><img src="/images/common/gold.png" alt="icon"/> The "one_of" type can also be used for randomizing QB models. </p>
+            <p><img src="/modding_guide/images/common/gold.png" alt="icon"/> The "one_of" type can also be used for randomizing QB models. </p>
          </blockquote>
-         <p><img src="/images/common/row_alert2.png" alt="icon"/> When testing, if you notice that no matter how many times you spawn the item, it always has the same color, try adding this inside the "render_info" component where you declared the color / material maps:</p>
+         <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> When testing, if you notice that no matter how many times you spawn the item, it always has the same color, try adding this inside the "render_info" component where you declared the color / material maps:</p>
          <pre><code>    "cache_model_geometry": false
 </code></pre>
          <p>
             Model geometry is cached by default for performance reasons, but there are some places in Lua files where we disable it, so for some entities the random color will work even if they don't have "cache_model_geometry" set to false in their JSON files. <!-- For example, on fixup post load of population_faction.lua it loads the json without caching.-->
-            <img src="/images/basic/color_maps/color_maps.png" alt="color_maps"/>
+            <img src="/modding_guide/images/basic/color_maps/color_maps.png" alt="color_maps"/>
          </p>
          <h2><a name="RenderMaterials"></a>Applying render_materials</h2>
          <p>We can also apply a different render material using material maps. It will make the color be rendered differently, for example to make it shiny, semi-transparent, or emissive. You can use existing materials from the stonehearth mod before trying to make your own ones.</p>
@@ -147,7 +147,7 @@
                <p>Let's test that the render material is applied to our entity (if there's some problem with it, a message will appear in the stonehearth.log informing that the game couldn't load the material):</p>
             </li>
          </ol>
-         <p><img src="/images/basic/color_maps/render_materials.png" alt="render_materials"/></p>
+         <p><img src="/modding_guide/images/basic/color_maps/render_materials.png" alt="render_materials"/></p>
          <p>You can read more about render materials and shaders <a href="shaders/index.html">here</a>.</p>
       </main>
    </body>

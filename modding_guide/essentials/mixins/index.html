@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Mixins</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Mixins</h1>
          <p>We have encountered mixins in previous sections of the guide. They are not to be confused with "mixintos".</p>
@@ -162,16 +162,16 @@
          <p>Notice the brackets of the array for the "mixins" node. The first mixin is specified as a path, and the other ones as aliases.</p>
          <h3><a name="RelativePaths"></a>About relative paths</h3>
          <p>Observe the mixin "file(cobblestone_fence_gate_ghost.json)" of the example above. Since the cobblestone_fence_gate_ghost.json file is inside the same folder than cobblestone_fence_gate.json (which references it), <strong>"file()"</strong> will search for cobblestone_fence_gate_ghost.json inside this same folder:
-            <img src="/images/essentials/mixins/mixin_in_same_folder.png" alt="mixin_in_same_folder"/>
+            <img src="/modding_guide/images/essentials/mixins/mixin_in_same_folder.png" alt="mixin_in_same_folder"/>
          </p>
          <p>If it had been inside another folder, we would use "file(other_folder/cobblestone_fence_gate_ghost.json)". For example, if we had it like in this picture, we'd say "file(mixins/cobblestone_fence_gate_ghost.json)":
-            <img src="/images/essentials/mixins/mixin_in_inner_folder.png" alt="mixin_in_inner_folder"/>
+            <img src="/modding_guide/images/essentials/mixins/mixin_in_inner_folder.png" alt="mixin_in_inner_folder"/>
          </p>
          <p>If it had been outside of the folder where cobblestone_fence_gate.json is, we would have used "file(../cobblestone_fence_gate_ghost.json)":
-            <img src="/images/essentials/mixins/mixin_outside.png" alt="mixin_outside"/>
+            <img src="/modding_guide/images/essentials/mixins/mixin_outside.png" alt="mixin_outside"/>
          </p>
          <p>And if it had been on a folder outside, we would have used "file(../other_folder/cobblestone_fence_gate_ghost.json)". In the case of this picture it would be "file(../mixins/cobblestone_fence_gate_ghost.json)":
-            <img src="/images/essentials/mixins/mixin_in_outer_folder.png" alt="mixin_in_outer_folder"/>
+            <img src="/modding_guide/images/essentials/mixins/mixin_in_outer_folder.png" alt="mixin_in_outer_folder"/>
          </p>
          <p>As you can see, for every directory that we go up from the folder inside which is the file that contains references to the paths, we append one <code>../</code> at the beginning of the path.</p>
          <h3><a name="AbsolutePaths"></a>About absolute paths</h3>

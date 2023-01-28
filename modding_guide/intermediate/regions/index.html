@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Collision regions</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Collision regions</h1>
             <p><strong>Acknowledgements</strong>: A big part of this guide comes from the excellent <a href="https://discourse.stonehearth.net/t/reference-positioning-placeable-items/14858">guide on regions</a> by Discourse user Tuhalu.</p>
@@ -30,16 +30,16 @@
             <h2><a name="WorldCoordinates"></a>World coordinates</h2>
             <p>The game world has its own set of coordinates based on a right-handed system. Assuming "north" is into the screen and up is above the ground, then when you first start a new game +Y is up, +Z is south and +X is east (assuming you didn't rotate the camera).</p>
             <p>In all the pictures to follow, the color of the axis tells you which it is. By convention, X is always red, Y is always green and Z is always blue.
-                <img src="/images/intermediate/regions/world_axes.png" alt="world_axes"/>
+                <img src="/modding_guide/images/intermediate/regions/world_axes.png" alt="world_axes"/>
             </p>
             <p>Each of those black grid squares is 1 "unit" size (press Z to enter zones mode in the game and see the grid for yourself).</p>
             <h3><a name="VoxelEditors"></a>A note on object coordinates</h3>
             <p>The coordinate system of objects in Qubicle is not the same as the world coordinate system in Stonehearth. Qubicle uses a left-hand coordinate system and Stonehearth uses a right-handed coordinate system. This has an impact on the offsets you use later.</p>
             <p>The exact difference is the direction of the Z-Axis. In Qubicle, the positive Z-Axis points towards the back of an object (or the "north"). In Stonehearth, the positive Z-Axis points to the front of an object (or the "south").</p>
             <p>Here is the barrel in Qubicle. Note that the Z axis faces away from the front of the barrel.
-                <img src="/images/intermediate/regions/barrel_model.png" alt="barrel_model"/>
+                <img src="/modding_guide/images/intermediate/regions/barrel_model.png" alt="barrel_model"/>
             </p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/> It might be different in other voxel editors. For Qubicle, make sure to always export your model with Z-axis as right-hand, otherwise the model might be flipped in game, or rotate strangely.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> It might be different in other voxel editors. For Qubicle, make sure to always export your model with Z-axis as right-hand, otherwise the model might be flipped in game, or rotate strangely.</p>
             <h2><a name="Properties"></a>Other properties of the mob component</h2>
             <p>In the JSON files of entities from the base mods, you might see other properties inside the <strong>"mob"</strong> component.</p>
             <ul>

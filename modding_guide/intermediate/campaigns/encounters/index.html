@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Generic encounters</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Generic encounters</h1>
             <p>Let's take a look at the available encounter types and their associated properties. Their controllers can be found in <code>stonehearth/services/server/game_master/controllers/encounters</code>.</p>
@@ -245,7 +245,7 @@
                             <p><strong>"max_spawns"</strong> -- optional field. Maximum number of times that we want the generator to trigger the edges (minimum <code>1</code>).</p>
                             <p> If we specify both <strong>"min_spawns"</strong> and <strong>"max_spawns"</strong>, a random number of times will be chosen between them and used as the spawn limit.</p>
                             <p> If we don't include any of them, the generator will keep spawning edges indefinitely (or until the source entity is destroyed, if we defined that field).</p>
-                            <p> <img src="/images/common/edit_big.png" alt="icon"/>If this generator encounter also has an out edge, it will be triggered when the maximum number of spawns is met (the minimum if we only defined min, or the random number if we included both).</p>
+                            <p> <img src="/modding_guide/images/common/edit_big.png" alt="icon"/>If this generator encounter also has an out edge, it will be triggered when the maximum number of spawns is met (the minimum if we only defined min, or the random number if we included both).</p>
                         </li>
                         <li>
                             <p><strong>"game_mode_tuning"</strong> -- optional field. A boolean for enabling tuning overrides for the <strong>"delay"</strong> parameter of this encounter. You can check an example in the <code>"encounter_tuning_overrides"</code> section from <code>stonehearth/data/game_mode/hard/hard.json</code>. In this case, the modifier would be applied when the player chooses hard mode.</p>
@@ -340,7 +340,7 @@
                     </ul>
                 </li>
             </ul>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/> Don't confuse these counters with the <code>"counter"</code> <a href="#Counter">encounter</a>. They have different purposes.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> Don't confuse these counters with the <code>"counter"</code> <a href="#Counter">encounter</a>. They have different purposes.</p>
             <h2><a name="UtilityEncounters"></a>Utility encounters</h2>
             <h3><a name="DestroyEntity"></a>Destroy entity</h3>
             <p>An encounter that destroys specific entities.</p>
@@ -402,7 +402,7 @@ return GoblinCampDepartsScript
                         </li>
                         <li>
                             <p><strong>"continue_on_disconnect"</strong> -- optional field. A boolean for continuing to run this node when a player (client) disconnects from a multiplayer game. It's <strong>false</strong> by default (pauses this encounter and resumes it once the player reconnects).</p>
-                            <p> <img src="/images/common/row_alert2.png" alt="icon"/> If you don't set <strong>"continue_on_disconnect"</strong> to <strong>true</strong>, you might need to implement <code>suspend()</code> and <code>continue()</code> functions in your custom script, so that the game knows if it has to stop some timer, resume it later, etc. They will be called when the player disconnects / reconnects.</p>
+                            <p> <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> If you don't set <strong>"continue_on_disconnect"</strong> to <strong>true</strong>, you might need to implement <code>suspend()</code> and <code>continue()</code> functions in your custom script, so that the game knows if it has to stop some timer, resume it later, etc. They will be called when the player disconnects / reconnects.</p>
                         </li>
                     </ul>
                 </li>
@@ -524,7 +524,7 @@ return GoblinCampDepartsScript
  }
 </code></pre>
                                     <p>We can have either <strong>"next_node"</strong>, pointing to the key of another node of the dialog, or <strong>"out_edge"</strong>, which will finish the dialog and trigger the specified <a href="../index.html#Edges">out egde</a>.</p>
-                                    <p><img src="/images/common/row_alert2.png" alt="icon"/> Notice that for this encounter type we often don't have an out edge defined, because the out edge is specified in the dialog choices, and more than one choice can point to the same out edge.</p>
+                                    <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> Notice that for this encounter type we often don't have an out edge defined, because the out edge is specified in the dialog choices, and more than one choice can point to the same out edge.</p>
                                 </li>
                             </ul>
                         </li>
@@ -643,7 +643,7 @@ return GoblinCampDepartsScript
                     <ul>
                         <li>
                             <p><strong>"out_edges" : {}</strong> -- contains 3 fields (<strong>"refuse"</strong>, <strong>"fail"</strong> and <strong>"success"</strong>), each pointing to the out edge to trigger depending on the results of the quest.</p>
-                            <p> <img src="/images/common/row_alert2.png" alt="icon"/>Note that usually we don't add an out edge to this encounter's JSON file, since it will trigger one of these depending on the player's choice.</p>
+                            <p> <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>Note that usually we don't add an out edge to this encounter's JSON file, since it will trigger one of these depending on the player's choice.</p>
                         </li>
                         <li>
                             <p><strong>"script"</strong> -- URI of the controller of a script that will determine which items to ask for (e.g.: <code>"stonehearth:game_master:script:collection_quest_shakedown"</code>). If you create your own, make sure to add it under <code>"controllers"</code> in your manifest. We'll pass the data under <strong>"collection_quest_info"</strong> to the script on creation. The script must have a <code>get_tribute_demand</code> function that returns an object (Lua table) containing URIs of items pointing to four fields: uri, count, icon and display_name. Take a look at how it's implemented in <code>collection_quest_shakedown.lua</code>.</p>
@@ -653,7 +653,7 @@ return GoblinCampDepartsScript
                         </li>
                         <li>
                             <p><strong>"skip_return_trip"</strong> -- optional field (a boolean). When <strong>true</strong>, the encounter is a simple item request so the "collection_due" dialog will be shown directly.</p>
-                            <p> <img src="/images/common/row_alert2.png" alt="icon"/> There's a known issue that when using this option the player can confirm the dialog even when not having all of the items (in which case only the available items will be removed from inventory). This means that the "fail" out edge can't be triggered, only the "success" and "refuse" ones can. If you want to use this option, you may want to use the <a href="#DeliveryQuest">delivery quest</a> encounter instead.</p>
+                            <p> <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> There's a known issue that when using this option the player can confirm the dialog even when not having all of the items (in which case only the available items will be removed from inventory). This means that the "fail" out edge can't be triggered, only the "success" and "refuse" ones can. If you want to use this option, you may want to use the <a href="#DeliveryQuest">delivery quest</a> encounter instead.</p>
                         </li>
                         <li>
                             <p><strong>"source_entity"</strong> -- optional field. A reference to a context registration path. The encounter won't start if this entity doesn't exist, and will be halted if the entity dies while the quest is active.</p>
@@ -795,7 +795,7 @@ return GoblinCampDepartsScript
                                 </li>
                                 <li>
                                     <p><strong>"out_edge"</strong> -- the out edge to trigger when the player chooses this option. It should eventually lead to an encounter of type <a href="#TownUpgrade">town upgrade</a>, which will grant the bonus mentioned in the description to the player's town.</p>
-                                    <p><img src="/images/common/row_alert2.png" alt="icon"/>Notice that usually we don't add an out edge to this encounter's JSON file, since it will trigger different ones depending on the player's choice.</p>
+                                    <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>Notice that usually we don't add an out edge to this encounter's JSON file, since it will trigger different ones depending on the player's choice.</p>
                                 </li>
                             </ul>
                         </li>
@@ -1025,7 +1025,7 @@ return false
             <h2><a name="CitizenEncounters"></a>Citizen encounters</h2>
             <h3><a name="AddCitizen"></a>Add citizen</h3>
             <p>Adds a new citizen to the town, either of the player's population or of another race/faction. They will spawn close to the town and will walk to the banner first.</p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/> Mind that once added to the player's town, you won't be able to retrieve the original population of the citizen by code. They will be considered to have the same population/faction than the player's town, even if their appearance is different (e.g. rabbits, orcs).</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> Mind that once added to the player's town, you won't be able to retrieve the original population of the citizen by code. They will be considered to have the same population/faction than the player's town, even if their appearance is different (e.g. rabbits, orcs).</p>
             <ul>
                 <li>
                     <p><strong>"encounter_type" : "add_citizen"</strong></p>

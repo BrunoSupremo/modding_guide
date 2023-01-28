@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Particle effects</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Particle effects</h1>
             <p>Cubemitters are the particle effects. For convention, stonehearth's particle effect files (which are just JSON!) have names that end with ".cubemitter.json". This way we can tell them apart from effect files that might have the same name. All the existing cubemitters are located inside the <code>stonehearth\data\horde\particles</code> directory.</p>
@@ -44,7 +44,7 @@
                 </li>
                 <li>
                     <p><strong>"cubemitter"</strong> -- the path to the JSON file that defines the settings for the particles. By default, they will be read from <code>stonehearth/data/horde</code>. I.e, <code>"particles/dust_poof/purple_dust_poof.cubemitter.json"</code> will be actually read as <code>stonehearth/data/horde/particles/dust_poof/purple_dust_poof.cubemitter.json</code>.</p>
-                    <p>  <img src="/images/common/row_alert2.png" alt="icon"/>In order for the game to read our custom effects from our mod folder, we need to use an absolute path starting from our mod's namespace (for example <code>/candyland/data/horde/particles/sprinkles_rain/sprinkles_rain.cubemitter.json</code>). Otherwise the game will try to read the path starting at the <code>stonehearth/data/horde</code> directory. This also applies for paths to render materials.</p>
+                    <p>  <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>In order for the game to read our custom effects from our mod folder, we need to use an absolute path starting from our mod's namespace (for example <code>/candyland/data/horde/particles/sprinkles_rain/sprinkles_rain.cubemitter.json</code>). Otherwise the game will try to read the path starting at the <code>stonehearth/data/horde</code> directory. This also applies for paths to render materials.</p>
                 </li>
                 <li>
                     <p><strong>"transforms" : {}</strong> -- contains <strong>"x"</strong>, <strong>"y"</strong>, <strong>"z"</strong>, <strong>"rx"</strong>, <strong>"ry"</strong> and <strong>"rz"</strong> fields. These are offsets (in world units) and rotations (in degrees) for the emitter of the particles. That way, the particles can spawn at different locations/rotations from the corresponding entity. If the entity moves (such as a hearthling) the emitter will move with them, it's attached.</p>
@@ -97,7 +97,7 @@
                     <p><strong>"emitter_space_tiling"</strong> -- optional field. It makes the cubemitter to 'wrap' in 3D space. It's important that the volume of the particles being created is lined up with the space tiling (so an emitter with a diameter of 80 units needs a wrapping of 80 units - otherwise there is a gap where things aren't emitted). This is used for weather effects that are attached to the camera.</p>
                 </li>
             </ul>
-            <p><a name="FourKinds"></a><img src="/images/common/row_alert2.png" alt="icon"/>For all the following fields of the cubemitter file, assume that the possible values for the <strong>"kind"</strong> property are <strong>"CONSTANT"</strong> / <strong>"CURVE"</strong> / <strong>"RANDOM_BETWEEN"</strong> / <strong>"RANDOM_BETWEEN_CURVES"</strong> unless specified otherwise. You can check how to define the <strong>"values"</strong> field for each of them in <a href="../index.html#TypesOfValues">this table</a>, although for some fields they might be a little different (such as for colors):</p>
+            <p><a name="FourKinds"></a><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>For all the following fields of the cubemitter file, assume that the possible values for the <strong>"kind"</strong> property are <strong>"CONSTANT"</strong> / <strong>"CURVE"</strong> / <strong>"RANDOM_BETWEEN"</strong> / <strong>"RANDOM_BETWEEN_CURVES"</strong> unless specified otherwise. You can check how to define the <strong>"values"</strong> field for each of them in <a href="../index.html#TypesOfValues">this table</a>, although for some fields they might be a little different (such as for colors):</p>
             <ul>
                 <li>
                     <p><strong>"emission" : {}</strong> -- properties related to the emission of the particles:</p>
@@ -165,7 +165,7 @@
             </p>
             <p>Go to the Effects Editor, and select the 'Cubemitters' tab. You can right-click on an existing cubemitter, click on 'Clone', select your mod as the target mod and provide a replacement text. Once the tree refreshes you should see your cubemitter listed there, if not, you might need to reload SHED.</p>
             <p>When you select your cubemitter file, you should see the JSON in the middle and a web editor at the right:</p>
-            <p><img src="/images/art/vfx/cloning_cubemitter_file.png" alt="cloning_cubemitter_file"/></p>
+            <p><img src="/modding_guide/images/art/vfx/cloning_cubemitter_file.png" alt="cloning_cubemitter_file"/></p>
             <p><a name="UsingCEFEditor"></a>It's easier to edit in the web editor, since it has curve editors and color pickers, then save it with the blue 'SAVE' button at the top so that the JSON file gets modified, and then save the JSON file too to confirm the changes. Or if you prefer, you can edit the JSON file directly.</p>
             <p><a href="../../../../essentials/shed/index.html#Troubleshooting">Here</a> are some workarounds if the web editor isn't working correctly.</p>
             <p>You'll see that many of the fields have a <strong>+</strong> button at the right to add them or expand them, and an <strong>x</strong> button to remove them.</p>
@@ -178,7 +178,7 @@
                 <li>The horizontal line represents time, so it will go from 0 to 1. If you want to set specific values to the points, you can do so in the textboxes below the chart (<strong>"T:"</strong> is for time, and <strong>"V:"</strong> is for value).</li>
                 <li>When the chart represents more than once curve, the area between the curves will be colored blue.</li>
             </ul>
-            <p><img src="/images/art/vfx/curve_editor_color_picker.png" alt="curve_editor_color_picker"/></p>
+            <p><img src="/modding_guide/images/art/vfx/curve_editor_color_picker.png" alt="curve_editor_color_picker"/></p>
             <p>For the colors, there will be color pickers. Click on them and you'll be able to easily choose a different color, as well as transparency (but remember the rules mentioned above about how to set the fields for transparency).</p>
         </main>
     </body>

@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Combat jobs</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Combat jobs</h1>
             <p>Combat is controlled using many files: the combat service, combat_state / target_tables components, AI actions under <code>stonehearth/ai/actions/combat</code>, etc.</p>
@@ -207,7 +207,7 @@
                         </li>
                         <li>
                             <p>We edit the controller file. This is very important. Our renamed controller file will still have the same code inside so we have to rename some stuff in it.</p>
-                            <p> <img src="/images/common/row_alert2.png" alt="icon"/> All jobs in the game inherit from <code>base_job.lua</code>. Combat jobs inherit from <code>combat_job.lua</code> instead, because that file already inherits from base_job.lua. The <code>CombatJob</code> class defined in combat_job.lua takes care of adding the combat unit to a default party when they get promoted, removing them when they are demoted to a non-combat job, and managing the experience gain for combat units when they patrol.</p>
+                            <p> <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> All jobs in the game inherit from <code>base_job.lua</code>. Combat jobs inherit from <code>combat_job.lua</code> instead, because that file already inherits from base_job.lua. The <code>CombatJob</code> class defined in combat_job.lua takes care of adding the combat unit to a default party when they get promoted, removing them when they are demoted to a non-combat job, and managing the experience gain for combat units when they patrol.</p>
                             <p> Our <code>crusader.lua</code> file would look like this after we rename Footman to Crusader:</p>
                             <pre><code>local CrusaderClass = class()
 

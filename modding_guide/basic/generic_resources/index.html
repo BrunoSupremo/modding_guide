@@ -2,20 +2,20 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Generic resources</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Generic resources</h1>
             <p>Sometimes when creating recipes for crafters we want to specify that an ingredient can be any item that meets a condition.</p>
             <p>Perhaps you've added amethysts, diamonds and rubies and they are all tagged "gem resource" in their "entity_data"'s "material_tags". You want to make a recipe that could use either amethysts, diamonds or rubies as one of its ingredients. <sup><a href="#ref-1">[1]</a></sup> In the recipe, we can use a material instead of an alias, in this case we could say "gem resource" and the crafter would be able to use any of those gems to craft the item.</p>
             <p>An example from the stonehearth mod would be that when crafting Thread, we want to use any kind of fiber source as an ingredient, no matter if the fiber comes from this or that plant, or from sheep's wool. We use a generic resource for that.
-                <img src="/images/basic/generic_resources/fiber_resource.png" alt="fiber_resource"/>
+                <img src="/modding_guide/images/basic/generic_resources/fiber_resource.png" alt="fiber_resource"/>
             </p>
             <h2><a name="GenericResources"></a>Adding generic resources</h2>
             <p>To add our own resource type to the game, we need to mixinto stonehearth/data/resource_constants.json. <sup><a href="#ref-1">[1]</a></sup></p>
@@ -36,7 +36,7 @@
 </code></pre>
             <p>Substitute "gem resource" with one or more tags from the "material_tags" of the entities you want the crafter to use. <strong>If you use more than one tag here</strong> (separated with spaces), <strong>the entities will need to have both tags in their JSON</strong>, otherwise they won't be considered for this resource.</p>
             <p>The icon will be shown in the recipe as the ingredient and the name will be used as its tooltip.
-                <img src="/images/basic/generic_resources/gem_resource.png" alt="gem_resource"/>
+                <img src="/modding_guide/images/basic/generic_resources/gem_resource.png" alt="gem_resource"/>
             </p>
             <p>The <strong>"default_resource"</strong> field is mostly used for building, but it's good to have it even if our resource isn't going to be used for that.</p>
             <p><a name="BuildingResources"></a>Let's take a look at the existing "clay_brick resource", to take a look at the extra info that we might want to add to our resource:</p>

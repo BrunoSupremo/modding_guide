@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Testing your mod</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Testing your mod</h1>
             <p>There are several mods that can help us test our own mods, besides using debugtools. Usually we'll create our own test files inside of them, there's no need to make a separate mod with mixintos just for testing your custom mods.</p>
@@ -115,14 +115,14 @@ return SettlementTest
 </code></pre>
                     <p>  We require the <code>micro_world.lua</code> file in the first line, which contains the <code>Microworld</code> class. Then we instantiate the Microworld class, and define an <code>__init()</code> function for our object to initialize our custom world. Inside it, we call the initialization function from the Microworld class passing the diameter (in number of blocks) that we want for our test world, and call the <code>create_world()</code> function (also from the Microworld class) to actually create the flat terrain. Finally, we return our object.</p>
                     <p>  We can create more functions in our class if we need to. There are already many functions in <code>micro_world.lua</code> that are useful to prepare a test world, you can call them like we called the <code>create_world()</code> function, and pass any parameters that you need. For example, the <code>create_world()</code> function can receive a kingdom URI and a biome URI as arguments, to generate the test world with them.</p>
-                    <p>  <a name="Warning"></a><img src="/images/common/row_alert2.png" alt="icon"/> Note that microworld attempts to simulate a regular game but it does not actually go through the same game flow as a regular game. For example, we have to manually initialize the services we want to use in <code>MicroWorld:create_world</code>. So if you're running into a bug that only happens in tests, it may be due to the tests themselves as opposed to the game. Generally the tests should match the game behavior but it isn't guaranteed.</p>
+                    <p>  <a name="Warning"></a><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> Note that microworld attempts to simulate a regular game but it does not actually go through the same game flow as a regular game. For example, we have to manually initialize the services we want to use in <code>MicroWorld:create_world</code>. So if you're running into a bug that only happens in tests, it may be due to the tests themselves as opposed to the game. Generally the tests should match the game behavior but it isn't guaranteed.</p>
                 </li>
             </ul>
             <h2><a name="StonehearthTests"></a>Stonehearth tests</h2>
             <p>These tests are pretty similar to the Microworld worlds explained above. The <code>stonehearth_tests</code> mod makes use of the <code>microworld</code> mod to generate test worlds, so you'll need to enable both in the Mods menu if you plan to use the <code>stonehearth_tests</code> mod.</p>
             <p>The development team used this mod to manually test features in isolation as they were being developed, or to try reproducing bugs in small environments.</p>
             <p>You have plenty of examples to reuse in this mod, so if you're new to coding, you can fiddle with Lua here until you feel comfortable enough to attempt more complex things in your mod.</p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/> The same warning <a href="#Warning">stated above</a> for microworld can also be applied for the stonehearth_tests mod. For example, when running tests you'll notice that the game master service hasn't been initialized (the Campaign Browser debug tool looks blank when you open it - thankfully it has a button to start it from the UI). So you'll need to initialize them manually. Also, multiplayer doesn't work unless you do the things listed in <code>multiplayer_test.lua</code>.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> The same warning <a href="#Warning">stated above</a> for microworld can also be applied for the stonehearth_tests mod. For example, when running tests you'll notice that the game master service hasn't been initialized (the Campaign Browser debug tool looks blank when you open it - thankfully it has a button to start it from the UI). So you'll need to initialize them manually. Also, multiplayer doesn't work unless you do the things listed in <code>multiplayer_test.lua</code>.</p>
             <h3><a name="SetupTests"></a>Setup stonehearth_tests</h3>
             <p>The <strong>stonehearth_tests</strong> mod now comes bundled with the game.</p>
             <ol>
@@ -159,7 +159,7 @@ return SettlementTest
 </code></pre>
             <h2><a name="Autotests"></a>Stonehearth autotests</h2>
             <p>We can create automated tests that will compare expected results with actual results so that we don't have to test features manually. They're useful to verify that regressions weren't introduced after changing some code.</p>
-            <p><img src="/images/common/gold.png" alt="icon"/> Keep in mind that we may not be able to automate some things, and that issues that an autotest reproduces sometimes are not reproducible in the game and viceversa. Try to avoid flaky tests that sometimes pass and sometimes fail.</p>
+            <p><img src="/modding_guide/images/common/gold.png" alt="icon"/> Keep in mind that we may not be able to automate some things, and that issues that an autotest reproduces sometimes are not reproducible in the game and viceversa. Try to avoid flaky tests that sometimes pass and sometimes fail.</p>
             <p>To create our own automated tests, we have two mods that now come bundled with the game. The <code>stonehearth_autotest</code> mod requires the <code>autotest_framework</code> mod in order to work, so you'll have to enable both in your user_settings.json if you plan to run autotests:</p>
             <ol>
                 <li>
@@ -295,7 +295,7 @@ end
 </code></pre>
                     <p>  In order to find the helper functions used in the autotests, you'll need to take a look at the <code>autotest_framework</code> files. For instance, in the example above we call <code>autotest.env.create_person()</code>, which is a function from <code>autotest_framework/lib/server/autotest_environment.lua</code>.</p>
                     <p>  The function <code>autotest.util.listen()</code> is a wrapper function from <code>autotest_framework/lib/server/autotest_util_server.lua</code> (you can find other helper functions there, such as <code>fail_if_expired(timeout)</code>).</p>
-                    <p>  <img src="/images/common/row_alert2.png" alt="icon"/>Any time you listen to an event in your autotests you must use one of the wrappers defined there, so that the autotest framework can clean them up correctly no matter if the tests passes or fails (otherwise, some listeners might still exist when the next test is executing, and might fire at the wrong time, throwing errors).</p>
+                    <p>  <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>Any time you listen to an event in your autotests you must use one of the wrappers defined there, so that the autotest framework can clean them up correctly no matter if the tests passes or fails (otherwise, some listeners might still exist when the next test is executing, and might fire at the wrong time, throwing errors).</p>
                     <p>  The <code>autotest:success()</code>, <code>autotest:fail()</code> and <code>autotest:sleep()</code> functions are defined in <code>autotest_framework/lib/server/autotest_instance.lua</code>, which controls the actual execution of the autotests. The parameter to the <code>sleep()</code> function is a number representing milliseconds.</p>
                     <p>  Other common functions used in the tests are located in <code>autotest_framework/lib/server/autotest_ui_server.lua</code>. And of course, you can use code from the game (like retrieving components, etc).</p>
                     <p>  Be careful since some things might still remain from test to test if you don't reset / clean them up, such as open UI menus.</p>
@@ -360,7 +360,7 @@ end
                     <p>Profile again!</p>
                 </li>
             </ol>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/>IMPORTANT: launch a new tab of <code>lua_profiler/lua_profiler.html</code> every time you need to load a new profile.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>IMPORTANT: launch a new tab of <code>lua_profiler/lua_profiler.html</code> every time you need to load a new profile.</p>
             <p>Note: If you are getting a game crash while profiling in <code>ai::CreateAction</code>, add a check for <code>ai.get()</code> on the preceding line.</p>
         </main>
     </body>

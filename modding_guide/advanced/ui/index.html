@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>UI</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>UI</h1>
          <p>Stonehearth uses HTML, Javascript (JQuery) and CSS (Less) for the UI. For creating UI views we use Ember and Handlebars templates. The version of Ember that the game uses is 1.8, which is a bit outdated, but was also patched over time for specific issues of the game so upgrading it is not straightforward.</p>
@@ -83,7 +83,7 @@
             </li>
             <li>
                <p>Edit the Less file. Right now, our UI view looks like this:</p>
-               <p>  <img src="/images/advanced/ui/ui_view_no_css.png" alt="ui_view_no_css"/>
+               <p>  <img src="/modding_guide/images/advanced/ui/ui_view_no_css.png" alt="ui_view_no_css"/>
                   We can add some CSS (Less) in the <code>custom_view.less</code> file to make it look better:
                </p>
                <pre><code>.customWindow {
@@ -129,7 +129,7 @@
             </li>
          </ol>
          <p>Now it looks like this:</p>
-         <p><img src="/images/advanced/ui/ui_view_with_css.png" alt="ui_view_with_css"/></p>
+         <p><img src="/modding_guide/images/advanced/ui/ui_view_with_css.png" alt="ui_view_with_css"/></p>
          <p>You can reuse any image from the game UI for your views, but be careful when defining your styles since it may conflict with existing CSS classes from other game files and get applied to views that it shouldn't.</p>
          <h2><a name="ShowingUIConditionally"></a>Showing views conditionally</h2>
          <p>We can have our view hidden until the player clicks somewhere in the UI (e.g.: we fire an event from a unit frame command and react to it).</p>

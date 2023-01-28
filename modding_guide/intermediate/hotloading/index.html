@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Hotloading mods</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Hotloading mods</h1>
          <ul>
@@ -22,7 +22,7 @@
          <h2><a name="When"></a>When should I hotload mods?</h2>
          <p>Well, you might have created a custom kingdom or biome, and want only certain campaigns or other features to be enabled only when that kingdom / biome has been chosen. For instance, when we choose to play with the Rayya's children mod, we override some images so that the UI looks different, and when we choose to play in the Desert biome, we override some models of goblins and other animals, so that they look more desert-like.</p>
          <p>In the past we called it "hotloading mods", but in the present it should actually be called "applying manifests", since we're not activating whole mods here.</p>
-         <p><img src="/images/common/row_alert2.png" alt="icon"/><a name="Requirements"></a><strong>Hotloading manifests is only allowed before world generation completes -OR- for 'client_only' manifests from client Lua</strong>.</p>
+         <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/><a name="Requirements"></a><strong>Hotloading manifests is only allowed before world generation completes -OR- for 'client_only' manifests from client Lua</strong>.</p>
          <p>Not everything in applied manifests will work. It's a known issue that certain mixintos won't get applied correctly from a hotloaded manifest, because the game has already cached those values (e.g. adding new crops to the list of initial crops). In most cases you'll have to add those into your main manifest.</p>
          <p>The applied/hotloaded manifests are usually inside some subfolder of our mod, and they have the</p>
          <pre><code>  "deferred_load": true
@@ -44,7 +44,7 @@
                <pre><code>"client_init_script": "file(rayyas_children_client)"
 </code></pre>
                <p>  at the root level (e.g. below the "info" section).</p>
-               <p>  <img src="/images/common/row_alert2.png" alt="icon"/>Notice how in this case we don't include the <code>.lua</code> extension inside <strong>"file()"</strong>. For <strong>"server_init_script"</strong> we wouldn't include it either.</p>
+               <p>  <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>Notice how in this case we don't include the <code>.lua</code> extension inside <strong>"file()"</strong>. For <strong>"server_init_script"</strong> we wouldn't include it either.</p>
                <p>  The example above comes from the Rayya's Children mod. Now, inside your init script, you'd need to have something like this (continuing with the same example):</p>
                <pre><code>rayyas_children = {
    constants = require 'constants'

@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Adding equipment</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Adding equipment</h1>
             <p>For how to create your own combat job, refer to this <a href="../../intermediate/jobs/combat_jobs/index.html">section of the guide</a>.</p>
@@ -119,7 +119,7 @@
                     <p>Test that the item can be obtained, restocked, equipped, that it applies whatever abilities / buffs you added to it, as well as that they get removed when the item is unequipped.</p>
                 </li>
             </ol>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/> Note that for equipment, if you add a <a href="../color_maps/index.html">color map</a> to it in order to make it glow or the like, it won't be correctly applied if it's setup as "merge_with_model". In order to fix this, apply the color map to the base_human.json mixin through a mixinto.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> Note that for equipment, if you add a <a href="../color_maps/index.html">color map</a> to it in order to make it glow or the like, it won't be correctly applied if it's setup as "merge_with_model". In order to fix this, apply the color map to the base_human.json mixin through a mixinto.</p>
             <h2><a name="Buffs"></a>Injecting buffs</h2>
             <p>Injecting buffs, commands and AI is done through arrays inside the "stonehearth:equipment_piece" component:</p>
             <pre><code>  "stonehearth:equipment_piece": {

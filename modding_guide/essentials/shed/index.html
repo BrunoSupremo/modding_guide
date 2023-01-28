@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>How to save time with SHED</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>How to save time with SHED</h1>
             <ul>
@@ -56,17 +56,17 @@
             </p>
             <h2><a name="FirstRun"></a>First time run</h2>
             <p>Find the StonehearthEditor.exe inside the "shed" folder and run it. The first time you run SHED it will ask you to find your mods directory. Usually you would select the "mods" folder inside your Stonehearth folder.
-                <img src="/images/essentials/shed/choose_mods_folder.png" alt="choose_mods_folder"/>
+                <img src="/modding_guide/images/essentials/shed/choose_mods_folder.png" alt="choose_mods_folder"/>
             </p>
             <p>To be able to see and create any content in SHED, the mods must be in plain folders, not in .smod or .zip. If your mods folder contains .smod files, SHED will offer you to uncompress them automatically. After it finishes, you might have to click on "File > Reload" for the mods to be detected by SHED.
-                <img src="/images/essentials/shed/ask_to_unzip.png" alt="ask_to_unzip"/>
+                <img src="/modding_guide/images/essentials/shed/ask_to_unzip.png" alt="ask_to_unzip"/>
                 If you manually unzip your mods, make sure the structure is the same than when we run <a href="../managing/unmanaged/index.html#ModConflicts">uncompressed mods</a> in the game, otherwise SHED won't know how to load them from the "mods" folder.
             </p>
             <p>SHED might take a little while to appear here and / or to load / reload all the mods, so be patient.
-                <img src="/images/essentials/shed/loading_data.png" alt="loading_data"/>
+                <img src="/modding_guide/images/essentials/shed/loading_data.png" alt="loading_data"/>
             </p>
             <p>If you're going to upload your mods to the Steam Workshop, you will have already created them from the Mods menu in the game. In that case, after SHED has finished loading the base mods, go to File->Change Mod Directory:
-                <img src="/images/essentials/shed/steam_uploads_directory.png" alt="steam_uploads_directory"/>
+                <img src="/modding_guide/images/essentials/shed/steam_uploads_directory.png" alt="steam_uploads_directory"/>
             </p>
             <p>You can browse and select your <code>steam_uploads</code> directory for the second text box, and click on 'Apply and reload', which will reload the mods list. Your mods will appear below the list of base mods, they won't get ordered together.</p>
             <p>SHED expects the base mods to always be loaded, and you will also want to have them in order to clone items from them to your mods, so make sure you selected the right <code>mods</code> directory.</p>
@@ -89,7 +89,7 @@
             <ul>
                 <li>About</li>
             </ul>
-            <p><img src="/images/essentials/shed/menubar_options.png" alt="menubar_options"/></p>
+            <p><img src="/modding_guide/images/essentials/shed/menubar_options.png" alt="menubar_options"/></p>
             <p>Then we have the different tabs:</p>
             <ul>
                 <li>Manifest</li>
@@ -98,21 +98,21 @@
                 <li>Effects Editor</li>
                 <li>Recipe Editor</li>
             </ul>
-            <p><img src="/images/essentials/shed/tabs.png" alt="tabs"/></p>
+            <p><img src="/modding_guide/images/essentials/shed/tabs.png" alt="tabs"/></p>
             <p>We'll explain some basics of working with SHED here, and specific tutorials will go in the respective section of the modding guide.</p>
             <h2><a name="Basics"></a>SHED basics</h2>
             <p>The "File > New Mod" option automatically creates a mod folder and a pre-filled manifest for you, but it will be created in the base mods directory (a local mod). This is useful for users that don't use Steam.</p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/> If you use this option, you must enter the <strong>namespace</strong> of your mod in the text box of the dialog, not the name of your mod.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> If you use this option, you must enter the <strong>namespace</strong> of your mod in the text box of the dialog, not the name of your mod.</p>
             <p>For basic modding, we'll be normally working in the Manifest tab.
                 When selecting a node on the treeview, the corresponding files will be opened in different tabs in the central area.
-                <img src="/images/essentials/shed/node_selected.png" alt="node_selected"/>
+                <img src="/modding_guide/images/essentials/shed/node_selected.png" alt="node_selected"/>
                 These are the buttons on top of the tabs:
-                <img src="/images/essentials/shed/tab_bar_buttons.png" alt="tab_bar_buttons"/>
+                <img src="/modding_guide/images/essentials/shed/tab_bar_buttons.png" alt="tab_bar_buttons"/>
             </p>
             <ul>
                 <li>
                     <p><strong>Open File in Text Editor</strong> : this will open the file in the text editor that you have assigned by default to open JSON files. You can change your default editor by right-clicking on a JSON file in the Windows File Explorer, clicking on "Properties", clicking on the "Change..." button and selecting the program of your choice.
-                        <img src="/images/essentials/shed/change_default_app.png" alt="change_default_app"/>
+                        <img src="/modding_guide/images/essentials/shed/change_default_app.png" alt="change_default_app"/>
                     </p>
                 </li>
                 <li>
@@ -123,31 +123,31 @@
                 </li>
                 <li>
                     <p><strong>Localize This File</strong> : this will create the needed locale/en.json file if it doesn't exist, fill it with the appropiate strings and adjust your JSON file to point to them. Instructions on how to setup your file for this option to work correctly <a href="../../basic/adding_items/cloning_with_shed/index.html#AutoLocalization">here</a>.</p>
-                    <p>  <img src="/images/common/row_alert2.png" alt="icon"/> This option might not work for all the files, so there could be some times when you will have to setup the localization of your files manually.</p>
+                    <p>  <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> This option might not work for all the files, so there could be some times when you will have to setup the localization of your files manually.</p>
                 </li>
                 <li>
                     <p><strong>Preview with Mixins</strong> : this will open a window showing how the game will read the file after all the mixins have been applied. It will show comments to highlight the properties that come from mixins. These comments are invalid JSON, so don't copy anything from this window.
-                        <img src="/images/essentials/shed/mixin_preview.png" alt="mixin_preview"/>
+                        <img src="/modding_guide/images/essentials/shed/mixin_preview.png" alt="mixin_preview"/>
                     </p>
                 </li>
             </ul>
             <p>Not all these options appear for all of the files, only the applicable ones will show up.</p>
             <p>On top of the tabs for the JSON files, you might also see more buttons. If you have an application assigned to open QB files by default, you can click in the buttons with the Qubicle icon to open the associated QB model. Same for the icons (.png files), though you can usually see them at the column on the right, above the dependencies.
-                <img src="/images/essentials/shed/top_tab_buttons.png" alt="top_tab_buttons"/>
+                <img src="/modding_guide/images/essentials/shed/top_tab_buttons.png" alt="top_tab_buttons"/>
             </p>
             <p>For localization strings, you can Ctrl+click on them and a dialog will appear allowing you to change the text. You can also know which text do they have by hovering over them, which is pretty convenient.
-                <img src="/images/essentials/shed/auto_loc.png" alt="auto_loc"/>
+                <img src="/modding_guide/images/essentials/shed/auto_loc.png" alt="auto_loc"/>
             </p>
             <p>You can right-click the nodes in the treeview on the left to get different options. These options will be different depending on the type of item selected.
-                <img src="/images/essentials/shed/context_menu.png" alt="context_menu"/>
+                <img src="/modding_guide/images/essentials/shed/context_menu.png" alt="context_menu"/>
             </p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/> Bear in mind that cloning might still have bugs. Only JSON and Lua files with an alias will appear in the treeview of the Manifest tab.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> Bear in mind that cloning might still have bugs. Only JSON and Lua files with an alias will appear in the treeview of the Manifest tab.</p>
             <p>When there's text with a darker background, you can Ctrl-click on it and it will open the referenced file in your default editor for that file's extension. It's also a way for SHED to tell you that it recognized the text as a reference to an existing file.</p>
             <p>SHED will also tell us if there's some problem with one of our files. There will be an icon of a red circle with a cross in the treeview item, and for the tabs once we select it.
-                <img src="/images/essentials/shed/error_icons.png" alt="error_icons"/>
+                <img src="/modding_guide/images/essentials/shed/error_icons.png" alt="error_icons"/>
             </p>
             <p>When there are errors, there will be a text in red in the status bar of SHED. Double click on it, and a list of the affected files will show up in a dialog. Clicking on them once will show more info in the text area above, double-clicking on them will also open them in SHED so that you can modify them and fix the errors.
-                <img src="/images/essentials/shed/error_list.png" alt="error_list"/>
+                <img src="/modding_guide/images/essentials/shed/error_list.png" alt="error_list"/>
             </p>
             <p>If SHED complains about one of your files, but doesn't refresh the error once you fix it and save those changes, use the "File > Reload" option.</p>
             <h3><a name="Workarounds"></a>Some workarounds and important info</h3>

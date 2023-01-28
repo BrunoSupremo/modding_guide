@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Local mods</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Local mods</h1>
             <p>We call "local" mods to any mods that have to be installed and updated manually by the players.
@@ -27,47 +27,47 @@
                 <li>If you installed the game with the Humble Bundle installer, this will normally be at <code>C:\Program Files (x86)\Stonehearth\mods</code>. </li>
                 <li>If you have installed it via Steam, then the mods folder will be at <code>C:\Program Files (x86)\Steam\steamapps\common\Stonehearth\mods</code>. </li>
             </ul>
-            <p><img src="/images/essentials/managing/mods_folder.png" alt="mods_folder"/></p>
+            <p><img src="/modding_guide/images/essentials/managing/mods_folder.png" alt="mods_folder"/></p>
             <p>Once you have placed the mod inside this folder, then all you need to do is start the game, and the mod should be active.
                 If it isn't, go to the Mods menu from the main menu, and make sure the mod is checked in the "Local Mods" list.
-                <img src="/images/essentials/managing/unmanaged_mods.png" alt="unmanaged_mods"/>
-                <img src="/images/essentials/managing/disabled_mod.png" alt="disabled_mod"/>
+                <img src="/modding_guide/images/essentials/managing/unmanaged_mods.png" alt="unmanaged_mods"/>
+                <img src="/modding_guide/images/essentials/managing/disabled_mod.png" alt="disabled_mod"/>
             </p>
             <h3><a name="ModConflicts"></a>Other formats</h3>
             <p>If the mod was provided with an extension other than ".smod" (such as ".zip, or ".rar") you will need to uncompress it.</p>
             <p>The game can read mods in ".smod" format or in plain folders. If you have both for the same mod, it will prefer reading the plain folder.</p>
             <p>If later you updated the .smod, but still having the plain folder, you will get a conflict, since the game will load the plain folder, which doesn't contain the latest version of the mod. This is especially important for the <code>stonehearth</code> mod, if you have it both as plain folder and as .smod, and Steam updates the game, you might get errors, and you will not see the new content. Delete the plain folder to solve this problem.</p>
-            <p><img src="/images/essentials/managing/mod_conflicts.png" alt="mod_conflicts"/></p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/>Make sure that if you uncompress a mod, it doesn't create an inner folder with the same name, otherwise the game won't be able to load the mod properly. Copy and paste the files on the outer directory to solve this problem.</p>
+            <p><img src="/modding_guide/images/essentials/managing/mod_conflicts.png" alt="mod_conflicts"/></p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>Make sure that if you uncompress a mod, it doesn't create an inner folder with the same name, otherwise the game won't be able to load the mod properly. Copy and paste the files on the outer directory to solve this problem.</p>
             <p>Bad unzipping:
-                <img src="/images/essentials/managing/bad_unzipping.png" alt="bad_unzipping"/>
+                <img src="/modding_guide/images/essentials/managing/bad_unzipping.png" alt="bad_unzipping"/>
                 Good unzipping:
-                <img src="/images/essentials/managing/good_unzipping.png" alt="good_unzipping"/>
+                <img src="/modding_guide/images/essentials/managing/good_unzipping.png" alt="good_unzipping"/>
             </p>
             <h2><a name="UninstallManual"></a>Instructions for uninstalling mods manually:</h2>
             <p>If you manually downloaded a mod from an external site, you'll have it placed inside your mods folder.
                 With the game closed, navigate to that directory and delete the corresponding mod's folder or .smod file. Then restart the game.
             </p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/>Bear in mind that savefiles that were made with that mod active will throw errors if you try to load them after uninstalling it (same if you disable the mod instead of deleting it).</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>Bear in mind that savefiles that were made with that mod active will throw errors if you try to load them after uninstalling it (same if you disable the mod instead of deleting it).</p>
             <h2><a name="UploadManual"></a>Instructions for uploading mods manually:</h2>
             <p>After you finish making your mod, it's time to package it for easier sharing. While being in the mods folder, select your mod folder, right-click it and zip it. </p>
             <p>Then rename it so that the extension is .smod instead of .zip (you will get a warning from Windows when changing the extension, just click Yes). That way it'll be faster to install for players. </p>
             <p>Test it again with the smod file only, to check that it is being loaded fine.</p>
-            <p><img src="/images/essentials/managing/zipping_mods.png" alt="zipping_mods"/>
-                <img src="/images/essentials/managing/renaming_to_smod.png" alt="renaming_to_smod"/>
+            <p><img src="/modding_guide/images/essentials/managing/zipping_mods.png" alt="zipping_mods"/>
+                <img src="/modding_guide/images/essentials/managing/renaming_to_smod.png" alt="renaming_to_smod"/>
             </p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/><strong>Don't rename the zip/smod file after compressing your mod folder</strong>. The manifest might become invalid because the inner path doesn't match.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/><strong>Don't rename the zip/smod file after compressing your mod folder</strong>. The manifest might become invalid because the inner path doesn't match.</p>
             <p>Then, upload it to the place of your choice.</p>
             <blockquote>
-                <p><img src="/images/common/row_alert2.png" alt="icon"/> If you plan to upload your mod to the Steam workshop, you shouldn't package it, the upload button will take care of that (also you'll need to generate a Steam file ID for your mod first). Refer to this <a href="../workshop/index.html#UploadWorkshop">section</a> of the guide for more information.</p>
+                <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> If you plan to upload your mod to the Steam workshop, you shouldn't package it, the upload button will take care of that (also you'll need to generate a Steam file ID for your mod first). Refer to this <a href="../workshop/index.html#UploadWorkshop">section</a> of the guide for more information.</p>
             </blockquote>
             <p>For updating local mods, you need to replace the entire .smod file / plain folder by hand with the new version for that mod.</p>
             <h2><a name="UploadTemplates"></a>Instructions for uploading building templates as a mod:</h2>
             <p>The Mods menu includes an easy way to redistribute a pack of building templates as a mod. <br/>
-                <img src="/images/common/row_alert2.png" alt="icon"/> If you download building templates mods as .smod, you will need to uncompress them in order for the game to be able to read the templates. The current version does not support reading templates from compressed mods. Make sure that they have the correct <a href="#ModConflicts">structure</a> after uncompressing them.
+                <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> If you download building templates mods as .smod, you will need to uncompress them in order for the game to be able to read the templates. The current version does not support reading templates from compressed mods. Make sure that they have the correct <a href="#ModConflicts">structure</a> after uncompressing them.
             </p>
             <p>First create a mod with a basic <a href="../../manifest/index.html">manifest</a>. Then, create a folder inside your mod's folder and name it "building_templates":
-                <img src="/images/essentials/managing/template_mod_folder.png" alt="template_mod_folder"/>
+                <img src="/modding_guide/images/essentials/managing/template_mod_folder.png" alt="template_mod_folder"/>
             </p>
             <p>In your manifest, add <strong>"is_building_template_mod" : true</strong> inside your manifest's "info" section and save the changes (remember to add commas where needed):</p>
             <pre><code>  {
@@ -81,17 +81,17 @@
 </code></pre>
             <p>Now in the Mods menu, hover over your mod and click on the <strong>"Edit this mod's list of templates"</strong> button, which has an icon for editing templates.
                 A new window will appear and let you choose from your existing building templates:
-                <img src="/images/essentials/managing/choosing_templates.png" alt="choosing_templates"/>
-                <img src="/images/common/gold.png" alt="icon"/> The templates will be copied to your mod, but they won't be deleted from the main game. If you later decide to add other templates, or remove some of them your mod, you can do so through this menu too (only the templates from your mod will be affected by the deletion).
+                <img src="/modding_guide/images/essentials/managing/choosing_templates.png" alt="choosing_templates"/>
+                <img src="/modding_guide/images/common/gold.png" alt="icon"/> The templates will be copied to your mod, but they won't be deleted from the main game. If you later decide to add other templates, or remove some of them your mod, you can do so through this menu too (only the templates from your mod will be affected by the deletion).
             </p>
             <p>Once you click 'OK', a confirmation dialog will appear:
-                <img src="/images/essentials/managing/confirm_templates.png" alt="confirm_templates"/>
+                <img src="/modding_guide/images/essentials/managing/confirm_templates.png" alt="confirm_templates"/>
                 In the mods list, there will be an arrow button at the right for the mods that have building templates. Clicking on it will expand / collapse the list of templates that the mod has (which is convenient if you need to see which templates are in which mod):
-                <img src="/images/essentials/managing/viewing_templates.png" alt="viewing_templates"/>
-                <img src="/images/essentials/managing/viewing_sh_templates.png" alt="viewing_sh_templates"/>
+                <img src="/modding_guide/images/essentials/managing/viewing_templates.png" alt="viewing_templates"/>
+                <img src="/modding_guide/images/essentials/managing/viewing_sh_templates.png" alt="viewing_sh_templates"/>
             </p>
             <p>Lastly, remember to zip your mod and upload it like explained in the <a href="#UploadManual">above section</a>. Players who download your templates mod will need to uncompress it first. <br/>
-                <img src="/images/common/row_alert2.png" alt="icon"/> If you compress your mod, you won't be able to view / edit its templates from the Mods menu. First you'll need to uncompress it.
+                <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> If you compress your mod, you won't be able to view / edit its templates from the Mods menu. First you'll need to uncompress it.
             </p>
             <p>The game will collect the templates from all the uncompressed mods and will show them in the building editor's template list.</p>
         </main>

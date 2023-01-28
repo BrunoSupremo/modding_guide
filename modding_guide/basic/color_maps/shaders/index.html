@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Materials and shaders</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Materials and shaders</h1>
          <ul>
@@ -199,19 +199,19 @@
      gl_FragColor = outColor.rgba;
   }
 </code></pre>
-         <p><img src="/images/common/edit_big.png" alt="icon"/><strong>Technical note</strong>: in Stonehearth our shaders are written using a slightly older version of GLSL, which means we have some deprecated keywords like 'varying' and 'attribute'. They are still valid in compatibility contexts, more information on that can be found <a href="https://gamedev.stackexchange.com/questions/29672/in-out-keywords-in-glsl">here</a>.</p>
+         <p><img src="/modding_guide/images/common/edit_big.png" alt="icon"/><strong>Technical note</strong>: in Stonehearth our shaders are written using a slightly older version of GLSL, which means we have some deprecated keywords like 'varying' and 'attribute'. They are still valid in compatibility contexts, more information on that can be found <a href="https://gamedev.stackexchange.com/questions/29672/in-out-keywords-in-glsl">here</a>.</p>
          <p>For more information on GLSL you can dive into their docs <a href="https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language">here</a>.</p>
          <h2><a name="Testing"></a>Testing shaders</h2>
          <p>You can enable this property in your user_settings.json to be able to test changes to shaders and cubemitter files without needing to restart the game:</p>
          <pre><code>  "enable_renderer_file_watcher" : true
 </code></pre>
          <p>It should be at the same level than your user_id, make sure to add commas where needed.</p>
-         <p><img src="/images/common/row_alert2.png" alt="icon"/> This option might not always work as expected. You may need to reload the game for the changes to take effect in some cases. Beware of crashes due to wrong filepaths or invalid values in your rendering-related files.</p>
+         <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> This option might not always work as expected. You may need to reload the game for the changes to take effect in some cases. Beware of crashes due to wrong filepaths or invalid values in your rendering-related files.</p>
          <p>Making new render materials and shaders is pretty complex, but if you're feeling adventurous, feel free to copy the existing shaders and tinker with them. Players might have older graphic cards which don't support some of the properties so be careful when creating shaders.</p>
-         <p><img src="/images/common/row_alert2.png" alt="icon"/>For reference, Stonehearth uses OpenGL 4.1 for the high quality renderer, but the low quality renderer works with older drivers, so you should use old style GLSL. You can specify the version of the program to compile at the top of the shader with the <code>#version</code> pragma. See <a href="https://github.com/mattdesl/lwjgl-basics/wiki/GLSL-Versions">this page</a> for a reference. However, note that if you use syntax and functions that are exclusive from recent versions like the 4.1, your shaders might break when compiled by older GPU drivers because they don't support those functions.</p>
-         <p><img src="/images/common/gold.png" alt="icon"/> Sometimes a shader will cause visual glitches that can be avoided if you split the affected voxels to a separate matrix or layer in the QB model (for models that have materials applied only to some of their colors).</p>
-         <p><img src="/images/basic/color_maps/render_materials_layers.png" alt="render_materials_layers"/></p>
-         <p><img src="/images/common/row_alert2.png" alt="icon"/> In the current version of the game, it is a known issue that entities that have render materials won't show an outline when trying to select them. The parts of the model that have the custom render material will show an incorrect selection color.</p>
+         <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>For reference, Stonehearth uses OpenGL 4.1 for the high quality renderer, but the low quality renderer works with older drivers, so you should use old style GLSL. You can specify the version of the program to compile at the top of the shader with the <code>#version</code> pragma. See <a href="https://github.com/mattdesl/lwjgl-basics/wiki/GLSL-Versions">this page</a> for a reference. However, note that if you use syntax and functions that are exclusive from recent versions like the 4.1, your shaders might break when compiled by older GPU drivers because they don't support those functions.</p>
+         <p><img src="/modding_guide/images/common/gold.png" alt="icon"/> Sometimes a shader will cause visual glitches that can be avoided if you split the affected voxels to a separate matrix or layer in the QB model (for models that have materials applied only to some of their colors).</p>
+         <p><img src="/modding_guide/images/basic/color_maps/render_materials_layers.png" alt="render_materials_layers"/></p>
+         <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> In the current version of the game, it is a known issue that entities that have render materials won't show an outline when trying to select them. The parts of the model that have the custom render material will show an incorrect selection color.</p>
       </main>
    </body>
 </html>

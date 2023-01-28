@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Small intro to JSON</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Small intro to JSON</h1>
             <p>In Stonehearth, we use <a href="https://www.json.org/">JSON</a> for our data files (those that are not 3D models / 2D images / scripts / etc).
@@ -59,7 +59,7 @@
   }
 </code></pre>
             <blockquote>
-                <p><img src="/images/common/row_alert2.png" alt="icon"/> We CAN'T have duplicate keys at the same level inside a JSON object. Keys are identifiers, so if instead of "genre" (in the example) we had written "game_name" again, even with a different value, the program that reads the JSON would have trouble determining which one is the correct value that we want to assign to that key.</p>
+                <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> We CAN'T have duplicate keys at the same level inside a JSON object. Keys are identifiers, so if instead of "genre" (in the example) we had written "game_name" again, even with a different value, the program that reads the JSON would have trouble determining which one is the correct value that we want to assign to that key.</p>
             </blockquote>
             <h3><a name="Numbers"></a>Numbers</h3>
             <p>When we need to write values that are not strings, we don't need to use quotes. For example, for using numbers, we write them like this:</p>

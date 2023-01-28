@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Lua scripts</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Lua scripts</h1>
             <p>In this section we'll talk about components, component renderers, controllers and observers. Also about saved variables and the lifetime cycle of these scripts.</p>
@@ -43,7 +43,7 @@
                 </li>
                 <li>
                     <p><strong>initialize()</strong> -- This function is always called after <code>__init</code>. In Lua components, the special <code>self._entity</code> field will be set and you can get the component's JSON data by calling <code>radiant.entities.get_json(self)</code>. You CANNOT access services or public fields (like <code>stonehearth.constants</code>) in <code>initialize()</code> because during restore, those might not exist yet.</p>
-                    <p>  <img src="/images/common/row_alert2.png" alt="icon"/> Important: you must declare all <a href="#SV">saved variable</a> fields in the <code>initialize()</code> function, including nil variables. You can ask the entity if it has other components in the initialize, but note that those other components might not have had <code>initialize()</code> called on them yet.</p>
+                    <p>  <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> Important: you must declare all <a href="#SV">saved variable</a> fields in the <code>initialize()</code> function, including nil variables. You can ask the entity if it has other components in the initialize, but note that those other components might not have had <code>initialize()</code> called on them yet.</p>
                 </li>
                 <li>
                     <p><strong>create()</strong> -- This is called ONCE when the component is first created, either on entity creation or on dynamically added. For controllers, the create function can take arguments passed in from the controller creator.</p>

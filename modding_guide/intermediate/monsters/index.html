@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Critters and monsters</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Critters and monsters</h1>
          <p>Monsters are created like any other living entity (critters, hearthlings...) but there are some extra files we'll want to create if we want to use them for encounters (raids, etc). We can find the existing populations under <code>stonehearth/services/server/population/data</code>.</p>
@@ -128,7 +128,7 @@
 </code></pre>
             </li>
          </ul>
-         <p><img src="/images/common/row_alert2.png" alt="icon"/> Don't forget to add an alias for your population in your manifest! For instance:</p>
+         <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> Don't forget to add an alias for your population in your manifest! For instance:</p>
          <pre><code>  "aliases" : {
      "kingdoms:vampires": "file(services/server/population/data/vampire_population.json)"
   }

@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Collision and destination</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Collision and destination</h1>
          <ul>
@@ -62,7 +62,7 @@
          <h2><a name="RegionCollision"></a>Collision regions</h2>
          <p>The collision region tells the game that a hearthling cannot walk through an object, and that we can't place any other items in that area. Without a collision region, hearthlings will be able to walk straight through the objects!</p>
          <p>The <strong>region_collision_shape</strong> component defines collision regions in terms of its own coordinate system. +Y is the same as the world coordinate system, but +X and +Z are the opposite. It is defined this way so that most values are positive (objects larger than 2 blocks in the X or Z direction may not have all values positive).
-            <img src="/images/intermediate/regions/region_collision.png" alt="region_collision"/>
+            <img src="/modding_guide/images/intermediate/regions/region_collision.png" alt="region_collision"/>
          </p>
          <p>If you press F11 and select an entity, you should be able to see its collision region as a transparent box with light blue edges. It usually overlaps with the destination region, so sometimes it's hard to see one or the other.</p>
          <p>The following is an example taken from <code>stone_chair.json</code>:</p>
@@ -83,9 +83,9 @@
          <pre><code>  "region_collision_shape": {}
 </code></pre>
          <p>in our JSON file (the one for the root entity, NOT in the ghost!) and then open the game and use the <a href="../../../essentials/debugtools/debugtools_mod/index.html#EntityEditor">Entity editor</a> with our item. The pencil with a + sign allows to add a new collision region, the X is to remove them and we can adjust them by using the up and down arrows for each dimension:</p>
-         <p><img src="/images/intermediate/regions/collision_region.png" alt="collision_region"/></p>
+         <p><img src="/modding_guide/images/intermediate/regions/collision_region.png" alt="collision_region"/></p>
          <p>Once you're happy with your collision regions, click on the scroll icon next to the Collision section, click on the Copy button, and paste the data in your JSON file (again remember, collision and destination regions do NOT go in the ghost JSON file).</p>
-         <p><img src="/images/intermediate/regions/copy_json.png" alt="copy_json"/></p>
+         <p><img src="/modding_guide/images/intermediate/regions/copy_json.png" alt="copy_json"/></p>
          <h3><a name="RegionCollisionTypes"></a>Region collision types</h3>
          <p>Besides the collision types, there's also region collision types, but in most cases modders don't need to be concerned about them.</p>
          <ul>
@@ -121,7 +121,7 @@
          <p>in the components of the JSON file of the root entity (NOT the ghost!).</p>
          <p>Now place your item in the world, select it and open the Entity editor. Add a destination region and make sure to check the "Auto update Adjacency" checkbox too. Now you can click on any of the squares of the adjacency flags.</p>
          <p>You should see a transparent box with purple edges (the destination region), and transparent boxes with red edges adjacent to that region. These red boxes define which grid blocks a hearthling can stand on to be considered "next to" the object. The goal is to get the red boxes to contain the grid around the edges of the object (they have to be aligned or else bad things might happen!).</p>
-         <p><img src="/images/intermediate/regions/destination_region.png" alt="destination_region"/></p>
+         <p><img src="/modding_guide/images/intermediate/regions/destination_region.png" alt="destination_region"/></p>
          <p>Hearthlings will walk up to any of the blocks in the adjacency region to start interacting with the object. If our destination region is high, the adjacency region will also be high (but normally it will only be one block thick since hearthlings only need 1 block to stand on the ground).</p>
          <p>By adjusting the destination region and the adjacency flags, we can make the hearthlings interact only from one side of the object. For example, the Potter uses the kiln only from the front side, and beds are only reachable if the blocks next to the longer sides are not occupied by collision boxes of other items.</p>
          <p>The possible adjacency flags are:</p>

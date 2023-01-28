@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Loadouts and shops</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Loadouts and shops</h1>
          <ul>
@@ -82,7 +82,7 @@
          <p>We add an entry with a custom identifier inside <strong>"loadouts"</strong>. The properties are self-explanatory. The <strong>"splash"</strong> and the <strong>"seal"</strong> are the images that appear on the right when we select the loadout. The <strong>"tooltip"</strong> is the text that appears at the bottom of the selected loadout on the right.</p>
          <p>If we want to add some amount of gold, we use <strong>"type" : "gold"</strong>, instead of <strong>"type" : "entity"</strong>.</p>
          <p>Sometimes the <strong>"display_name"</strong> of the items will be long and not fit into the UI, so we can use some custom abbreviated names here:
-            <img src="/images/basic/misc_json/loadouts.png" alt="loadouts"/>
+            <img src="/modding_guide/images/basic/misc_json/loadouts.png" alt="loadouts"/>
          </p>
          <p>To remove an existing loadout, use <a href="../../../essentials/removing/index.html#MixintypeRemove">mixintypes</a>.</p>
          <p>Example mod from a community member that adds many loadouts: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1360030491">Specialized Loadouts</a></p>
@@ -243,12 +243,12 @@
                <p>  First make sure that your town goes through the banner celebration so that we ensure we are on tier 1.</p>
                <p>  Then, open the <a href="../../../essentials/debugtools/debugtools_mod/index.html#CampaignBrowser">campaign browser</a>, click on the node names of the trader campaign encounters to open the small window and click on 'Trigger Now' until you reach the 'spawn shop' encounter.</p>
                <p>  Since the shops are random and we used the same weight for our custom shop, we'll need to trigger the encounter a bunch of times and close the other shops until we see it appear:
-                  <img src="/images/basic/misc_json/trader_campaign.png" alt="trader_campaign"/>
-                  <img src="/images/basic/misc_json/shop_notification.png" alt="shop_notification"/>
+                  <img src="/modding_guide/images/basic/misc_json/trader_campaign.png" alt="trader_campaign"/>
+                  <img src="/modding_guide/images/basic/misc_json/shop_notification.png" alt="shop_notification"/>
                </p>
                <p>  Rayya's children has a different trader campaign, so we'll need to add another mixinto in their arc in order to include our custom shop for them too.
                   Northern alliance reuses the Ascendancy one.
-                  <img src="/images/basic/misc_json/custom_shop.png" alt="custom_shop"/>
+                  <img src="/modding_guide/images/basic/misc_json/custom_shop.png" alt="custom_shop"/>
                </p>
             </li>
          </ol>

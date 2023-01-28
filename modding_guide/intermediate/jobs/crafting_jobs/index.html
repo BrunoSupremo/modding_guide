@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Crafting jobs</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Crafting jobs</h1>
             <p>Let's create a new crafting job. We'll call it Lamplighter, they will craft fuel that will be used to light the lamps in the game (this example job comes from the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1357451622">Silent Woods</a> mod).</p>
@@ -214,7 +214,7 @@
 }
 </code></pre>
                             <p> These properties are used to define the effect that the crafter will play to drop the ingredients on top of the workbench, and an offset to positionate the ingredients once they're dropped and the produced items before the crafter picks them up.</p>
-                            <p> <img src="/images/common/edit_big.png" alt="icon"/> We can define workbench equivalents in the entity_data of the workbench.json file too. For example:</p>
+                            <p> <img src="/modding_guide/images/common/edit_big.png" alt="icon"/> We can define workbench equivalents in the entity_data of the workbench.json file too. For example:</p>
                             <pre><code>"stonehearth:workshop": {
    "equivalents": [ "stonehearth:mason:pedestal:amberstone" ]
 }
@@ -231,7 +231,7 @@
                         </li>
                         <li>
                             <p>We edit the controller file. This is very important. Our renamed controller file will still have the same code inside so we have to rename some stuff in it.</p>
-                            <p> <img src="/images/common/row_alert2.png" alt="icon"/> All jobs in the game inherit from <code>base_job.lua</code>. Crafting jobs inherit from <code>crafting_job.lua</code> instead, because that file already inherits from base_job.lua. The <code>CraftingJob</code> class defined in crafting_job.lua takes care of adding the crafter component to the hearthling and managing the experience gain for crafters when they craft a recipe.</p>
+                            <p> <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> All jobs in the game inherit from <code>base_job.lua</code>. Crafting jobs inherit from <code>crafting_job.lua</code> instead, because that file already inherits from base_job.lua. The <code>CraftingJob</code> class defined in crafting_job.lua takes care of adding the crafter component to the hearthling and managing the experience gain for crafters when they craft a recipe.</p>
                             <p> Our <code>lamplighter.lua</code> file would look like this after we rename Herbalist to Lamplighter and remove all the unneeded code:</p>
                             <pre><code>local CraftingJob = require 'stonehearth.jobs.crafting_job'
 
@@ -279,7 +279,7 @@ end
 </code></pre>
                     <p>  We add a key for our new job, a localized <strong>"name"</strong> and <strong>"description"</strong> for the tooltip, a CSS <strong>"class"</strong> (normally the same than the one that we copied), a <strong>"required_job"</strong> which is the alias of our crafter preceded by our mod's namespace plus a colon, a localized <strong>"required_job_text"</strong> which will be displayed in the tooltip when the player hasn't promoted anyone to our crafting job yet, a path to an <strong>"icon"</strong> to display for the menu item, <strong>"menu_action" : "show_crafter_ui"</strong> (which will make it so that clicking in the button will open our crafter's workshop), and <strong>"hotkey_action"</strong> which will point to a hotkey from <code>hotkeys.json</code> so that players can bind keys to open our crafter's workshop with them.</p>
                     <p>  Mind that if we add a hotkey action here we'll have to add a mixinto to <code>stonehearth/data/hotkeys.json</code> and add the action there too.</p>
-                    <p>  <img src="/images/common/row_alert2.png" alt="icon"/> Make sure to create a recipe for another crafter for your talisman to be obtainable in the game, or make it obtainable in some other way.</p>
+                    <p>  <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> Make sure to create a recipe for another crafter for your talisman to be obtainable in the game, or make it obtainable in some other way.</p>
                 </li>
                 <li>
                     <p>Finally we can test our new crafting job in the game and make sure that everything works as expected.</p>
@@ -319,7 +319,7 @@ end
                     <ul>
                         <li>
                             <p>Search for the 'recipes' node under the 'jobs:carpenter' node of the stonehearth mod, right-click on it, and click on 'Clone'.</p>
-                            <p> <img src="/images/common/row_alert2.png" alt="icon"/> For easier cloning, you can try with the engineer recipe list, which has less items and will be easier to edit.</p>
+                            <p> <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> For easier cloning, you can try with the engineer recipe list, which has less items and will be easier to edit.</p>
                         </li>
                         <li>
                             <p>In the clone dialog, set the Target mod to your mod.</p>

@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>The manifest</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>The manifest</h1>
             <ul>
@@ -39,7 +39,7 @@
             <h2><a name="YourFirstMod"></a>Your first mod</h2>
             <p>To start making your mod, create a folder inside the Stonehearth/mods directory. You can name the folder however you want, but it can ONLY contain alphanumeric characters, hyphens and underscores. We also tend to use lowercase only for the folder name.</p>
             <blockquote>
-                <p><img src="/images/common/row_alert2.png" alt="icon"/> If you're going to upload your mod to the Steam Workshop, you should create your mod folder via the <a href="../managing/workshop/index.html#UploadWorkshop">Mods menu</a>. Alternatively, you can develop your mod in the Stonehearth/mods folder, and when it's ready, generate the mod folder through the Mods menu, copy-paste the contents of your mod, and edit the content of the auto-generated manifest so that it includes your additions.</p>
+                <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> If you're going to upload your mod to the Steam Workshop, you should create your mod folder via the <a href="../managing/workshop/index.html#UploadWorkshop">Mods menu</a>. Alternatively, you can develop your mod in the Stonehearth/mods folder, and when it's ready, generate the mod folder through the Mods menu, copy-paste the contents of your mod, and edit the content of the auto-generated manifest so that it includes your additions.</p>
                 <p>From there on, you should either continue developing your mod inside the auto-generated mod folder, or disable that mod and develop the one inside the mods folder, repeating the steps above whenever you need to push your update to the Workshop. Steps in this guide will refer to the mods folder (local mods), but you can develop your mod inside the auto-generated folder for the Workshop if you want.</p>
             </blockquote>
             <p>Create a text file inside your mod folder and name it <code>manifest.json</code> (make sure the extension is .json and not .json.txt or the like. Enable showing <a href="../stonehearth/index.html#FileExtensions">file extensions</a> so you can see the actual format of the file).
@@ -69,7 +69,7 @@
                 </li>
                 <li>
                     <p>The <strong>version</strong>. <br/>
-                        <img src="/images/common/row_alert2.png" alt="icon"/> The <code>"version"</code> key of the "info" section refers to the modding API version, not to your mod version. It is used to outdate automatically old mods when the API version is changed. To make your mod compatible with the current version of the game, always ensure that it has the same value than the one in the current <code>stonehearth</code> mod.
+                        <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> The <code>"version"</code> key of the "info" section refers to the modding API version, not to your mod version. It is used to outdate automatically old mods when the API version is changed. To make your mod compatible with the current version of the game, always ensure that it has the same value than the one in the current <code>stonehearth</code> mod.
                     </p>
                 </li>
                 <li>
@@ -104,7 +104,7 @@
      "medium_oak_tree" : "file(entities/trees/oak_tree/medium_oak_tree)"
   }
 </code></pre>
-            <p><a name="Filepaths"></a><img src="/images/common/gold.png" alt="icon"/>You may have noticed that the path looks a bit strange. There are several ways in which we can specify the paths. These are all equivalent:</p>
+            <p><a name="Filepaths"></a><img src="/modding_guide/images/common/gold.png" alt="icon"/>You may have noticed that the path looks a bit strange. There are several ways in which we can specify the paths. These are all equivalent:</p>
             <blockquote>
                 <pre><code> "medium_oak_tree" : "file(entities/trees/oak_tree/medium_oak_tree)"
  "medium_oak_tree" : "file(entities/trees/oak_tree/medium_oak_tree/medium_oak_tree.json)"
@@ -137,7 +137,7 @@
             <pre><code>  "dependencies" : [ "mod_a", "mod_b"]
 </code></pre>
             <p>This way, if our mod overrides the same files than "mod_a" or "mod_b", our overrides will win, because they'll be loaded last.</p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/> This won't force dependencies nor warn the players if they're missing the dependencies. Modders should talk among themselves to decide which mod should add the dependency, and tell players to install the mods they require.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> This won't force dependencies nor warn the players if they're missing the dependencies. Modders should talk among themselves to decide which mod should add the dependency, and tell players to install the mods they require.</p>
             <p>The base mods will be loaded first. In multiplayer, client_only mods will be ordered separately, since the host might not have them. The "dependencies" field won't affect hotloaded manifests.</p>
             <p>If the game detects a circular dependency (like mod_a depends on mod_b which depends on mod_c which depends on mod_a), these mods will be temporarily disabled (it won't affect the user_settings disabled setting and won't change the checkbox in the Mods menu). They will be disabled in case the dependency could cause bugs in the game. A pop up will appear after the mods have been loaded telling which ones have the circular dependency and will therefore be disabled.</p>
             <p>In the same way, if we have a mod that has a dependency, but the depended mod is not installed or is disabled, the game will ignore the dependency and just load that mod as if it didn't have it.</p>

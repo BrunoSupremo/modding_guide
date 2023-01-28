@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Plants and trees</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Plants and trees</h1>
          <p>We've learned how to create renewable and non-renewable resources in a <a href="../renewable_resources/index.html">previous section</a>. Here we'll see how we can add them to an existing biome so that they spawn at world generation. For how to create your own biome from scratch, follow this other <a href="../../intermediate/biomes/index.html">guide</a>.</p>
@@ -76,7 +76,7 @@
                <p>  Then, in the <strong>"scattered" : { "plants" : {} }</strong> section we have the <strong>"weights"</strong> for the different terrain elevations. Each number key inside <strong>"plains"</strong>, <strong>"foothills"</strong> and <strong>"mountains"</strong> represents a terrain elevation. Inside of them, we declare our plant's alias again and assign a <a href="../misc_json/index.html#WeightedSets">weight</a> to it (the weights are calculated with all the plants inside that entry).</p>
                <p>  This way we determine how often compared to other plants will our plant appear for each terrain elevation.</p>
                <p>  Now we can test and see if our plant appears in the temperate biome:
-                  <img src="/images/basic/plants/plants.png" alt="plants"/>
+                  <img src="/modding_guide/images/basic/plants/plants.png" alt="plants"/>
                </p>
             </li>
          </ol>
@@ -174,7 +174,7 @@
 </code></pre>
                <p>  When a season changes, the first days of the new season will be of transition. During this period the terrain will change its color palette gradually, and the entities that have seasonal variants will swap their models at a random moment during the transition. They will also prefer switching models during the night (so there will be nights when no model will change and other nights when several of them will be swapped).</p>
                <p>  To test, it's faster to just choose different starting seasons and check that the plant has spawned in the correct seasonal variant, since seasons take a long time to pass even while playing at higher speeds.</p>
-               <p>  <img src="/images/basic/plants/seasonal_models.png" alt="seasonal_models"/></p>
+               <p>  <img src="/modding_guide/images/basic/plants/seasonal_models.png" alt="seasonal_models"/></p>
             </li>
          </ol>
       </main>

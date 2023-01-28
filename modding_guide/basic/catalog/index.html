@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>The catalog</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>The catalog</h1>
             <p>The catalog service takes care of cataloging the entities based on properties inside the entity_data of those entities.</p>
@@ -25,23 +25,23 @@
   }
 </code></pre>
             <p>Since it's inside "entity_data", this information will be the shared by every item of this type. The usual properties are <strong>"display_name"</strong>, <strong>"description"</strong> and <strong>"icon"</strong>, which will be shown in the unit frame when you select this item inside the game (in any of its entity forms). If we wanted, we could have different properties for the <a href="../adding_items/index.html#Iconic">iconic version</a>, since it's a separate entity on itself.
-                <img src="/images/basic/catalog/unit_frame.png" alt="unit_frame"/>
+                <img src="/modding_guide/images/basic/catalog/unit_frame.png" alt="unit_frame"/>
             </p>
             <p>Besides those, we also have <strong>"category"</strong>, <strong>"material_tags"</strong>, and <strong>"subjects"</strong>. <br/>
-                <img src="/images/common/row_alert2.png" alt="icon"/><strong>The values for these three properties are not meant to be localized</strong> (they're not inside "i18n()"), they are used by the game to assign categories internally.
+                <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/><strong>The values for these three properties are not meant to be localized</strong> (they're not inside "i18n()"), they are used by the game to assign categories internally.
             </p>
             <p><a name="MaterialTags"></a>The <strong>"material_tags"</strong> is a string of materials separated by spaces. Alternatively, we can declare it as an array of strings, which will make it more compatible with other mods:</p>
             <pre><code>    "material_tags": [ "plant", "stockpile_plant" ]
 </code></pre>
             <p>This way mods can add tags to this item without changing the whole string, which could overwrite other mod's added tags.</p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/>If you need to add a material tag to an item that has them as a string separated by spaces, your mixinto will need to have a string separated by spaces too, overwriting the whole value. If you want to convert it to an array (or viceversa), you'll need to use a <a href="../../essentials/removing/index.html#MixintypeOverride">mixintype</a> to override the JSON node.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>If you need to add a material tag to an item that has them as a string separated by spaces, your mixinto will need to have a string separated by spaces too, overwriting the whole value. If you want to convert it to an array (or viceversa), you'll need to use a <a href="../../essentials/removing/index.html#MixintypeOverride">mixintype</a> to override the JSON node.</p>
             <p>It is very important that you fill this field correctly when creating your own items, since they are restocked to the storage based on one or more of these tags. In this case, the "stockpile_plant" tag will make it so the item is restocked to stockpiles and crates with the plant filter enabled.
-                <img src="/images/basic/catalog/storage_filter.png" alt="storage_filter"/>
+                <img src="/modding_guide/images/basic/catalog/storage_filter.png" alt="storage_filter"/>
             </p>
             <p>When you tick the "All" checkbox in a stockpile, it will accept every item, without checking the tags. When you tick the "None" checkbox, the stockpile will refuse any item whatever their tags are. If you tick every filter, the "All" box will automatically tick, but it will not accept all items, just every items that match at least one of the filters.</p>
             <p>The other tags defined here are used to catalog the item, and can be consulted like any other entity_data. For example, we could have "flammable" as one of the material tags and in some Lua file, check for all the entities with that tag and set fire to them (running a VFX, destroying the entities after some time has passed, or changing their model variants to give them a burnt look).</p>
             <blockquote>
-                <p><img src="/images/common/gold.png" alt="icon"/> You might still see a "material" component in some of the game files. This is deprecated and has been replaced by the "material_tags" inside the "stonehearth:catalog" key from the entity_data.</p>
+                <p><img src="/modding_guide/images/common/gold.png" alt="icon"/> You might still see a "material" component in some of the game files. This is deprecated and has been replaced by the "material_tags" inside the "stonehearth:catalog" key from the entity_data.</p>
             </blockquote>
             <p>A list with the existing storage filters is in <strong>stonehearth/ui/data/stockpile_filters.json</strong> and a list with the filters for the input boxes is in <strong>stonehearth/ui/data/input_box_filters.json</strong>. They are defined there, along with the localized string for displaying their name in the UI, their icon, order, etc. You can add <a href="../storages/index.html#Filters">your own filters</a> with mixintos to these files.</p>
             <p>The <strong>"category"</strong> is a generic category used for some of the traits and components, as well as to catalog your inventory (for edibles, wealth and showing groups of items in some of the menus). You can use it like the material tags, and use your own category if you want. There isn't a list of the existing categories, but if you copy a similar item from the stonehearth mod it will already have an appropiate category.</p>

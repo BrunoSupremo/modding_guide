@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Other effects</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Other effects</h1>
             <p>There are some types of effects we haven't talked about yet.</p>
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                     <p><strong>"duration"</strong> -- optional field. Duration of the sound track in milliseconds. It doesn't need to match the natural duration of the sound.</p>
-                    <p>  <img src="/images/common/edit_big.png" alt="icon"/> The way these four fields interact is:</p>
+                    <p>  <img src="/modding_guide/images/common/edit_big.png" alt="icon"/> The way these four fields interact is:</p>
                     <ul>
                         <li>The sound starts at <strong>"start_time"</strong>.</li>
                         <li>If <strong>"loop"</strong> is set, the sound loops for the <strong>"duration"</strong>.</li>
@@ -67,7 +67,7 @@
                 </li>
                 <li>
                     <p><strong>"max_distance"</strong> -- optional field (60 by default). The maximum distance at which the sound will be audible.</p>
-                    <p>  <img src="/images/common/edit_big.png" alt="icon"/>Note: for this type of sound that is based on distance / location, make sure that your sound file is exported as mono, not as stereo, otherwise there'll be weird echoing. We can use a high value if we want the sound to be audible from far away.</p>
+                    <p>  <img src="/modding_guide/images/common/edit_big.png" alt="icon"/>Note: for this type of sound that is based on distance / location, make sure that your sound file is exported as mono, not as stereo, otherwise there'll be weird echoing. We can use a high value if we want the sound to be audible from far away.</p>
                 </li>
                 <li>
                     <p><strong>"falloff"</strong> -- optional field (defaults to 1). The attenuation for the sound (when at a distance, the sound will be less audible). Can contain decimals.</p>
@@ -80,7 +80,7 @@
                 </li>
                 <li>
                     <p><strong>"max_instances"</strong> -- optional field. This is useful when many instances of this sound can be running at the same time. For example, if we wanted that only one lullaby is heard regardless of how many hearthlings are sleeping nearby, we'd set this to 1.</p>
-                    <p>  <img src="/images/common/row_alert2.png" alt="icon"/>Mind that for this particular example, when the first hearthling (who started to play the lullaby) wakes up, the sound will stop, no matter if there are other hearthlings nearby still sleeping (they cancelled playing their sounds because we already got to the <strong>"max_instances"</strong>). If another hearthling goes to sleep after the first one woke up, then the sound will be played again.</p>
+                    <p>  <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>Mind that for this particular example, when the first hearthling (who started to play the lullaby) wakes up, the sound will stop, no matter if there are other hearthlings nearby still sleeping (they cancelled playing their sounds because we already got to the <strong>"max_instances"</strong>). If another hearthling goes to sleep after the first one woke up, then the sound will be played again.</p>
                 </li>
                 <li>
                     <p><strong>"repeat"</strong> -- optional field (defaults to <strong>false</strong>). Provided your effect contains at least an animation track and a sound track, we restart the sound when the animation loops. This is normally true without needing this field, but in rare cases where the sound effect has a longer duration than the animation you might want to use it to change how it's played. It depends on the duration / loop / start_time and end_time that you set up for your tracks.</p>
@@ -109,7 +109,7 @@
             <p>We call the <code>'radiant:play_sound'</code> function and pass an object that contains the URI of the track that we want to play.</p>
             <h2><a name="UnitStatus"></a>Unit status effects</h2>
             <p>The bubbles that appear on top of hearthlings when they talk, or the heart that appears when a hearthling loses health are unit status effects.</p>
-            <p><img src="/images/art/vfx/unit_status_effects.png" alt="unit_status_effects"/></p>
+            <p><img src="/modding_guide/images/art/vfx/unit_status_effects.png" alt="unit_status_effects"/></p>
             <p>They are achieved by attaching an image that always faces the camera to a bone from the hearthling's rig (or to a certain distance from the center of any entity).</p>
             <p>This is an effect track for a unit status effect:</p>
             <pre><code>  "unit_status_effect": {
@@ -193,7 +193,7 @@
             <p>You can find more examples of unit status effects in <code>stonehearth/data/effects</code>, although the effects there are mixed. There's also some unit status effects that have an animation track, those are under the <code>stonehearth/data/rigs</code> folder, but finding them is harder.</p>
             <h2><a name="ActivityOverlay"></a>Activity overlay effects</h2>
             <p>The toast that appears hovering above an entity when we mark it for harvesting, looting, etc. is an activity overlay effect.</p>
-            <p><img src="/images/art/vfx/activity_overlay_effects.png" alt="activity_overlay_effects"/></p>
+            <p><img src="/modding_guide/images/art/vfx/activity_overlay_effects.png" alt="activity_overlay_effects"/></p>
             <p>This is mostly used for non-animated entities. Example of an activity overlay track:</p>
             <pre><code>  "activity_overlay_effect": {
      "type" : "activity_overlay_effect",
@@ -253,7 +253,7 @@
             </ul>
             <h2><a name="SHED"></a>Creating other effects with SHED</h2>
             <p>We already mentioned <a href="../index.html#SHED">one way</a> to create effects with SHED. There's another option: go to the Effects Editor, find a similar effect than what you want to create in the 'Effects' tab. Right click on it, click on 'Clone', change the target mod to your mod and provide a replacement name.</p>
-            <p><img src="/images/art/vfx/cloning_effect_from_effects_tab.png" alt="cloning_effect_from_effects_tab"/></p>
+            <p><img src="/modding_guide/images/art/vfx/cloning_effect_from_effects_tab.png" alt="cloning_effect_from_effects_tab"/></p>
             <p>Then confirm, and the tree view will refresh to add your effect. Edit it since the replacement texts might be pointing to unexisting files and change the rest of properties to what you want to.</p>
             <p>With this method you will need to add an alias for the effect separately, but you can do so in the Manifest view: right click in your mod's name, click on 'Add New Alias', select the file that was created, and then a popup will appear for you to edit the alias.</p>
             <p>With the other method the alias will be generated when cloning the effect file, so it might be faster. You'll need to create any additional files separately, or reuse some from the stonehearth mod.</p>

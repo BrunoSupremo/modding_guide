@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Components</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Components</h1>
             <p>As explained in the <a href="../../../essentials/entities_components/index.html#Components">essentials guide</a>, components are reusable functionality that defines behaviors for entities. You can find the Lua components under <code>stonehearth/components</code>.</p>
@@ -60,7 +60,7 @@
 
   return MyComponent
 </code></pre>
-            <p><img src="/images/common/edit_big.png" alt="icon"/>All components have a <code>self._entity</code> field that is the entity that the component is created on. We can use <a href="../index.html#SV">saved variables</a> and <a href="../index.html#ControllerLifecycle">lifecycle functions</a> in them.</p>
+            <p><img src="/modding_guide/images/common/edit_big.png" alt="icon"/>All components have a <code>self._entity</code> field that is the entity that the component is created on. We can use <a href="../index.html#SV">saved variables</a> and <a href="../index.html#ControllerLifecycle">lifecycle functions</a> in them.</p>
             <p>You can add Lua implemented components to JSON files by giving the name of the component (prefixed by the mod's namespace plus a colon) to the <strong>"components"</strong> section of the entity's JSON file. For example, this is the workshop component (implemented in <code>workshop_component.lua</code>) from <code>carpenter_workbench.json</code>:</p>
             <pre><code>  "components" : {
      "stonehearth:workshop": {

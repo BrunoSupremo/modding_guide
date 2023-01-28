@@ -2,18 +2,18 @@
      <head>
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-          <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-          <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-          <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+          <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+          <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+          <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+          <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
           <title>Mixintos and overrides</title>
      </head>
      <body>
-          <script src="/menus.js"></script>
+          <script src="/modding_guide/menus.js"></script>
           <main>
                <h1>Mixintos and overrides</h1>
                <p>Using Mixintos and Overrides, you'll be able to modify content in the Stonehearth mod (or in any mod, actually) without tampering with the mod's internal files. Both mixintos and overrides are specified in your mod's manifest.</p>
-               <p><img src="/images/common/row_alert2.png" alt="icon"/> Remember to add commas only when <a href="../json/index.html">needed</a>, or the game won't be able to read your manifest and it won't be able to load your mod. See these other <a href="../debugging/index.html">tips</a> for debugging.</p>
+               <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> Remember to add commas only when <a href="../json/index.html">needed</a>, or the game won't be able to read your manifest and it won't be able to load your mod. See these other <a href="../debugging/index.html">tips</a> for debugging.</p>
                <ul>
                     <li><a href="#Mixintos">The mixinto</a></li>
                     <li><a href="#ModifyingMixinto">Modifying content using mixintos</a></li>
@@ -93,7 +93,7 @@
 </code></pre>
                <p>Of course you can have the same path in your mod so that your files are organized in the same way than in the stonehearth mod, if you want.</p>
                <p>In this case, "my_effect.json" does not exist in the stonehearth mod, only in our mod, but by specifying it like this in the manifest, the game will think that it really has that non-existent file and will override it with our content. When will this effect/animation be played is another issue.</p>
-               <p><img src="/images/common/row_alert2.png" alt="icon"/> Notice that the paths in these overrides (the paths to files that don't exist inside the stonehearth mod) <strong>don't</strong> start by a forward slash. For this type of overrides they must be declared this way, otherwise they won't work. <br/>
+               <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> Notice that the paths in these overrides (the paths to files that don't exist inside the stonehearth mod) <strong>don't</strong> start by a forward slash. For this type of overrides they must be declared this way, otherwise they won't work. <br/>
                     Other full paths in the manifest and the rest of files must start by a forward slash unless specified otherwise. Some of them will work fine either with or without the slash but for consistency we'll be using the same syntax throughout our examples.
                </p>
                <h2><a name="Compatibility"></a>Mod compatibility</h2>

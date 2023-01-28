@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Adding commands</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Adding commands</h1>
             <ul>
@@ -29,10 +29,10 @@
             <h2><a name="Commands"></a>What is a command?</h2>
             <p>A command is an order that the players can issue on an entity they have clicked on. For example, "Release Pet" for pets, "Move Item" for decorations, and "Workshop" for workbenches and crafters. They are managed through the commands component.</p>
             <p>Below are some command buttons on a hearthling's unit frame (the UI bar that displays information about a hearthling):
-                <img src="/images/intermediate/commands/unit_frame.png" alt="unit_frame"/>
+                <img src="/modding_guide/images/intermediate/commands/unit_frame.png" alt="unit_frame"/>
             </p>
             <p>The citizens panel lists all commands available for the selected hearthling too, so that we can use them from there.
-                <img src="/images/intermediate/commands/citizens_panel.png" alt="citizens_panel"/>
+                <img src="/modding_guide/images/intermediate/commands/citizens_panel.png" alt="citizens_panel"/>
             </p>
             <p>It also adds the "Change Jobs" button, which isn't treated as a command, it will directly bring up the promotion UI. You can also open the promotion tree by clicking on the job icon inside the character sheet.</p>
             <h2><a name="AddingCommands"></a>Adding commands to an entity</h2>
@@ -143,7 +143,7 @@
 </code></pre>
             <p>In the <strong>"controller"</strong> field we define the file where the code of the <code>use_consumable_on_town</code> function is actually located. Normally it's in a call handler (they'll be explained in advanced sections of the guide). We also have to define if the <strong>"endpoint"</strong> is <strong>"client"</strong> or <strong>"server"</strong>, depending on whether the function should be executed on the client side or on the server side.</p>
             <p>In our command's JSON file we have the <strong>"args"</strong> array to pass arguments to the function (check the <code>default_arrows.json</code> and <code>summon_titan_from_gong.json</code> commands for examples).</p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/>Note that, even when we leave the "args" array empty, the first argument that will be passed is always the entity from which we executed this command.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>Note that, even when we leave the "args" array empty, the first argument that will be passed is always the entity from which we executed this command.</p>
             <h3><a name="CallObject"></a>Call object</h3>
             <p>We can call a function on an object (like a service), if we add the <strong>"object"</strong> field. For example:</p>
             <pre><code>  {
@@ -160,7 +160,7 @@
   }
 </code></pre>
             <p>Here the code of the <code>restore_terrain_command</code> function (notice that is not preceded by the namespace of the mod!) is defined in the building service (stonehearth.building), which is an object instantiated by the game. Remember that the first object of the "args" array will be the entity from which we executed this command.</p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/> For calling functions on an object in this way, we must add them to the manifest in the <strong>"object_commands"</strong> section (shortened example from the stonehearth manifest):</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> For calling functions on an object in this way, we must add them to the manifest in the <strong>"object_commands"</strong> section (shortened example from the stonehearth manifest):</p>
             <pre><code>  "object_commands": {
      "building": [
         "restore_terrain_command"

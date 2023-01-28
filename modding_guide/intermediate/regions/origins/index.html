@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Origins</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Origins</h1>
             <ul>
@@ -28,7 +28,7 @@
             <p>You can define the center (origin) of your objects and how they will rotate by using the <strong>mob</strong> component.</p>
             <p>In general, models have an origin at the centre of the surface to which they are attached. For furniture, they are normally attached to the ground, so the origin is at the centre of the bottom. Some decorations are attached to walls, so their origin is the centre of the block that attaches to the wall. Other items like weapons and armor have special rules for their origins and so aren't discussed here. Check <a href="../../../basic/wearables/weapons/index.html">this page</a> for how to align them.</p>
             <p>If you have <a href="../../../essentials/debugtools/index.html#DebugKeys">debug keys</a> enabled, you can press F11 to see the axes of a given object. They represent where the origin (0,0,0) is in the voxel editor for that model, the point around which the object will rotate in the game, and the location where the game thinks that the entity is. Here's a barrel icon and you can see that the origin comes from the middle of the bottom.
-                <img src="/images/intermediate/regions/barrel_iconic.png" alt="barrel_iconic"/>
+                <img src="/modding_guide/images/intermediate/regions/barrel_iconic.png" alt="barrel_iconic"/>
             </p>
             <h2><a name="ModelOrigin"></a>Model origin</h2>
             <p>The <strong>model_origin</strong> is an offset (defined in terms of the world axis coordinate system) so that the model aligns well with the world. It works based on the origin of the model itself (which is defined in Qubicle/your voxel editor).</p>
@@ -43,7 +43,7 @@
                     <p>  Some models have X and Z dimensions that are not exactly divisible by 2. Setting their model origin is easy because there is a single voxel that is the center of the model.</p>
                     <p>  When this happens, you set that dimension to 0.05 so that it corrects the alignment in the world. The value should always be 0 or + or - 0.05 (given that the default <a href="../../../basic/adding_items/item_scale/index.html">scale</a> for objects is 0.1). If the model needs to be positioned by larger amounts, then you can and should do that in your voxel editor.</p>
                     <p>  For instance, if you create an object in Qubicle that is 3x3 blocks in the X and Z directions, you'll need to set model_origin to something like -0.05 for X and 0.05 for Z. Try it out in the Entity editor and click on "Update" to apply the changes, then try rotating the object again and observe if the model gets displaced.</p>
-                    <p>  <img src="/images/intermediate/regions/odd_sized.png" alt="odd_sized"/></p>
+                    <p>  <img src="/modding_guide/images/intermediate/regions/odd_sized.png" alt="odd_sized"/></p>
                     <p>  Whether you use -0.05 for X or Z depends on how you orient the object itself around the origin in Qubicle. With this example, the central voxel is placed in the positive direction of both X and Z. X set to -0.05 because that is the difference between the origin point (0,0,0) and the actual centre of the object (0.05, 0, 0.05) in Qubicle.</p>
                     <p>  But why is Z +0.05 when X is -0.05? As discussed before, the coordinate system of Qubicle is different to the coordinate system of Stonehearth. The exact difference is the direction of the Z-Axis. In Qubicle, the positive Z-Axis points towards the back of an object (or the "north"). In Stonehearth, the positive Z-Axis points to the front of an object (or the "south"). So you actually want to use the opposite adjustment in the Z-Axis compared to the model position in Qubicle.</p>
                 </li>
@@ -51,16 +51,16 @@
                     <p>Model origin for even-sized models:</p>
                     <p>  For a model where either one or both of the sides are even, you have to decide which of the off center points the model will rotate around.</p>
                     <p>  If we have an object that is 2 world units wide and long, then the true centre of the object is where 4 blocks join and not at the centre of one. For example, if we want to align this anvil to occupy 2x2 units, the center would be where the yellow circle is:
-                        <img src="/images/intermediate/regions/suggested_origin.png" alt="suggested_origin"/>
+                        <img src="/modding_guide/images/intermediate/regions/suggested_origin.png" alt="suggested_origin"/>
                     </p>
                     <p>  Any of the grid squares A, B, C, or D can serve as the rotation point. Since the anvil will be a 2x2, let's choose grid square A to be the rotation center. We have to manually move the anvil model half a block in X and Z so that quadrant A (where the axes are) is in the back left corner.</p>
                     <p>  Setting the model origin to be (0.5, 0, 0.5) moves the anvil model so that visually, the back left of the model is on top of the green line. Now the anvil fits within a 2x2 grid, which is what we wanted:
-                        <img src="/images/intermediate/regions/model_origin.png" alt="model_origin"/>
+                        <img src="/modding_guide/images/intermediate/regions/model_origin.png" alt="model_origin"/>
                     </p>
                     <p>  We could also have moved the anvil in other direction to make it fit within the 2x2 grid, in which case the rotation point might not have been in square A.</p>
                 </li>
             </ul>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/> If you modified the scale of your item in the render_info component, the values for the origins might not be exactly 0.05 or 0.5, you'll have to try other values until it feels right.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> If you modified the scale of your item in the render_info component, the values for the origins might not be exactly 0.05 or 0.5, you'll have to try other values until it feels right.</p>
             <h3><a name="AxisAlignment"></a>About axis alignment flags</h3>
             <p>The axis alignment flags are a cheap way to align models to the grid, especially if they're even sided, but they may require that the model is moved in the QB file if one of the lengths is odd. It might not always be possible to use them if the object has animations that expect the model's matrices to be in a specific location.</p>
             <p>In the stonehearth mod, they're normally used for windows, doors, some containers and some other entities that have scale 1:1 with the world. You can try checking one or both in the Entity editor and see if they align your model to the world like you wanted.</p>
@@ -81,7 +81,7 @@
        "region_origin" : { "x": 0.5, "y": 0, "z": 0.5 }
     }
 </code></pre>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/> If your region_origin is incorrect, the collision region will not match the position of the model as it rotates.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> If your region_origin is incorrect, the collision region will not match the position of the model as it rotates.</p>
             <h2><a name="Files"></a>Where should origins go</h2>
             <p>The origin information for your object should go in the ghost.json file when it is available. The regular JSON file mixes information in from the ghost.json file, so you won't need to repeat it.</p>
             <p>If your object can't be placed in the world by the player, then it won't have a ghost.json file and only then do you put your origin information in the regular json file. Failure to do so leads to situations where the ghost object and regular object do not have the same origins and the position of the object jumps when an item is placed.</p>
@@ -93,7 +93,7 @@
             <pre><code>  "model_origin": { "x": 0, "y": -0.5, "z": -0.5 }
 </code></pre>
             <p>In Qubicle we need to align the part of the model that will be hanging from the wall with (0,0,0). Also it should be in the negative Z space, so that it's easier to align it with walls later. Some hangable items (like planters for the windows) might not be aligned like this in Qubicle.</p>
-            <p><img src="/images/intermediate/regions/hangable_items.png" alt="hangable_items"/></p>
+            <p><img src="/modding_guide/images/intermediate/regions/hangable_items.png" alt="hangable_items"/></p>
             <p>The region origin for hangable items follows the same rules than for any other entity.</p>
         </main>
     </body>

@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>For existing entities</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>For existing entities</h1>
             <ul>
@@ -67,11 +67,11 @@
                 </li>
                 <li>
                     <p>If the model appears all white, click on the small circular icon here and change it to "Texture":</p>
-                    <p>  <img src="/images/art/vfx/blender_toggling_texture.png" alt="blender_toggling_texture"/></p>
+                    <p>  <img src="/modding_guide/images/art/vfx/blender_toggling_texture.png" alt="blender_toggling_texture"/></p>
                 </li>
                 <li>
                     <p>Check that the object has each part separated, in case something went wrong when exporting to <strong>.obj</strong>. When right-clicking on different parts of the model, only that part should show an orange outline, and its name should appear at the bottom left of the scene:</p>
-                    <p>  <img src="/images/art/vfx/blender_object_names.png" alt="blender_object_names"/></p>
+                    <p>  <img src="/modding_guide/images/art/vfx/blender_object_names.png" alt="blender_object_names"/></p>
                 </li>
             </ol>
             <h3><a name="Rigging"></a>Loading the rig files</h3>
@@ -82,7 +82,7 @@
                 </li>
                 <li>
                     <p>Find the skeleton JSON file. In our case we're going to use the male hearthling model, so we search for the male skeleton. Select it, and click on 'Import File':</p>
-                    <p>  <img src="/images/art/vfx/blender_importing_skeleton.png" alt="blender_importing_skeleton"/></p>
+                    <p>  <img src="/modding_guide/images/art/vfx/blender_importing_skeleton.png" alt="blender_importing_skeleton"/></p>
                 </li>
                 <li>
                     <p>Now you should see the name of the skeleton file in the "Stonehearth UI" section of the scene menu, which confirms that we loaded a skeleton file.</p>
@@ -95,15 +95,15 @@
                     <p>  If something went wrong, the circle at the side of "Skeleton" will become red. In that case, you can click on the Skeleton or Meta buttons in the "Reset:" section to unload those files, check them manually and try loading them again.</p>
                     <p>  The circle should become green if the skeleton was loaded correctly, but if it doesn't (and it's not red either), check the "Debugging info (on/off)" checkbox to expand the debugging info. There it will mention if there's some object missing or that shouldn't be there, and it'll say if the skeleton and meta files were loaded correctly.</p>
                     <p>  For example, here the add-on detected that some names do not match. Taking a look at the hierarchy, turns out the shoulders have <code>_0</code> in their names:</p>
-                    <p>  <img src="/images/art/vfx/blender_error_preparing_skeleton.png" alt="blender_error_preparing_skeleton"/></p>
+                    <p>  <img src="/modding_guide/images/art/vfx/blender_error_preparing_skeleton.png" alt="blender_error_preparing_skeleton"/></p>
                     <p>  So we can click on them, go to the object menu (an orange cube icon), and rename them there (press Enter so that the name is saved). Then we have to rename them in the object data menu too (an inverted triangle icon).</p>
-                    <p>  <img src="/images/art/vfx/blender_renaming_objects.png" alt="blender_renaming_objects"/></p>
+                    <p>  <img src="/modding_guide/images/art/vfx/blender_renaming_objects.png" alt="blender_renaming_objects"/></p>
                     <p>  When in doubt, you can reset the skeleton and meta files and import them again, but often it is preferred to restart from a clean scene, as some bad information might have been carried by the errors.</p>
                     <p>  Normally when there's a problem it's due to some issue with the meta file or the name / number of bones don't match the expected values. Make sure that the circle is green before proceeding. In case you run into an issue, the "Debugging Info" section might provide some hints about the issue.</p>
                 </li>
                 <li>
                     <p>Now click on "Prepare Animation". If there are no errors, the model should move to the center of the grid in the scene, with the feet aligned to the floor.</p>
-                    <p>  <img src="/images/art/vfx/blender_animation_prepared.png" alt="blender_animation_prepared"/>
+                    <p>  <img src="/modding_guide/images/art/vfx/blender_animation_prepared.png" alt="blender_animation_prepared"/>
                         Same than before, if the circle for "Animation" becomes red, check the debugging info to see what happened. If it fails to move the entire model to the center of the scene, there might be something wrong with the relationships between bones / meshes. Check to see if a meta-file was loaded, or if the relationships have been created properly.
                     </p>
                     <p>  Be sure that you have centered your model before starting with the animation work. Otherwise, the animation might not perform as expected while it is running in Stonehearth. So make sure that the circle is green before proceeding.</p>
@@ -155,7 +155,7 @@
                 </li>
                 <li>
                     <p>Then, decide how many frames you want your animation to have, and type them in the 'End' textbox of the Timeline (the gray wide section at the bottom of the window), and press <code>Enter</code> to confirm. You can change them later if you need to. You should see the gray bar increasing or decreasing depending on your values:</p>
-                    <p>  <img src="/images/art/vfx/blender_timeline.png" alt="blender_timeline"/></p>
+                    <p>  <img src="/modding_guide/images/art/vfx/blender_timeline.png" alt="blender_timeline"/></p>
                     <p>  Animations in Stonehearth play at 30 frames per second. In general, we want short animations but sometimes they need to be long if the motion is meant to be slow (e.g. breathing, walking...). You can zoom in/out the timeline by scrolling with the mousewheel when hovering over it, and then there's a scrollbar at the bottom to move it left or right. That will make it easier to select the frames.</p>
                 </li>
                 <li>
@@ -179,7 +179,7 @@
                         </li>
                         <li>
                             <p>If you need more precision, open the hidden menu by pressing <code>N</code> and you'll see the transform / rotation / scale in numbers, which can be manually typed there:</p>
-                            <p> <img src="/images/art/vfx/blender_numerical_transforms.png" alt="blender_numerical_transforms"/></p>
+                            <p> <img src="/modding_guide/images/art/vfx/blender_numerical_transforms.png" alt="blender_numerical_transforms"/></p>
                         </li>
                         <li>
                             <p>To cancel the transformation that you're doing, right-click once anywhere on the scene. You can use <code>Ctrl+Z</code> too if you wish to undo changes.</p>
@@ -194,11 +194,11 @@
                 </li>
                 <li>
                     <p>After you have set an initial pose for your animation, select the 'Animation' tab from the menu on the left:</p>
-                    <p>  <img src="/images/art/vfx/blender_animation_menu.png" alt="blender_animation_menu"/></p>
+                    <p>  <img src="/modding_guide/images/art/vfx/blender_animation_menu.png" alt="blender_animation_menu"/></p>
                     <ul>
                         <li>Press <code>A</code> twice to select all the bones (everything should be selected with an orange outline).</li>
                         <li>On the Animation menu, press 'Insert' and click on 'LocRotScale'. This will save the current pose as a Keyframe in the Timeline:
-                            <img src="/images/art/vfx/blender_insert_keyframe.png" alt="blender_insert_keyframe"/>
+                            <img src="/modding_guide/images/art/vfx/blender_insert_keyframe.png" alt="blender_insert_keyframe"/>
                         </li>
                         <li>Now select the last frame in the timeline and do the same. You should see yellow marks where you inserted keyframes.</li>
                         <li>Try playing your animation with the play button below the timeline. It's a static pose, but that way your animation begins and ends with the same pose.</li>
@@ -220,7 +220,7 @@
                 </li>
                 <li>
                     <p>Near the bottom of the menu at the left, make sure that what is selected is "Animation":</p>
-                    <p>  <img src="/images/art/vfx/blender_export_anim.png" alt="blender_export_anim"/></p>
+                    <p>  <img src="/modding_guide/images/art/vfx/blender_export_anim.png" alt="blender_export_anim"/></p>
                 </li>
                 <li>
                     <p>Give a name for the animation file (e.g. <code>custom_anim.json</code>). In general we only use lowercase, underscores and numbers for the file names.</p>
@@ -232,18 +232,18 @@
             <h3><a name="SkeletonOffsets"></a>Exporting animations with skeleton offsets</h3>
             <p>Imagine you've finished an animation for the male hearthling model, and want to create the same animation for the female (assuming both have the same bones and bone names, but the pivots of the bones are different - e.g. the female hearthling is a bit shorter so her bones are positioned lower).</p>
             <p>With the Blender add-on we can easily apply offsets to the animation so that we don't have to create the animation for the female from scratch.</p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/>At the time this guide was written, the female hearthling skeleton is different from the male one, but you can simply add the eyebrow bones to it in order to export the animation with offset - the game will later ignore those bones in the animation (make sure to work on a copy of her skeleton though).</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>At the time this guide was written, the female hearthling skeleton is different from the male one, but you can simply add the eyebrow bones to it in order to export the animation with offset - the game will later ignore those bones in the animation (make sure to work on a copy of her skeleton though).</p>
             <p>Steps assuming you've just exported the animation for the male and still have the male model, rig and the animation loaded in Blender:</p>
             <ol>
                 <li>
                     <p>Import the female skeleton, making sure to check the "Import skeleton for offset" option at the bottom left:</p>
-                    <p>  <img src="/images/art/vfx/blender_import_skeleton_for_offset.png" alt="blender_import_skeleton_for_offset"/>
+                    <p>  <img src="/modding_guide/images/art/vfx/blender_import_skeleton_for_offset.png" alt="blender_import_skeleton_for_offset"/>
                         Make sure that the "Offset calculated" field above the "Prepare Skeleton" button from the Scene menu changed. If not, it wasn't imported correctly (the bones and bone names should match).
                     </p>
                 </li>
                 <li>
                     <p>Export the animation again, checking the "Export taking offset into account":</p>
-                    <p>  <img src="/images/art/vfx/blender_export_with_offset.png" alt="blender_export_with_offset"/></p>
+                    <p>  <img src="/modding_guide/images/art/vfx/blender_export_with_offset.png" alt="blender_export_with_offset"/></p>
                 </li>
                 <li>
                     <p>To check that the animation was exported correctly, you can restart Blender, import the .obj file of the female, the female skeleton / meta files and the animation you just exported, and play it (or simply try it in the game, if you already have all the effects prepared).</p>
@@ -252,7 +252,7 @@
             <h3><a name="ImportingAnimations"></a>Importing animations</h3>
             <p>You can import animation files from the game in the same way than skeletons or meta files. There's also a button in the add-on to delete imported animations.</p>
             <p>It's hard to work with them since they describe all the frames, but you may be able to delete those you don't want and keep a couple poses for using in your animation.</p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/>Before importing an animation, make sure to click on "Prepare Skeleton" and "Prepare Animation", and that both have the green circle. Otherwise things will look broken after importing the animation.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>Before importing an animation, make sure to click on "Prepare Skeleton" and "Prepare Animation", and that both have the green circle. Otherwise things will look broken after importing the animation.</p>
         </main>
     </body>
 </html>

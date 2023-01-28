@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Adding customizations</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Adding customizations</h1>
          <ul>
@@ -81,11 +81,11 @@
                <p>  The colors we add here will be available for any of the building parts, except for roofs.</p>
                <p>  Inside each key for the material tag, we have a <strong>"colors"</strong> entry which contains the list of colors. Each color is then expressed as a hexadecimal RGB color, starting with a hash symbol (#). As a convention, these colors are in uppercase. </p>
                <p>  Each color entry has a <strong>"display_name"</strong>, which is a localized key for the name you want to show in the tooltip, and an ordinal to arrange the colors in the palette. The names for the existing colors in the game were obtained using <a href="http://www.color-blindness.com/color-name-hue/">this website</a>, but you can use any name you want.</p>
-               <p>  <img src="/images/common/row_alert2.png" alt="icon"/> It doesn't matter if we have duplicated ordinals in the list, but we can't have duplicated colors. This includes colors repeated on a different material entry. The game needs to associate a color with a certain resource material in order to calculate the building cost. So make sure that none of the colors you add has a duplicate in your mod nor in the stonehearth mod.</p>
+               <p>  <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> It doesn't matter if we have duplicated ordinals in the list, but we can't have duplicated colors. This includes colors repeated on a different material entry. The game needs to associate a color with a certain resource material in order to calculate the building cost. So make sure that none of the colors you add has a duplicate in your mod nor in the stonehearth mod.</p>
             </li>
             <li>
                <p>Test your new colors in game (you can spawn the resources using the <a href="../../essentials/debugtools/debugtools_mod/index.html#ItemStamper">Item Stamper</a> from debugtools):
-                  <img src="/images/basic/customization/building_colors.png" alt="building_colors"/>
+                  <img src="/modding_guide/images/basic/customization/building_colors.png" alt="building_colors"/>
                </p>
             </li>
          </ol>
@@ -138,7 +138,7 @@
          <p>Hairstyles are QB models with a default color palette, which is mapped in <code>stonehearth/data/materials/hair_color_map.json</code>. The game then applies different color palettes to the same model when we choose the appearance of the hearthlings in the roster screen.</p>
          <p>You will need to reuse the colors from this color map when designing your own hairstyles, but it's also possible to add more colors and add mixintos to cover them in the color and material maps.</p>
          <p>When copying an existing QB model of a hairstyle, notice that it is broken in 2 layers:
-            <img src="/images/basic/customization/hair_model.png" alt="hair_model"/>
+            <img src="/modding_guide/images/basic/customization/hair_model.png" alt="hair_model"/>
          </p>
          <p>The layer that corresponds to the upper part of the hair is named <strong>hat</strong> and the one for the lower part is named <strong>head</strong>. This separation is needed for implementing hats. Depending on the transparency setting you use for your headgear, the "hat" layer of the hair model will be hidden or not, when the hearthling equips the item.</p>
          <p>So we have to make sure our layers are correctly named before exporting our model. Also notice that the male hearthlings are 1 voxel taller than the female ones, so it's always better to import an existing hairstyle so we can pick the colors with an eyedropper tool and know where to cut the hat part.</p>
@@ -161,7 +161,7 @@
             Make sure to not have duplicate keys in the "values" list, otherwise those models will be overwritten in the game.
          </p>
          <p>Finally, we can test our new model in the game and make sure it looks good:
-            <img src="/images/basic/customization/custom_hair.png" alt="custom_hair"/>
+            <img src="/modding_guide/images/basic/customization/custom_hair.png" alt="custom_hair"/>
          </p>
          <h3><a name="CustomColors"></a>Adding custom colors for skin, hair and eyes</h3>
          <p>The same way we added new hairstyles, we can make a mixinto to the customization files and add our own <a href="../color_maps/index.html#MaterialMap">material maps</a>.</p>
@@ -209,7 +209,7 @@
   }
 </code></pre>
          <p>And now we can test our new hair color in the game:
-            <img src="/images/basic/customization/hair_colors.png" alt="hair_colors"/>
+            <img src="/modding_guide/images/basic/customization/hair_colors.png" alt="hair_colors"/>
          </p>
          <h3><a name="Lua"></a>Using Lua to change customizations</h3>
          <p>We can find an example on how to change customizations using Lua in the customization component (<code>_add_style</code> and <code>_remove_style</code> functions):</p>

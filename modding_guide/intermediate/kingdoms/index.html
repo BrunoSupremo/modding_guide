@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Kingdoms</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Kingdoms</h1>
          <p>Kingdoms are managed through the population service, population call handler, and <code>population_faction.lua</code>. To add our new playable kingdom we can take a look at the rayyas_children and northern_alliance mods.</p>
@@ -30,7 +30,7 @@
                   </li>
                   <li>
                      <p><strong>"favored_biome"</strong> -- URI of the favored biome. Normally favored biomes provide with enough resources for the base crafter job of your custom kingdom. When players choose to play with this kingdom in a non-favored biome, a warning will appear in the UI. </p>
-                     <p> <img src="/images/common/row_alert2.png" alt="icon"/> The warning will only appear if we chose a vanilla kingdom that's not favored. For modded biomes it won't appear. Nevertheless, a "(favored)" text will appear next to the biome name, so that players know that in that biome they'll have all the resources for this kingdom's jobs.</p>
+                     <p> <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> The warning will only appear if we chose a vanilla kingdom that's not favored. For modded biomes it won't appear. Nevertheless, a "(favored)" text will appear next to the biome name, so that players know that in that biome they'll have all the resources for this kingdom's jobs.</p>
                   </li>
                   <li>
                      <p><strong>"quote"</strong> -- unused legacy field.</p>
@@ -55,7 +55,7 @@
                   </li>
                   <li>
                      <p><strong>"job_index"</strong> -- URI of the job index for our custom kingdom. Take a look at how to create jobs to create your own custom jobs. You can also reuse the stonehearth ones if you want to.</p>
-                     <p> <img src="/images/common/gold.png" alt="icon"/>We can add a <strong>"base_job"</strong> field to the jobs index to specify a different base job than <code>"stonehearth:jobs:worker"</code>. You should only have one base job since the vanilla game doesn't support more than one. Normally it's a job that doesn't require a talisman, in case the player can't craft it for whatever reason. Take a look at how the Worker job is set up.</p>
+                     <p> <img src="/modding_guide/images/common/gold.png" alt="icon"/>We can add a <strong>"base_job"</strong> field to the jobs index to specify a different base job than <code>"stonehearth:jobs:worker"</code>. You should only have one base job since the vanilla game doesn't support more than one. Normally it's a job that doesn't require a talisman, in case the player can't craft it for whatever reason. Take a look at how the Worker job is set up.</p>
                   </li>
                   <li>
                      <p><strong>"inventory_capacity_equation"</strong> -- an equation to calculate how should the inventory capacity increase over time. For the vanilla game it's based on the number of hearthlings : <code>"math.max(num_citizens * 150, 1200)"</code>.</p>

@@ -2,18 +2,18 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href='/css/styles.css' rel='stylesheet' type='text/css'>
-		<link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-		<link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-		<link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+		<link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+		<link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+		<link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+		<link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
 		<title>AI actions</title>
 	</head>
 	<body>
-		<script src="/menus.js"></script>
+		<script src="/modding_guide/menus.js"></script>
 		<main>
 			<h1>AI actions</h1>
-			<p>You can find all the information from this page in this <a href="/files/AI.pdf">PDF</a>.</p>
-			<p>There's also the old notes about AI in this other <a href="/files/Stonehearth_AI_old_notes.pdf">PDF</a>. They're still mostly valid, and might help you understand how the AI works with a practical/visual example.</p>
+			<p>You can find all the information from this page in this <a href="/modding_guide/files/AI.pdf">PDF</a>.</p>
+			<p>There's also the old notes about AI in this other <a href="/modding_guide/files/Stonehearth_AI_old_notes.pdf">PDF</a>. They're still mostly valid, and might help you understand how the AI works with a practical/visual example.</p>
 			<ul>
 				<li><a href="#Overview">Overview of the AI system</a></li>
 				<li>
@@ -76,7 +76,7 @@
 				</li>
 			</ul>
 			<p>Below is a screenshot of how a typical AI tree looks in the AI inspector. Activities (=frames) are presented in angle brackets. The rest of the nodes are actions. Leaf nodes are Leaf Actions. Inner nodes are compound, task group, or task actions. The root is always the <code>stonehearth:top</code> activity.</p>
-			<p><img src="/images/essentials/debugtools/ai_inspector.png" alt="ai_inspector"/></p>
+			<p><img src="/modding_guide/images/essentials/debugtools/ai_inspector.png" alt="ai_inspector"/></p>
 			<h2><a name="WritingActions"></a>Writing actions</h2>
 			<p>Actions are Lua scripts registered in the mod's manifest and "injected" into a character's AI. This section explores how to declare actions. The <a href="#InjectingActions">next section</a> explores how to inject actions into into a character's AI.</p>
 			<h3><a name="LeafAction"></a>Leaf action example</h3>
@@ -225,7 +225,7 @@
 				</li>
 			</ul>
 			<p><a name="AIStateMachine"></a>Here's a simplified diagram of the state machine of an AI action:
-				<img src="/images/advanced/ai/ai_state_machine.png" alt="ai_state_machine"/>
+				<img src="/modding_guide/images/advanced/ai/ai_state_machine.png" alt="ai_state_machine"/>
 			</p>
 			<h3><a name="CompoundAction"></a>Compound action example</h3>
 			<p>(hypothetical) <code>find_and_paint_subject_action.lua</code></p>

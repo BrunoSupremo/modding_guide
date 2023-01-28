@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Adding campaigns</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Adding campaigns</h1>
          <p>The game_master service is responsible for managing the different campaigns for the players. We can trigger different campaigns depending on the kingdom that the player chose, and also depending on factors such as the biome, game mode, etc.</p>
@@ -34,7 +34,7 @@
          <p>For example, the goblin campaign, which throws increasing numbers of enemies at the player, is made of three arcs (beginning, hit-and-run, and finale) and multiple goblin-specific instances of a few basic, generic encounters (spawn camp, wait, city raid, etc).</p>
          <h2><a name"GMTree"></a>Game master tree</h2>
          <p>All encounters, arcs, and campaigns are nodes (they inherit from <code>stonehearth/services/server/game_master/controllers/node.lua</code>) and exist in a tree, with the game master controller as root node. You can visualize them in the <a href="../../essentials/debugtools/debugtools_mod/index.html#CampaignBrowser">Campaign browser</a> from debugtools:</p>
-         <p><img src="/images/intermediate/campaigns/campaign_browser_tree.png" alt="campaign_browser_tree"/></p>
+         <p><img src="/modding_guide/images/intermediate/campaigns/campaign_browser_tree.png" alt="campaign_browser_tree"/></p>
          <p>The game master has campaigns (as children), campaigns have arcs (Trigger, Challenge, Climax), and arcs have encounters. Encounters themselves actually run the content using a reusable script (e.g.: <code>create_camp_encounter.lua</code>) and the JSON data of the specific node listed in the arc index file (e.g.: <code>ambient_threats_arc.json</code>) to customize the encounter parameters.</p>
          <p>All the existing campaigns, arcs and encounters can be found inside subdirectories of <code>stonehearth/data/gm</code>.</p>
          <h2><a name="Edges"></a>In-edges and out-edges</h2>
@@ -42,7 +42,7 @@
          <p>These are used to shape a graph or tree that defines the flow of the campaign. The in_edge is a custom identifier, usually the same name than the encounter file, so that different nodes can trigger the same encounters. Example from <code>daily_report_encounter.json</code>:</p>
          <pre><code>  "in_edge": "daily_report_encounter",
 </code></pre>
-         <p><img src="/images/common/row_alert2.png" alt="icon"/> For the first encounter of each arc, the <strong>"in_edge"</strong> must be <strong>"start"</strong>. You can only have one encounter with this in_edge per arc.</p>
+         <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> For the first encounter of each arc, the <strong>"in_edge"</strong> must be <strong>"start"</strong>. You can only have one encounter with this in_edge per arc.</p>
          <p><a name="OutEdge"></a>For out_edges, the syntax will vary. Examples:</p>
          <ul>
             <li>
@@ -149,7 +149,7 @@
          <pre><code>  "out_edge" : "arc:finish"
 </code></pre>
          <p>Other encounters from this arc might still be around, but they should resolve themselves on their own.</p>
-         <p><img src="/images/common/row_alert2.png" alt="icon"/> Some of the encounters will define their out edges inside their info section so that they can control which one will spawn depending on how the encounter ends, so they won't have the <strong>"out_edge"</strong> property at the root level of the JSON.</p>
+         <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> Some of the encounters will define their out edges inside their info section so that they can control which one will spawn depending on how the encounter ends, so they won't have the <strong>"out_edge"</strong> property at the root level of the JSON.</p>
          <h2><a name="CanStart"></a>Starting encounters conditionally</h2>
          <p>There are <a href="encounters/index.html#WaitForRequirementsMet">some encounters</a> that are used to check for conditions themselves, in order to trigger their out edges when the condition is met.</p>
          <p>But we can also add checks in any encounter JSON file to allow the encounter to start only under certain conditions.</p>
@@ -306,7 +306,7 @@
             </li>
             <li>
                <p><strong>"in_edge"</strong> -- required field, this is the identifier for this encounter and usually matches the identifier for this file from the arc index.</p>
-               <p>  <img src="/images/common/row_alert2.png" alt="icon"/> For each arc, you should have one encounter whose in edge is named <strong>"start"</strong>. This will be the encounter that triggers when the arc starts to run.</p>
+               <p>  <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> For each arc, you should have one encounter whose in edge is named <strong>"start"</strong>. This will be the encounter that triggers when the arc starts to run.</p>
             </li>
             <li>
                <p><strong>"out_edge"</strong> -- optional field, an out edge as explained <a href="#OutEdge">before</a>.</p>
@@ -344,12 +344,12 @@
    "data:gm_index" : "file(data/gm/gm_index.json)"
 }
 </code></pre>
-               <p>  <img src="/images/common/row_alert2.png" alt="icon"/> The alias has to be exactly <strong>"data:gm_index"</strong>, otherwise SHED won't be able to find it. Also, remember to add a mixinto to the stonehearth's gm_index so that you can test your campaigns in the game.</p>
+               <p>  <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> The alias has to be exactly <strong>"data:gm_index"</strong>, otherwise SHED won't be able to find it. Also, remember to add a mixinto to the stonehearth's gm_index so that you can test your campaigns in the game.</p>
             </li>
             <li>
                <p>Open SHED and click on the "Encounter Designer" tab.</p>
                <p>  You should see a tree listing the campaigns of all the mods you have ready in your folder. Click on one of the campaigns and you should see a graph at the right displaying what the campaign looks like:</p>
-               <p>  <img src="/images/intermediate/campaigns/goblin_campaign.png" alt="goblin_campaign"/></p>
+               <p>  <img src="/modding_guide/images/intermediate/campaigns/goblin_campaign.png" alt="goblin_campaign"/></p>
                <p>  You can zoom in/out of the graph with the mouse wheel, and you can pan around the graph with the third mouse button (press the mouse wheel, hold it down, and move the mouse). You can see subtrees in the graph being highlighted when you hover over them.</p>
                <p>  Whenever you change a node, remember to save the changes and click on the "Refresh Encounters" button at the top right, so that the graph gets updated (for example, imagine you create a new encounter/node, it will be unattached to the graph. But if you edit another node so that it points to your new node as an out_edge, that won't be reflected in the graph until you reload/refresh). Sometimes it will refresh automatically, for example when deleting nodes.</p>
             </li>
@@ -364,7 +364,7 @@
          <p>You should see several options in the bar above the JSON editor. The first one is to open the current file in your default text editor (for JSON files), the second one is for opening the containing folder of this file, the third one is to save, and the last one is to localize the file (remember that sometimes localizing might not work). If you added mixins, the preview with mixins button should also appear at the end.</p>
          <p>When you save, the JSON will be formatted nicely if you had some bad indentations.</p>
          <p>The JSON editor in SHED supports autocomplete and hints for encounters, which is extremely useful. If you don't get the dropdown for a property, try deleting everything until the property name, then type the ':' and see if it appears. Navigate through the options with the arrow keys and press Enter or double click to confirm an option:</p>
-         <p><img src="/images/intermediate/campaigns/auto_complete.png" alt="auto_complete"/></p>
+         <p><img src="/modding_guide/images/intermediate/campaigns/auto_complete.png" alt="auto_complete"/></p>
          <p>If the color at the left of the file is green, everything's fine. When it's red, SHED won't let you save the file (syntax errors). Hovering over the arrows at the left will show a tooltip describing the problem. If it's orange, there might be some missing field or some data that SHED doesn't recognize, but will let you proceed. When it's gray it means that SHED isn't checking for errors in this file because it doesn't know what should it contain, so you're responsible for what you're writing.</p>
          <p>These are different node types you can see in the graph and their meaning:</p>
          <ul>

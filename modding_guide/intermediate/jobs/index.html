@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>Adding jobs</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>Adding jobs</h1>
             <p>We can create our own jobs / classes and alter the existing promotion tree to suit our preferences.</p>
@@ -67,7 +67,7 @@
                     <p>The <code>job_tool_talisman.json</code> file is similar to the file for other entities. In it, we have the item properties mixin.</p>
                     <p>  For the entity_data we have the net worth and the catalog (make sure that the category is <strong>"tools"</strong> and that the material_tags include <strong>"stockpile_tool"</strong>, so that it's properly restocked to storages).</p>
                     <p>  For the components, we have the model variants, which point to the model for the iconic version, and an "effect_list" with a default effect (in the stonehearth mod, iconics for talismans and workbenches have this particle effect to distinguish them quickly in stockpiles or the ground).</p>
-                    <p>  <img src="/images/common/gold.png" alt="icon"/> You might also see in some talisman files a component called <strong>"stonehearth:promotion_talisman"</strong>. This is an old component that was deprecated and no longer exists, so you can omit it for your job.</p>
+                    <p>  <img src="/modding_guide/images/common/gold.png" alt="icon"/> You might also see in some talisman files a component called <strong>"stonehearth:promotion_talisman"</strong>. This is an old component that was deprecated and no longer exists, so you can omit it for your job.</p>
                 </li>
                 <li>
                     <p>Now we edit the <code>job_tool.json</code> file. The model in the <strong>"model_variants"</strong> component is that of the equipped tool, so remember to positionate it <a href="../../basic/wearables/weapons/index.html#EquippedModel">in your voxel editor</a> so that the hearthling can grab it properly.</p>
@@ -174,7 +174,7 @@
                     <p>Together with perks that use a custom function, you'll also see a <strong>"demote_fn"</strong> field. This designates what should be run if the hearthling has that perk and is demoted. It's a way of ensuring that permanent buffs and custom abilities are removed when the hearthling is promoted/demoted to some other job. If you don't add it, the hearthling will keep those abilities.</p>
                 </li>
             </ul>
-            <p><img src="/images/common/gold.png" alt="icon"/> You'll also see that many jobs at level 6 will get a title instead of / in addition to perks, which allows us to know that they're at the maximum level in the UI. This title is outside of the "perks" array. Nowadays it's not needed, all hearthlings will get a title that will be shown in the character sheet and will change as they level up (Apprentice, Journeyman, Master).</p>
+            <p><img src="/modding_guide/images/common/gold.png" alt="icon"/> You'll also see that many jobs at level 6 will get a title instead of / in addition to perks, which allows us to know that they're at the maximum level in the UI. This title is outside of the "perks" array. Nowadays it's not needed, all hearthlings will get a title that will be shown in the character sheet and will change as they level up (Apprentice, Journeyman, Master).</p>
             <p>On top of the perks, hearthlings will gain +10 health points every time they level up. These will carry on after promoting / demoting.
                 Job experience is reset when you promote / demote a hearthling, to encourage specialization.
             </p>

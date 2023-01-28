@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Landmarks</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Landmarks</h1>
          <p><a name="Landmarks"></a>Landmarks are a special type of scenario that allows us to add terrain features to the map via QB files. They are created using functions from the <code>stonehearth/lib/landmark_lib.lua</code> file.</p>
@@ -127,15 +127,15 @@
                <p>  The <strong>"color_water"</strong> is used to fill water up to the top of the voxel - good for waterfalls where you want water to be flowing out of the instant the landmark is spawned. <strong>"color_water_lowered"</strong> is used for water basins where there are dry stones (or where you just dont want the water to fill the area it is in up to the brim). <br/>
                   In general, if water is going to pour out of a basin, you want to use the "color_water". If water is going to end in a basin, use "color_water_lowered".
                </p>
-               <p>  <img src="/images/common/row_alert2.png" alt="icon"/>All the colors hexadecimal value must be in uppercase, otherwise they won't adapt to the biomes.</p>
+               <p>  <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>All the colors hexadecimal value must be in uppercase, otherwise they won't adapt to the biomes.</p>
                <p>  Using colors not defined in <code>landmark_blocks.json</code> will make them appear the same color no matter the biome where the landmark is spawned. If we add some new block types to <code>terrain_blocks.json</code> and / or to <code>landmark_blocks.json</code>, we can also use them in landmarks.</p>
                <p>  There are many landmarks that spawn underground and players can't see them unless they mine. We can create underground caves by using the color for the <strong>"null"</strong> tag, it will remove blocks from the terrain it intersects with. But they should be as short as possible, otherwise if the player places their banner on top of a cave, the starting hearthlings might spawn inside of it, which is confusing.</p>
                <p>  This is the model for one of the existing cave landmarks, seen from below:
-                  <img src="/images/basic/static_scenarios/cave_landmark.png" alt="cave_landmark"/>
+                  <img src="/modding_guide/images/basic/static_scenarios/cave_landmark.png" alt="cave_landmark"/>
                   All the pink will be removed from the terrain when this landmark spawns (this scenario has a category of <strong>"terrain_feature_underground"</strong>). As you can see, it's only 3 blocks tall.
                </p>
                <p>  For our example we used colors to spawn some plants and a loot chest:
-                  <img src="/images/basic/static_scenarios/landmark_model.png" alt="landmark_model"/>
+                  <img src="/modding_guide/images/basic/static_scenarios/landmark_model.png" alt="landmark_model"/>
                </p>
             </li>
             <li>
@@ -156,7 +156,7 @@
             </li>
             <li>
                <p>Test that the landmark spawns in the biomes we defined. You might need to tweak the values to have a higher chance to spawn, or even change the habitats, since there are many landmarks to choose from and it can take many attempts to get it to appear.
-                  <img src="/images/basic/static_scenarios/landmark_spawned.png" alt="landmark_spawned"/>
+                  <img src="/modding_guide/images/basic/static_scenarios/landmark_spawned.png" alt="landmark_spawned"/>
                </p>
             </li>
          </ol>

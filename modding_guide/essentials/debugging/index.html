@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>How to debug your errors</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>How to debug your errors</h1>
             <ul>
@@ -50,12 +50,12 @@
             </p>
             <h2><a name="DebuggingUI"></a>Debugging the UI</h2>
             <p><strong>For UI errors</strong>, which usually appear at the right side of the screen, <strong>you must always reload the UI</strong> (with F5 or the button in the error dialog). It might be in an inconsistent state and you won't be able to continue using it correctly unless you reload it. If you forgot to take a look at the trace in the error dialog, you can look at the stonehearth.log too (provided you haven't restarted the game).</p>
-            <p><img src="/images/common/row_alert2.png" alt="icon"/>Reloading the UI will make any non-UI error reappear, even if you've already closed them. Simply close them again if you've already checked all of them.</p>
+            <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>Reloading the UI will make any non-UI error reappear, even if you've already closed them. Simply close them again if you've already checked all of them.</p>
             <p>If you make mods related to the UI, you can make use of the CEF debugger, provided you have Google Chrome installed:</p>
             <ol>
                 <li>With the game running, open Chrome.</li>
                 <li>In the address bar, type <strong>localhost:1338</strong> and press Enter.
-                    <img src="/images/essentials/debugging/ui_port.png" alt="ui_port"/>
+                    <img src="/modding_guide/images/essentials/debugging/ui_port.png" alt="ui_port"/>
                 </li>
                 <li>Click on the "Stonehearth UI" link. Other links might appear if you're not inside the game (for example, if you're loading a game).</li>
                 <li>When you need to reload the debugger, make sure that the address is only <strong>localhost:1338</strong>, as the browser will append parameters to it as you use it.</li>
@@ -64,17 +64,17 @@
             <p>Examples of use:</p>
             <ol>
                 <li>You can inspect UI elements. Click on the "Inspect element" tool, then go to the game, and hover over any UI elements. You might need to open the UI view you want to inspect before activating this tool.
-                    <img src="/images/essentials/debugging/inspect_element_tool.png" alt="inspect_element_tool"/>
+                    <img src="/modding_guide/images/essentials/debugging/inspect_element_tool.png" alt="inspect_element_tool"/>
                 </li>
                 <li>Click on the one you want to inspect, and go to the browser. It will be selected in the HTML, and you can check all its properties, temporarily tweak its CSS, etc.
-                    <img src="/images/essentials/debugging/inspecting_element.png" alt="inspecting_element"/>
-                    <img src="/images/essentials/debugging/inspected_element.png" alt="inspected_element"/>
+                    <img src="/modding_guide/images/essentials/debugging/inspecting_element.png" alt="inspecting_element"/>
+                    <img src="/modding_guide/images/essentials/debugging/inspected_element.png" alt="inspected_element"/>
                 </li>
                 <li>You can also check for Javascript warnings and errors in the web console.
-                    <img src="/images/essentials/debugging/web_console.png" alt="web_console"/>
+                    <img src="/modding_guide/images/essentials/debugging/web_console.png" alt="web_console"/>
                 </li>
                 <li>And you can debug your Javascript code with the CEF debugger. Mind that sometimes it might become unresponsive and you might need to reload it.
-                    <img src="/images/essentials/debugging/cef_debugger.png" alt="cef_debugger"/>
+                    <img src="/modding_guide/images/essentials/debugging/cef_debugger.png" alt="cef_debugger"/>
                 </li>
             </ol>
             <h2><a name="QuickTesting"></a>Testing your mods faster</h2>
@@ -91,8 +91,8 @@
   }
 </code></pre>
             <p>You might already have these "mods" : { "stonehearth" : {} } keys in your settings so just paste the "world_generation" node at the corresponding level (but remember to add commas where needed). This will generate a tiny world so it will take less time to load it.
-                <img src="/images/essentials/debugging/tiny_world_ui.png" alt="tiny_world_ui"/>
-                <img src="/images/essentials/debugging/tiny_world_terrain.png" alt="tiny_world_terrain"/>
+                <img src="/modding_guide/images/essentials/debugging/tiny_world_ui.png" alt="tiny_world_ui"/>
+                <img src="/modding_guide/images/essentials/debugging/tiny_world_terrain.png" alt="tiny_world_terrain"/>
             </p>
             <h2><a name="Microworld"></a>Microworld</h2>
             <p>You can also create your own <a href="../../intermediate/testing/index.html">test worlds</a> with the help of this mod. Microworld, once configured in your user_settings.json, will skip the main menu and load directly your test world, which is much faster.</p>

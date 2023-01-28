@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Ore veins</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Ore veins</h1>
          <p><a name="OreVeins"></a>Ores and other resources can drop from mining. We can create our own resource veins that will spawn inside the terrain, and make them drop more of a certain resource.</p>
@@ -173,7 +173,7 @@
 }
 </code></pre>
                <p>  We add an entry with our terrain type (the main keys inside <strong>"block_types"</strong> from terrain_blocks.json) for each season, and link it to the color that we want for our ore vein in hexadecimal format. Terrain blocks don't admit custom render materials, they will all use the same shader (hardcoded in the C++ side). Water has a separate renderer.</p>
-               <p>  <img src="/images/common/gold.png" alt="icon"/> <a name="SafeMixintos"></a>We can add mixintos to files from other mods even if the players don't have those mods installed. Warnings that those files couldn't be found will be written to the stonehearth.log, but won't pop up in the game. If there are too many warnings from several mods, the game might take a bit longer to start.</p>
+               <p>  <img src="/modding_guide/images/common/gold.png" alt="icon"/> <a name="SafeMixintos"></a>We can add mixintos to files from other mods even if the players don't have those mods installed. Warnings that those files couldn't be found will be written to the stonehearth.log, but won't pop up in the game. If there are too many warnings from several mods, the game might take a bit longer to start.</p>
             </li>
             <li>
                <p>Finally, we can create our ore vein and add it as a static scenario so that it spawns in the terrain.</p>
@@ -232,7 +232,7 @@
             <li>
                <p>Test that your ore vein appears in the map.</p>
                <p>  This might take a while since the placement is random. Promote a combat unit with <a href="../../../essentials/debugtools/debugtools_mod/index.html">debugtools</a> and make them run around the edge of a mountain until you spot a vein of your resource. Then click on it to check the unit frame, and order your hearthlings to mine it to see that your resource is being dropped. Also mine rock or whatever other terrain type you used in the mining loot table and check that the drops are working.
-                  <img src="/images/basic/static_scenarios/ore_vein.png" alt="ore_vein"/>
+                  <img src="/modding_guide/images/basic/static_scenarios/ore_vein.png" alt="ore_vein"/>
                </p>
             </li>
          </ol>

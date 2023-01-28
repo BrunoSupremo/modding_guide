@@ -2,14 +2,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
         <title>The debugtools mod</title>
     </head>
     <body>
-        <script src="/menus.js"></script>
+        <script src="/modding_guide/menus.js"></script>
         <main>
             <h1>The debugtools mod</h1>
             <p><code>debugtools</code> is a mod used by the developers to help debugging the game.
@@ -24,27 +24,27 @@
                 <li>Start or load a game.</li>
             </ol>
             <p>Debugtools is a set of 10 tools located in the upper-right corner of the screen:
-                <img src="/images/essentials/debugtools/debugtools.png" alt="debugtools"/>
+                <img src="/modding_guide/images/essentials/debugtools/debugtools.png" alt="debugtools"/>
             </p>
             <p>Some general info: <br/>
-                <img src="/images/common/gold.png" alt="icon"/> Any blue text in the various debugtools is a link to other information or to trigger something. <br/>
-                <img src="/images/common/gold.png" alt="icon"/> You can drag around the UI of any of these tools. <br/>
-                <img src="/images/common/gold.png" alt="icon"/> If a debug tool is open while you open any other in-game UI view, the tool's UI might move around the screen. It will return to its original position once you close the other UI view.
+                <img src="/modding_guide/images/common/gold.png" alt="icon"/> Any blue text in the various debugtools is a link to other information or to trigger something. <br/>
+                <img src="/modding_guide/images/common/gold.png" alt="icon"/> You can drag around the UI of any of these tools. <br/>
+                <img src="/modding_guide/images/common/gold.png" alt="icon"/> If a debug tool is open while you open any other in-game UI view, the tool's UI might move around the screen. It will return to its original position once you close the other UI view.
             </p>
             <p>Let's go over them one by one:</p>
             <ul>
-                <li><img src="/images/essentials/debugtools/campaign_browser_icon.png" alt="icon"/><a href="#CampaignBrowser">Campaign Browser</a></li>
-                <li><img src="/images/essentials/debugtools/ai_inspector_icon.png" alt="icon"/><a href="#AIInspector">AI Inspector</a></li>
-                <li><img src="/images/essentials/debugtools/object_browser_icon.png" alt="icon"/><a href="#ObjectBrowser">Object Browser</a></li>
-                <li><img src="/images/essentials/debugtools/perf_mon_icon.png" alt="icon"/><a href="#PerformanceMonitor">Performance Monitor</a></li>
-                <li><img src="/images/essentials/debugtools/entity_editor_icon.png" alt="icon"/><a href="#EntityEditor">Entity Editor</a></li>
-                <li><img src="/images/essentials/debugtools/job_monitor_icon.png" alt="icon"/><a href="#JobMonitor">Job Monitor</a></li>
-                <li><img src="/images/essentials/debugtools/trace_monitor_icon.png" alt="icon"/><a href="#TraceMonitor">Trace Monitor</a></li>
-                <li><img src="/images/essentials/debugtools/item_stamper_icon.png" alt="icon"/><a href="#ItemStamper">Item Stamper</a></li>
-                <li><img src="/images/essentials/debugtools/lua_console_icon.png" alt="icon"/><a href="#LuaConsole">Lua Console</a></li>
-                <li><img src="/images/essentials/debugtools/time_slider_icon.png" alt="icon"/><a href="#DebuggingWeather">Time Slider</a></li>
+                <li><img src="/modding_guide/images/essentials/debugtools/campaign_browser_icon.png" alt="icon"/><a href="#CampaignBrowser">Campaign Browser</a></li>
+                <li><img src="/modding_guide/images/essentials/debugtools/ai_inspector_icon.png" alt="icon"/><a href="#AIInspector">AI Inspector</a></li>
+                <li><img src="/modding_guide/images/essentials/debugtools/object_browser_icon.png" alt="icon"/><a href="#ObjectBrowser">Object Browser</a></li>
+                <li><img src="/modding_guide/images/essentials/debugtools/perf_mon_icon.png" alt="icon"/><a href="#PerformanceMonitor">Performance Monitor</a></li>
+                <li><img src="/modding_guide/images/essentials/debugtools/entity_editor_icon.png" alt="icon"/><a href="#EntityEditor">Entity Editor</a></li>
+                <li><img src="/modding_guide/images/essentials/debugtools/job_monitor_icon.png" alt="icon"/><a href="#JobMonitor">Job Monitor</a></li>
+                <li><img src="/modding_guide/images/essentials/debugtools/trace_monitor_icon.png" alt="icon"/><a href="#TraceMonitor">Trace Monitor</a></li>
+                <li><img src="/modding_guide/images/essentials/debugtools/item_stamper_icon.png" alt="icon"/><a href="#ItemStamper">Item Stamper</a></li>
+                <li><img src="/modding_guide/images/essentials/debugtools/lua_console_icon.png" alt="icon"/><a href="#LuaConsole">Lua Console</a></li>
+                <li><img src="/modding_guide/images/essentials/debugtools/time_slider_icon.png" alt="icon"/><a href="#DebuggingWeather">Time Slider</a></li>
             </ul>
-            <h3><a name="CampaignBrowser"></a><img src="/images/essentials/debugtools/campaign_browser_icon.png" alt="icon"/>Campaign browser:</h3>
+            <h3><a name="CampaignBrowser"></a><img src="/modding_guide/images/essentials/debugtools/campaign_browser_icon.png" alt="icon"/>Campaign browser:</h3>
             <p>The campaign browser shows the current status of the game master in terms of campaigns, in the form of a horizontal tree with nodes. You can see (and trigger) encounters with it, and check the ones that are currently active. You can use this tool to debug your own modded campaigns, see if their flow is correct and spawn them at any given time.</p>
             <p>Some tips for using the campaign browser:</p>
             <ul>
@@ -53,23 +53,23 @@
                 </li>
                 <li>
                     <p>Click on the name of a node to open a contextual menu. If the encounter hasn't been triggered yet, you will see an option to trigger it. Click on the blue text to do so:
-                        <img src="/images/essentials/debugtools/non_triggered.png" alt="non_triggered"/>
+                        <img src="/modding_guide/images/essentials/debugtools/non_triggered.png" alt="non_triggered"/>
                     </p>
                 </li>
                 <li>
                     <p>If the encounter has already been triggered you will see info about it in the contextual menu:
-                        <img src="/images/essentials/debugtools/already_triggered.png" alt="already_triggered"/>
+                        <img src="/modding_guide/images/essentials/debugtools/already_triggered.png" alt="already_triggered"/>
                     </p>
                 </li>
                 <li>
                     <p>There are a couple of buttons in the contextual menus. One is "Toggle Raw View" (a gears icon) and the other one is "Toggle Private Variables View". Clicking on them will show / hide extra information in the contextual menu when applicable (sometimes there will be no private variables to show).
-                        <img src="/images/essentials/debugtools/raw_view.png" alt="raw_view"/>
-                        <img src="/images/essentials/debugtools/encounter_context.png" alt="encounter_context"/>
+                        <img src="/modding_guide/images/essentials/debugtools/raw_view.png" alt="raw_view"/>
+                        <img src="/modding_guide/images/essentials/debugtools/encounter_context.png" alt="encounter_context"/>
                     </p>
                 </li>
                 <li>
                     <p>If the encounter can spawn more than one encounter, you will see a list of the options available as well as the default trigger. This is useful because we can trigger directly the encounter that we want to debug, instead of a randomly chosen one:
-                        <img src="/images/essentials/debugtools/trigger_one_of.png" alt="trigger_one_of"/>
+                        <img src="/modding_guide/images/essentials/debugtools/trigger_one_of.png" alt="trigger_one_of"/>
                     </p>
                 </li>
                 <li>
@@ -86,7 +86,7 @@
                 </li>
                 <li>
                     <p>You can also start the game master from within the campaign browser if you're in a test world that hasn't initialized it. There's a trigger next to the close button:
-                        <img src="/images/essentials/debugtools/start_game_master.png" alt="start_game_master"/>
+                        <img src="/modding_guide/images/essentials/debugtools/start_game_master.png" alt="start_game_master"/>
                     </p>
                 </li>
                 <li>
@@ -96,12 +96,12 @@
                     <p>The fastest way to spawn enemies when debugging combat-related stuff is triggering the raiding parties from the ambient threats campaign. If you need tougher raids than the initial ones, use other debug tools to increase your net worth or try with other methods (e.g.: preparing a test world with the <a href="https://github.com/stonehearth/microworld">Microworld</a> mod).</p>
                 </li>
             </ul>
-            <h3><a name="AIInspector"></a><img src="/images/essentials/debugtools/ai_inspector_icon.png" alt="icon"/>AI Inspector:</h3>
+            <h3><a name="AIInspector"></a><img src="/modding_guide/images/essentials/debugtools/ai_inspector_icon.png" alt="icon"/>AI Inspector:</h3>
             <p>To use the AI inspector, select a living entity from inside the game, and open the AI inspector by clicking on it. It will show which actions are currently being considered and which action is currently running. 
-                <img src="/images/essentials/debugtools/ai_inspector.png" alt="ai_inspector"/>
+                <img src="/modding_guide/images/essentials/debugtools/ai_inspector.png" alt="ai_inspector"/>
             </p>
             <p>It has a search bar that will highlight matching actions in the tree (it will also highlight the parent nodes of those actions). You can click on the dashes next to the actions to collapse / expand the nodes.
-                <img src="/images/essentials/debugtools/ai_search_bar.png" alt="ai_search_bar"/>
+                <img src="/modding_guide/images/essentials/debugtools/ai_search_bar.png" alt="ai_search_bar"/>
             </p>
             <p>The tree will refresh often (hearthlings and other living entities are constantly thinking) so you might want to pause the game to observe the status of the entity at a given moment.</p>
             <p>At the top of the tool, there's a "pin to entity" option. If you toggle it, the AI inspector will keep showing the AI of that entity, even if you select a different entity or click in the terrain / UI. There are other debug options at the top, too.</p>
@@ -120,68 +120,68 @@
             <p>We have activities, which are behaviors that can have multiple implementations, and actions, which are specific implementations of an activity. For example, if "get food" is an activity, "get food from stockpile", "get food from backpack", and "hunt wild animal" may all be implementations of the "get food" activity.</p>
             <p>Each action can be a compound action or a leaf action. Compound actions are labeled like so in the AI inspector. They are composed of several steps, each of them being an action. For a compound action to start running, the entity must have determined that each of its child actions can be run in order.</p>
             <p>The inspector will also show the value of the arguments for the actions next to them, which gives us more information about what's happening inside the selected entity's mind.</p>
-            <h3><a name="ObjectBrowser"></a><img src="/images/essentials/debugtools/object_browser_icon.png" alt="icon"/>Object Browser:</h3>
+            <h3><a name="ObjectBrowser"></a><img src="/modding_guide/images/essentials/debugtools/object_browser_icon.png" alt="icon"/>Object Browser:</h3>
             <p>Select an entity inside the game and open the Object Browser. You will see all the components that the entity has, and a couple more fields:
-                <img src="/images/essentials/debugtools/object_browser.png" alt="object_browser"/>
+                <img src="/modding_guide/images/essentials/debugtools/object_browser.png" alt="object_browser"/>
             </p>
             <p>You can see some buttons ("Toggle Raw View", "Toggle Private Variables View") that are reused in other debugtools, such as the contextual menus of the campaign browser. The collapse/expand and close buttons are also reused in other debug tools.</p>
             <p>There's also a new icon in this tool (a magnifying glass with a + inside, like a "zoom in" icon) which will center the camera over the entity that the object browser is showing, unless the entity is not in the world (e.g.: inside a storage, etc).</p>
             <p>There's a "Track Selected" icon at the top left of the object browser that you can toggle. When it's active (in yellow) the tool will update its contents whenever you select a different entity. When it's not yellow, selecting a new entity won't refresh its contents. This is useful when you want to compare the components of two separate entities side by side. Simply open a new object browser and select a different entity.</p>
             <p>The bar at the top refers to the current object being shown by the object browser. It will show the numeric ID of that object. If you know the ID of some object, you can manually write it there to inspect it. Clicking on any of the blue texts will navigate to the data of that component, showing the values that the selected entity has. Inspecting the "uri" field will show the contents of the JSON file for that URI.</p>
             <p>With this tool and the ability to toggle the private variables view, we can inspect values that are not exposed to the UI, such as the current value of expendable resources and the like, contents of private storages, etc. Since clicking on new links will bring us to different objects, we can use the "Back" and "Forward" buttons to navigate to the previous objects that we were inspecting.
-                <img src="/images/essentials/debugtools/inspecting_objects.png" alt="inspecting_objects"/>
-                <img src="/images/essentials/debugtools/inspecting_objects2.png" alt="inspecting_objects2"/>
+                <img src="/modding_guide/images/essentials/debugtools/inspecting_objects.png" alt="inspecting_objects"/>
+                <img src="/modding_guide/images/essentials/debugtools/inspecting_objects2.png" alt="inspecting_objects2"/>
             </p>
             <p>Lastly, the "Show All Entities" button (looks like 3 horizontal lines) will show a separate window with a list of all the existing entities for the current game and their count. This button might also appear in other debug tools.
-                <img src="/images/essentials/debugtools/show_all_entities.png" alt="show_all_entities"/>
+                <img src="/modding_guide/images/essentials/debugtools/show_all_entities.png" alt="show_all_entities"/>
                 It has a search bar and will also show entities that are bugged / out of bounds (out of the world). The "[no uri]" entities are special entities like the terrain.
             </p>
             <p>Clicking on one of the items from the list will open a new window showing an array that contains the references to all the entities of that type (e.g.: all berry bushes).
-                <img src="/images/essentials/debugtools/all_entities_of_type.png" alt="all_entities_of_type"/>
+                <img src="/modding_guide/images/essentials/debugtools/all_entities_of_type.png" alt="all_entities_of_type"/>
             </p>
-            <h3><a name="PerformanceMonitor"></a><img src="/images/essentials/debugtools/perf_mon_icon.png" alt="icon"/>Performance Monitor:</h3>
+            <h3><a name="PerformanceMonitor"></a><img src="/modding_guide/images/essentials/debugtools/perf_mon_icon.png" alt="icon"/>Performance Monitor:</h3>
             <p>This tool is used to measure some performance values:
-                <img src="/images/essentials/debugtools/perf_mon.png" alt="perf_mon"/>
+                <img src="/modding_guide/images/essentials/debugtools/perf_mon.png" alt="perf_mon"/>
             </p>
             <p>You can also do some profiling with it, with help of the <a href="../../../intermediate/testing/index.html#LuaProfiler">Lua profiler scripts</a>. The bar next to the speed buttons shows the resource usage of several background tasks, too. You can toggle a breakdown of the different colors if you click on it.
-                <img src="/images/essentials/debugtools/perf_bar.png" alt="perf_bar"/>
+                <img src="/modding_guide/images/essentials/debugtools/perf_bar.png" alt="perf_bar"/>
             </p>
             <p>The development team also used a different telemetry tool for measuring performance in more detail, but these tools can still show any obvious bottlenecks or issues.</p>
-            <h3><a name="EntityEditor"></a><img src="/images/essentials/debugtools/entity_editor_icon.png" alt="icon"/>Entity Editor:</h3>
+            <h3><a name="EntityEditor"></a><img src="/modding_guide/images/essentials/debugtools/entity_editor_icon.png" alt="icon"/>Entity Editor:</h3>
             <p>The entity editor allows us to fiddle with the collision and destination regions of the entities. Select an entity, and click on this tool (or viceversa):
-                <img src="/images/essentials/debugtools/entity_editor.png" alt="entity_editor"/>
+                <img src="/modding_guide/images/essentials/debugtools/entity_editor.png" alt="entity_editor"/>
             </p>
             <p>You can then adjust the model / region origins and collision / destination regions visually inside the game. It'll help if you open the zones menu or some other menu that activates the grid in the terrain, that way you can see the alignment better:
-                <img src="/images/essentials/debugtools/destination_regions.png" alt="destination_regions"/>
+                <img src="/modding_guide/images/essentials/debugtools/destination_regions.png" alt="destination_regions"/>
                 The labels have useful tooltips to help explain the different values. We'll be covering these regions in <a href="../../../intermediate/regions/collision_destination/index.html">another section</a> of the guide, if you need more info.
             </p>
             <p>When you're happy with the regions, you can click on the "Show Json" button (the scroll) and a new window will open with the updated values, so that you can copy-paste them into your entity's JSON file:
-                <img src="/images/essentials/debugtools/show_json.png" alt="show_json"/>
+                <img src="/modding_guide/images/essentials/debugtools/show_json.png" alt="show_json"/>
             </p>
-            <h3><a name="JobMonitor"></a><img src="/images/essentials/debugtools/job_monitor_icon.png" alt="icon"/>Job Monitor:</h3>
+            <h3><a name="JobMonitor"></a><img src="/modding_guide/images/essentials/debugtools/job_monitor_icon.png" alt="icon"/>Job Monitor:</h3>
             <p>This tool monitors the tasks of the hearthlings. It shows info about idle hearthlings and other creatures:
-                <img src="/images/essentials/debugtools/job_monitor.png" alt="job_monitor"/>
+                <img src="/modding_guide/images/essentials/debugtools/job_monitor.png" alt="job_monitor"/>
             </p>
             <p>If you click on a hearthling, the job monitor will only show info about that hearthling. If you click on the terrain or deselect any entity, it will show info about all the idle entities.</p>
             <p>It also shows the status of their pathfinder, if they're trying to search for something that is very far away, though it usually disappears quickly (unless the game is laggy). It will show the priority, ticks, and AI spin counts next to the entity's name, and what they're doing:
-                <img src="/images/essentials/debugtools/idle_pathf.png" alt="idle_pathf"/>
+                <img src="/modding_guide/images/essentials/debugtools/idle_pathf.png" alt="idle_pathf"/>
             </p>
             <p>Mostly used to investigate idle hearthlings.</p>
-            <h3><a name="TraceMonitor"></a><img src="/images/essentials/debugtools/trace_monitor_icon.png" alt="icon"/>Trace Monitor:</h3>
+            <h3><a name="TraceMonitor"></a><img src="/modding_guide/images/essentials/debugtools/trace_monitor_icon.png" alt="icon"/>Trace Monitor:</h3>
             <p>This tool is used to track the traces for the UI. It will add / remove some objects from the list if you select different entities.
-                <img src="/images/essentials/debugtools/trace_monitor.png" alt="trace_monitor"/>
+                <img src="/modding_guide/images/essentials/debugtools/trace_monitor.png" alt="trace_monitor"/>
             </p>
             <p>We can check if some trace failed, and which ones are in progress. It lists the object IDs, so we can use the object browser to check which objects each of them trace (if applicable). It might take some seconds to load all the information (same for the object browser if the object is too big).</p>
             <p>Notice that this tool's window can't be dragged, unlike the rest of debug tools.</p>
-            <h3><a name="ItemStamper"></a><img src="/images/essentials/debugtools/item_stamper_icon.png" alt="icon"/>Item Stamper:</h3>
+            <h3><a name="ItemStamper"></a><img src="/modding_guide/images/essentials/debugtools/item_stamper_icon.png" alt="icon"/>Item Stamper:</h3>
             <p>This is the most used tool from the debugtools mod. The item stamper or item dropper allows to spawn any entity in the game. Simply type part or all of the alias of the item that you are searching and it will show a dropdown with a list of matched items:
-                <img src="/images/essentials/debugtools/item_stamper_typing.png" alt="item_stamper_typing"/>
+                <img src="/modding_guide/images/essentials/debugtools/item_stamper_typing.png" alt="item_stamper_typing"/>
             </p>
             <p>You can click on the list item to not have to type all the alias. Then, check the "iconic" checkbox to spawn the item as an iconic, or leave it unchecked if you don't want to (or if the item doesn't have an iconic form). After that, click on the terrain to spawn the item as many times as you like, and right-click to exit placing mode:
-                <img src="/images/essentials/debugtools/item_stamper_stamped.png" alt="item_stamper_stamped"/>
+                <img src="/modding_guide/images/essentials/debugtools/item_stamper_stamped.png" alt="item_stamper_stamped"/>
             </p>
             <p>You can go faster by clicking the "x9" checkbox, it will spawn 9 entities with just 1 click:
-                <img src="/images/essentials/debugtools/item_stamper_x9.png" alt="item_stamper_x9"/>
+                <img src="/modding_guide/images/essentials/debugtools/item_stamper_x9.png" alt="item_stamper_x9"/>
             </p>
             <p>It helps to know the actual URI / alias of the entity, since sometimes it doesn't match the display name for it (e.g. the Mean Bed's alias is "stonehearth:furniture:not_much_of_a_bed").</p>
             <p>If the game is paused and you spawned an entity that has AI or an entity that has animations, it might appear squashed until you unpause.</p>
@@ -189,18 +189,18 @@
                 To spawn aggresive enemies, you'll need to use the campaign browser.
             </p>
             <p>The UI of the item stamper is a little buggy sometimes. It can also list things that are not placeable items nor living entities, it doesn't filter completely all the items in the game and might not fit inside the window if it's too long.</p>
-            <h3><a name="LuaConsole"></a><img src="/images/essentials/debugtools/lua_console_icon.png" alt="icon"/>Lua Console</h3>
+            <h3><a name="LuaConsole"></a><img src="/modding_guide/images/essentials/debugtools/lua_console_icon.png" alt="icon"/>Lua Console</h3>
             <p>With this console we can execute any Lua function available in the game's files, and check values of private variables too. It is super useful for debugging.</p>
             <p>We can execute code from the server side. If we select an entity, we can use "e" to access it from this console. For example, here we've selected a hearthling. We store her in a new variable, and execute code to make her hungry using this variable:
-                <img src="/images/essentials/debugtools/lua_console_server.png" alt="lua_console_server"/>
-                <img src="/images/essentials/debugtools/lua_console_executed.png" alt="lua_console_executed"/>
+                <img src="/modding_guide/images/essentials/debugtools/lua_console_server.png" alt="lua_console_server"/>
+                <img src="/modding_guide/images/essentials/debugtools/lua_console_executed.png" alt="lua_console_executed"/>
             </p>
             <p>We can also execute code on the client side (for example, if the function we want to execute is in a client service). First we need to click on "client" at the top of the console. In this picture, we retrieve the value of a private variable of the sound service:
-                <img src="/images/essentials/debugtools/lua_console_client.png" alt="lua_console_client"/>
+                <img src="/modding_guide/images/essentials/debugtools/lua_console_client.png" alt="lua_console_client"/>
             </p>
-            <h3><a name="DebuggingWeather"></a><img src="/images/essentials/debugtools/time_slider_icon.png" alt="icon"/>Time Slider</h3>
+            <h3><a name="DebuggingWeather"></a><img src="/modding_guide/images/essentials/debugtools/time_slider_icon.png" alt="icon"/>Time Slider</h3>
             <p>This is a tool that was added for testing weather stuff.</p>
-            <p><img src="/images/essentials/debugtools/time_slider.png" alt="time_slider"/></p>
+            <p><img src="/modding_guide/images/essentials/debugtools/time_slider.png" alt="time_slider"/></p>
             <p>You can drag back and forth the slider to see the sky gradient change. The weather will change every day at 4:30AM (at the time this guide was written).</p>
             <p>Despite you can see the current time changing in the slider, the date won't change until the required amount of hours has passed. Same for game events or campaigns that are waiting for a certain amount of hours before spawning an encounter, this slider won't affect them.</p>
             <p>If you drag the slider with the game paused, the sky will change, but the weather won't update until you unpause.</p>

@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Miscellaneous JSON</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Miscellaneous JSON</h1>
          <p>These are explanations about some expressions we can find for certain properties and components in the JSON files:</p>
@@ -161,7 +161,7 @@
          <p>Weights are a bit different! A weight merely states how likely something is relative to something else.</p>
          <p>Say you want A to drop 5 times as often as B. B has an arbitrary weight of 2. Therefore A must have a weight of 10, 5 times as much as B. So currently, we have a total weight of 12. 2/12 times we see B and 10/12 times we see A.</p>
          <p>What if we want to add item C with a weight of 8 (4 times as common as B)? Now we have a total weight of 20, giving 10/20 times we'll see A, 2/20 times we'll see B and 8/20 times we'll see C. The relative chance of each item dropping is preserved, but the chance of A and B dropping is now less than it was before. This is important.<sup><a href="#ref-1">[1]</a></sup></p>
-         <p><img src="/images/basic/misc_json/weights.png" alt="weights"/></p>
+         <p><img src="/modding_guide/images/basic/misc_json/weights.png" alt="weights"/></p>
          <p>Check the numbers in the file you're mixinto'ing to before adjusting this weight. If your number is too low, your item will not drop much (if at all). If your number is too high, it will outweight every other item and nothing else will drop!</p>
          <h3>References</h3>
          <p><a name='ref-1'>[1]</a>: From <a href="https://discourse.stonehearth.net/t/tutorial-adding-mining-resources-updated-for-alpha-18/16994">https://discourse.stonehearth.net/t/tutorial-adding-mining-resources-updated-for-alpha-18/16994</a></p>

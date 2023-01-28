@@ -2,14 +2,14 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
-      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <link href='/modding_guide/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/modding_guide/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/modding_guide/images/favicon_logo_sh.png'>
       <title>Building parts</title>
    </head>
    <body>
-      <script src="/menus.js"></script>
+      <script src="/modding_guide/menus.js"></script>
       <main>
          <h1>Building parts</h1>
          <ul>
@@ -90,7 +90,7 @@
             </li>
             <li>
                <p>We can test that our new building resource appears in the game and that hearthlings can use it to build:
-                  <img src="/images/intermediate/building_parts/building_resources.png" alt="building_resources"/>
+                  <img src="/modding_guide/images/intermediate/building_parts/building_resources.png" alt="building_resources"/>
                </p>
             </li>
          </ol>
@@ -119,13 +119,13 @@
          <p>Floor patterns are listed inside the <strong>"pattern"</strong> entry, grouped by building resource. Inside the <strong>"patterns"</strong> key we have a list of URIs of our patterns (the URIs link to the QB model), and we define an <strong>"icon"</strong> for the UI and a <strong>"display_name"</strong> for the tooltip.</p>
          <p>Like for the colors, patterns can't be repeated for different resources, so make sure there are no duplicate URIs of patterns for the same building resource or among different resources.</p>
          <p>Import a QB model of an existing pattern to see how they are setup. You can find them inside <code>stonehearth/data/build/brushes/pattern</code>. Floor patterns don't need to be perfectly square, you can make rectangular shapes, or even shapes with holes. They do have to be 1 voxel high though since floors and roads are only that tall.</p>
-         <p><img src="/images/common/row_alert2.png" alt="icon"/> It's also recommended to add the colors that you've used in your pattern to the list of available colors for the corresponding resource (if they aren't there already). Otherwise, they will be treated as wood by default in the building cost list.</p>
+         <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> It's also recommended to add the colors that you've used in your pattern to the list of available colors for the corresponding resource (if they aren't there already). Otherwise, they will be treated as wood by default in the building cost list.</p>
          <p>Don't forget to add the URI of the pattern to your manifest!</p>
          <pre><code>    "aliases" : {
        "build:brushes:pattern:green_cane_diagonal" : "file(data/build/brushes/pattern/green_cane_diagonal/green_cane_diagonal.qb)"
     }
 </code></pre>
-         <p><img src="/images/intermediate/building_parts/floor_pattern.png" alt="floor_pattern"/></p>
+         <p><img src="/modding_guide/images/intermediate/building_parts/floor_pattern.png" alt="floor_pattern"/></p>
          <h2><a name= "WallPatterns"></a>Adding wall patterns</h2>
          <p>Same than for adding floor patterns, but the mixinto will include them inside the <strong>"wall"</strong> entry:</p>
          <pre><code>    {
@@ -149,7 +149,7 @@
          <p>Much like floor patterns, you can make different shapes for the patterns but the wall should be only 1 voxel thick, otherwise you will get unexpected results when using the room / wall tools in the builder.</p>
          <p>The .qb model for walls is usually centered over (0,0,0) but you can make it in the positive quadrant too. If you import an existing wall pattern (they're inside <code>stonehearth/data/build/brushes/wall</code>), you'll see that you can make them shorter or taller, they don't need to have the default wall height from the game (6 blocks), the builder will know how to stretch the pattern. They can also have different lengths.</p>
          <p>Make sure that the colors of your pattern are also in the list of available colors for the corresponding resource (be careful not to add duplicates).
-            <img src="/images/intermediate/building_parts/wall_pattern.png" alt="wall_pattern"/>
+            <img src="/modding_guide/images/intermediate/building_parts/wall_pattern.png" alt="wall_pattern"/>
          </p>
          <h2><a name="RoofPatterns"></a>Adding roof patterns</h2>
          <p>Roof patterns are added to the <code>building_brushes.json</code> file like the floor/wall patterns:</p>
@@ -176,11 +176,11 @@
          <p>If it's <strong>"flat"</strong>, the roof model will be treated like the rayyas_children roofs (or the castle roof): they will remain flat and we can only change the direction that they're facing.</p>
          <p>Roofs can only be added as patterns, since their .qb model has to be setup in a special way, to represent its different parts, such as inner/outer corners, sides, and the middle. But players are free to use the blocks tool in the building editor to create more detailed roofs or roofs with different slants (roofs from the northern_alliance mod were made using the blocks tool, for example).</p>
          <p>Let's take a look at the QB models for the roofs (you can find more examples inside <code>stonehearth/data/build/brushes/roof</code>). The ones for peaked roofs are setup in a 9-grid:
-            <img src="/images/intermediate/building_parts/9_grid.png" alt="9_grid"/>
+            <img src="/modding_guide/images/intermediate/building_parts/9_grid.png" alt="9_grid"/>
          </p>
          <p>Each part is in a different matrix/layer. The names for these matrices/layers are numbers, and must be the same than in the picture above. Due to how the parts are placed and rotated in the game, the pattern will look different depending on the slants, size, etc. so this is the usual size used for peaked roofs models in the game.</p>
          <p>The ones for the flat roofs are in a 13-grid (to account for inner corners too):
-            <img src="/images/intermediate/building_parts/13_grid.png" alt="13_grid"/>
+            <img src="/modding_guide/images/intermediate/building_parts/13_grid.png" alt="13_grid"/>
          </p>
          <p>Notice that the names for the matrices/layers for the inner corners end by <strong>c</strong>, and are based on the other corners. We need to use these exact names in our layers.</p>
          <p>For flat roofs we can make them a bit taller if we want to (for example, for the crenellations of the castle roof), and increase the size of the middle section if we want it to have a pattern. Also notice how the clay slat roof is set up. The border of the roof is aligned with the X/Z axes, while the wooden parts protude outwards.</p>
@@ -191,7 +191,7 @@
     }
 </code></pre>
          <p>Finally, test your roof patterns in the game:
-            <img src="/images/intermediate/building_parts/roof_pattern.png" alt="roof_pattern"/>
+            <img src="/modding_guide/images/intermediate/building_parts/roof_pattern.png" alt="roof_pattern"/>
          </p>
          <h2><a name="Windows"></a>Adding windows</h2>
          <p>Windows and doors have a 'cutter' which automatically creates a hole for them when you place them in a wall when designing a building.</p>
