@@ -1,1239 +1,46 @@
-<head>
-   <link href='./../../../css/styles.css' rel='stylesheet' type='text/css'>
-   <link rel="icon" type="image/png" href='./../../../images/favicon_logo_sh.png'>
-   <link rel="apple-touch-icon" type="image/png" href='./../../../images/favicon_logo_sh.png'>
-   <link rel="icon" type="image/png" sizes="144x144" href='./../../../images/favicon_logo_sh.png'>
-   <title>Adding recipes</title>
-</head>
-<body id="documentation">
-   <!-- the header of the page -->
-   <a name="top"></a>
-   <div class="inner">
-      <header>
-<div class='logo'>
-</div>
-<p>Last updated: <b>January 30th, 2019</b>. Latest version <a href="https://stonehearth.github.io/modding_guide/index.html">here</a>.</p>
-</header>
-
-      <div id="content_wrapper">
-         <div id="divTop"><a id="linkTop" href="#top">TOP</a></div>
-         <aside class="sidebar">
-   <nav>
-      <ul>
-      
-      
-
-   <li>
-      <a href='./../../.././index.html'>Stonehearth's Modding Guide</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/index.html'>Modding Guide</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/index.html'>Modding Essentials</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/managing/index.html'>Managing mods</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/managing/workshop/index.html'>Steam Workshop mods</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/managing/unmanaged/index.html'>Local mods</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/programming_languages/index.html'>Programming Languages</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/modding_scope/index.html'>What can be modded</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/tools/index.html'>Tools for modding</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/stonehearth/index.html'>The Stonehearth mod</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/json/index.html'>Small intro to JSON</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/manifest/index.html'>The manifest</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/entities_components/index.html'>Entities and components</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/mixins/index.html'>Mixins</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/mixintos_overrides/index.html'>Mixintos and overrides</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/removing/index.html'>Mixintypes</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/localization/index.html'>Localization</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/debugging/index.html'>How to debug your errors</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/debugtools/index.html'>Using debug tools</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/debugtools/debugtools_mod/index.html'>The debugtools mod</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/debugtools/default_console/index.html'>The default console</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/startermods/index.html'>Startermod example</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/shed/index.html'>How to save time with SHED</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/index.html'>Basic Modding</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/index.html'>Art Workflow</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/modeling/index.html'>Creating models</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/icons/index.html'>Creating 2D assets</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/index.html'>Creating effects</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/animations/index.html'>Animations</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/animations/anim_existing/index.html'>For existing entities</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/animations/anim_custom/index.html'>For custom entities</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/cubemitters/index.html'>Particle effects</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/animated_lights/index.html'>Light effects</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/other_effects/index.html'>Other effects</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/index.html'>Adding new items</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/entity_forms/index.html'>Entity Forms</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/cloning_manually/index.html'>Adding items manually</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/cloning_with_shed/index.html'>Adding items with SHED</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/item_scale/index.html'>Changing the scale</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/catalog/index.html'>The catalog</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/generic_resources/index.html'>Generic resources</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/craftables/index.html'>Adding recipes</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/wearables/index.html'>Adding equipment</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/wearables/armor/index.html'>Armor and hats</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/wearables/weapons/index.html'>Weapons</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/storages/index.html'>Storage items</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/color_maps/index.html'>Color and material maps</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/color_maps/shaders/index.html'>Materials and shaders</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/customization/index.html'>Adding customizations</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/crops/index.html'>Adding crops</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/renewable_resources/index.html'>Renewable resources</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/plants/index.html'>Plants and trees</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/static_scenarios/index.html'>Static scenarios</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/static_scenarios/ore_veins/index.html'>Ore veins</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/static_scenarios/landmarks/index.html'>Landmarks</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/static_scenarios/nests_ruins/index.html'>Critter nests and ruins</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/misc_json/index.html'>Miscellaneous JSON</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/misc_json/shops/index.html'>Loadouts and shops</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/localization_mod/index.html'>Translating mods</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/index.html'>Intermediate Modding</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/regions/index.html'>Collision regions</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/regions/origins/index.html'>Origins</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/regions/collision_destination/index.html'>Collision and destination</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/building_parts/index.html'>Building parts</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/commands/index.html'>Adding commands</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/buffs/index.html'>Buffs</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/thoughts/index.html'>Thoughts</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/traits/index.html'>Traits</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/biomes/index.html'>Biomes</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/biomes/seasons_weather/index.html'>Seasons and weather</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/jobs/index.html'>Adding jobs</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/jobs/crafting_jobs/index.html'>Crafting jobs</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/jobs/combat_jobs/index.html'>Combat jobs</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/kingdoms/index.html'>Kingdoms</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/monsters/index.html'>Critters and monsters</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/campaigns/index.html'>Adding campaigns</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/campaigns/encounters/index.html'>Generic encounters</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/hotloading/index.html'>Hotloading mods</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/testing/index.html'>Testing your mod</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/index.html'>Advanced Modding</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/logging/index.html'>User settings and logging</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/events/index.html'>Events</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/components_controllers/index.html'>Lua scripts</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/components_controllers/components_renderers/index.html'>Components</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/components_controllers/controllers/index.html'>Controllers</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/ai/index.html'>AI actions</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/services/index.html'>Services</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/call_handlers/index.html'>Call handlers</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/ui/index.html'>UI</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/cpp/index.html'>C++ functions</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-      </ul>
-   </nav>
-</aside>
-
-
-         <div id="content">
-   <div class='page_title'>Adding recipes</div>
-   <p><p>We've covered how to create our own items in <a href="../adding_items/index.html">this previous section</a>. Of course, you can add whichever components you want for those items and, if you create the models from scratch, make sure to check the <a href="../art/modeling/index.html">modeling guide</a> and the guide on <a href="../../intermediate/regions/index.html">collision regions</a> so that your models are correctly exported and aligned in the world. Here's <a href="../adding_items/item_scale/index.html">how to change the scale</a> of an item too, if you need it.</p></p>
-
-
-<p>In this other <a href="../../intermediate/jobs/crafting_jobs/index.html">guide</a> we cover how to add your own crafting job to the game.</p>
-
-
-
-<ul>
-    <li><a href="#ForExistingCrafters">Steps to add a recipe to an existing crafter from the stonehearth mod</a></li>
-    <li><a href="#AnatomyOfRecipes">Anatomy of a recipe</a></li>
-    <li><a href="#RecipeList">Adding the recipe to the recipes list</a></li>
-    <li><a href="#SHED">Using SHED to add recipes</a></li>
-</ul>
-
-
-
-<h2><a name="ForExistingCrafters"></a>Steps to add a recipe to an existing crafter from the stonehearth mod</h2>
-
-
-
-<ol>
-    <li><p>Decide which existing crafter will craft the item.</p></li>
-    <li><p>Create a recipe for the item.</p></li>
-    <li><p>Add a mixinto to integrate the new recipe in the recipes list of that crafter.</p></li>
-    <li><p>Test that the crafter can craft the item.</p></li>
-</ol>
-
-
-
-
-<p>Let's get started. We're going to add a recipe for the custom table that we created in a <a href="../adding_items/cloning_manually/index.html">previous example</a> in the startermod_basic mod.
-We'll make the mason craft it.</p>
-
-
-
-<h2><a name="AnatomyOfRecipes"></a>Anatomy of a recipe</h2>
-
-
-<p>Let's copy the recipe of the "table_for_one" of the carpenter and adjust its values to reference our custom table and our mod's localization file. It is located inside <code>stonehearth\jobs\carpenter\recipes</code>. We'll call our file <strong>custom_table_recipe.json</strong>. Let's also add some extra fields that we can encounter in recipes:</p>
-
-
-
-<pre><code>  {
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <title>Adding recipes</title>
+   </head>
+   <body>
+      <script src="/menus.js"></script>
+      <main>
+         <h1>Adding recipes</h1>
+         <p>We've covered how to create our own items in <a href="../adding_items/index.html">this previous section</a>. Of course, you can add whichever components you want for those items and, if you create the models from scratch, make sure to check the <a href="../art/modeling/index.html">modeling guide</a> and the guide on <a href="../../intermediate/regions/index.html">collision regions</a> so that your models are correctly exported and aligned in the world. Here's <a href="../adding_items/item_scale/index.html">how to change the scale</a> of an item too, if you need it.</p>
+         <p>In this other <a href="../../intermediate/jobs/crafting_jobs/index.html">guide</a> we cover how to add your own crafting job to the game.</p>
+         <ul>
+            <li><a href="#ForExistingCrafters">Steps to add a recipe to an existing crafter from the stonehearth mod</a></li>
+            <li><a href="#AnatomyOfRecipes">Anatomy of a recipe</a></li>
+            <li><a href="#RecipeList">Adding the recipe to the recipes list</a></li>
+            <li><a href="#SHED">Using SHED to add recipes</a></li>
+         </ul>
+         <h2><a name="ForExistingCrafters"></a>Steps to add a recipe to an existing crafter from the stonehearth mod</h2>
+         <ol>
+            <li>
+               <p>Decide which existing crafter will craft the item.</p>
+            </li>
+            <li>
+               <p>Create a recipe for the item.</p>
+            </li>
+            <li>
+               <p>Add a mixinto to integrate the new recipe in the recipes list of that crafter.</p>
+            </li>
+            <li>
+               <p>Test that the crafter can craft the item.</p>
+            </li>
+         </ol>
+         <p>Let's get started. We're going to add a recipe for the custom table that we created in a <a href="../adding_items/cloning_manually/index.html">previous example</a> in the startermod_basic mod.
+            We'll make the mason craft it.
+         </p>
+         <h2><a name="AnatomyOfRecipes"></a>Anatomy of a recipe</h2>
+         <p>Let's copy the recipe of the "table_for_one" of the carpenter and adjust its values to reference our custom table and our mod's localization file. It is located inside <code>stonehearth\jobs\carpenter\recipes</code>. We'll call our file <strong>custom_table_recipe.json</strong>. Let's also add some extra fields that we can encounter in recipes:</p>
+         <pre><code>  {
      "type": "recipe",
      "effort": 30,
      "work_units": 3,
@@ -1256,41 +63,45 @@ We'll make the mason craft it.</p>
      ]
   }
 </code></pre>
-
-<p>Explanation of the fields:</p>
-
-
-
-<ul>
-    <li><p><strong>"type" : "recipe"</strong>. With this we indicate that this JSON file represents a crafting recipe.</p></li>
-    <li><p><strong>"work_units" : 3</strong>. This value is the number of times the crafting animation will be played. The higher, the more time it will take to craft the item.</p></li>
-    <li><p><strong>"effort" : 30</strong>. This is a numerical value for "effort based crafting". It represents number of in-game minutes that it takes to craft the item (as defined in constants.json).</p>
-
-    <p>  At the time this guide is released it might / might not be enabled yet (if you don't include it in your recipe, a default value will be used depending on the stonehearth crafter that has the recipe). Make sure to at least specify the "work_units", until this field is enabled in the game.</p>
-
-    <p>  Effort based crafting replaces "work_units" for crafting, to make the crafting speed not dependent of the length of the crafting animation. Some crafting animations are shorter than other ones, so for the same "work units" certain crafters take less time to craft the item.</p>
-
-    <p>  "Effort based crafting" not only removes the animation dependency, it also makes the crafting faster or slower depending on whether the crafter is tired (has the "Groggy" debuff), or happy / sad.</p>
-
-    <p>  You can find more info about this in <code>stonehearth/components/workshop/crafting_progress.lua</code>, and in <code>stonehearth/components/crafter/crafter_component.lua</code>.</p></li>
-    <li><p><strong>"recipe_name" : "i18n(...)"</strong>. The name that will be displayed on the workshop UI for the recipe. Usuallythe same name than the produced item.</p></li>
-    <li><p><strong>"description" : "i18n()"</strong>. The description that will be displayed on the workshop UI for the recipe.</p></li>
-    <li><p><strong>"flavor" : "i18n()"</strong>. The small text in italic that will be displayed on the workshop UI for the recipe. It is optional.</p></li>
-    <li><p><strong>"portrait" : "..."</strong>. The path to an image for the recipe. This image is usually in the item's folder, not in the recipe's folder, since it's also used as the icon for the unit frame.</p></li>
-    <li><p><strong>"level_requirement"</strong>. This is an optional field. The level that the crafter needs in order to unlock this recipe. Until he/she reaches this level, the recipe will appear grayed out in the workshop UI. All jobs start at level 1 (but workers don't level up, they're the basic job). If we don't add a level requirement, they'll be able to craft the item right away, if they have the required ingredients and the corresponding workbench placed.</p></li>
-    <li><p><strong>"workshop" : "uri_of_the_workbench"</strong>. This is the qualified alias of the workbench that the crafter will be using in order to craft the item. We can only specify one alias. You can find the alias for the existing workbenches in the stonehearth manifest. Remember to prefix it here with the namespace of the mod that defines it (in this case, stonehearth).</p></li>
-</ul>
-
-
-
-<p><img src="../../../images/common/edit_big.png" alt="icon"/>If we don't add the "workshop" field to the recipe file, the crafter will craft the item with their hands instead. This is normally used to craft the initial workbenches.</p>
-
-
-
-<ul>
-    <li><p><strong>"ingredients" : [{...}]</strong>. This is the list of ingredients for the recipe. It is an array of objects. You can use either <a href="../generic_resources/index.html">generic resources</a> like in our custom table recipe (with the material tags of the resource's entity_data), or specific URIs as ingredients, like this:</p>
-
-<pre><code>"ingredients": [
+         <p>Explanation of the fields:</p>
+         <ul>
+            <li>
+               <p><strong>"type" : "recipe"</strong>. With this we indicate that this JSON file represents a crafting recipe.</p>
+            </li>
+            <li>
+               <p><strong>"work_units" : 3</strong>. This value is the number of times the crafting animation will be played. The higher, the more time it will take to craft the item.</p>
+            </li>
+            <li>
+               <p><strong>"effort" : 30</strong>. This is a numerical value for "effort based crafting". It represents number of in-game minutes that it takes to craft the item (as defined in constants.json).</p>
+               <p>  At the time this guide is released it might / might not be enabled yet (if you don't include it in your recipe, a default value will be used depending on the stonehearth crafter that has the recipe). Make sure to at least specify the "work_units", until this field is enabled in the game.</p>
+               <p>  Effort based crafting replaces "work_units" for crafting, to make the crafting speed not dependent of the length of the crafting animation. Some crafting animations are shorter than other ones, so for the same "work units" certain crafters take less time to craft the item.</p>
+               <p>  "Effort based crafting" not only removes the animation dependency, it also makes the crafting faster or slower depending on whether the crafter is tired (has the "Groggy" debuff), or happy / sad.</p>
+               <p>  You can find more info about this in <code>stonehearth/components/workshop/crafting_progress.lua</code>, and in <code>stonehearth/components/crafter/crafter_component.lua</code>.</p>
+            </li>
+            <li>
+               <p><strong>"recipe_name" : "i18n(...)"</strong>. The name that will be displayed on the workshop UI for the recipe. Usuallythe same name than the produced item.</p>
+            </li>
+            <li>
+               <p><strong>"description" : "i18n()"</strong>. The description that will be displayed on the workshop UI for the recipe.</p>
+            </li>
+            <li>
+               <p><strong>"flavor" : "i18n()"</strong>. The small text in italic that will be displayed on the workshop UI for the recipe. It is optional.</p>
+            </li>
+            <li>
+               <p><strong>"portrait" : "..."</strong>. The path to an image for the recipe. This image is usually in the item's folder, not in the recipe's folder, since it's also used as the icon for the unit frame.</p>
+            </li>
+            <li>
+               <p><strong>"level_requirement"</strong>. This is an optional field. The level that the crafter needs in order to unlock this recipe. Until he/she reaches this level, the recipe will appear grayed out in the workshop UI. All jobs start at level 1 (but workers don't level up, they're the basic job). If we don't add a level requirement, they'll be able to craft the item right away, if they have the required ingredients and the corresponding workbench placed.</p>
+            </li>
+            <li>
+               <p><strong>"workshop" : "uri_of_the_workbench"</strong>. This is the qualified alias of the workbench that the crafter will be using in order to craft the item. We can only specify one alias. You can find the alias for the existing workbenches in the stonehearth manifest. Remember to prefix it here with the namespace of the mod that defines it (in this case, stonehearth).</p>
+            </li>
+         </ul>
+         <p><img src="/images/common/edit_big.png" alt="icon"/>If we don't add the "workshop" field to the recipe file, the crafter will craft the item with their hands instead. This is normally used to craft the initial workbenches.</p>
+         <ul>
+            <li>
+               <p><strong>"ingredients" : [{...}]</strong>. This is the list of ingredients for the recipe. It is an array of objects. You can use either <a href="../generic_resources/index.html">generic resources</a> like in our custom table recipe (with the material tags of the resource's entity_data), or specific URIs as ingredients, like this:</p>
+               <pre><code>"ingredients": [
    {
       "uri": "stonehearth:food:egg",
       "count": 2
@@ -1300,19 +111,14 @@ We'll make the mason craft it.</p>
       "count": 1
    }
 ],
-</code></pre></li>
-</ul>
-
-
-
-<p>Using generic resources means that the crafter can use any item that counts as that resource (wood from any type of tree, for example). Remember to prefix the alias of the items with the namespace of the mod plus a colon. The <strong>"count"</strong> field of the ingredients is self-explanatory.</p>
-
-
-
-<ul>
-    <li><p><strong>"produces" : [{...}]</strong>. This is another array of objects. Here we put the outcome of the recipe. There's one difference with the previous array of objects though. If we want the recipe to produce more than one item, we can't use a "count" field here. We need to repeat the same "item" in different entries instead; like this:</p>
-
-<pre><code>"produces": [
+</code></pre>
+            </li>
+         </ul>
+         <p>Using generic resources means that the crafter can use any item that counts as that resource (wood from any type of tree, for example). Remember to prefix the alias of the items with the namespace of the mod plus a colon. The <strong>"count"</strong> field of the ingredients is self-explanatory.</p>
+         <ul>
+            <li>
+               <p><strong>"produces" : [{...}]</strong>. This is another array of objects. Here we put the outcome of the recipe. There's one difference with the previous array of objects though. If we want the recipe to produce more than one item, we can't use a "count" field here. We need to repeat the same "item" in different entries instead; like this:</p>
+               <pre><code>"produces": [
    {
       "item": "startermod_basic:furniture:custom_table"
    },
@@ -1323,23 +129,13 @@ We'll make the mason craft it.</p>
       "item": "startermod_basic:furniture:custom_table"
    }
 ]
-</code></pre></li>
-</ul>
-
-
-
-<p>We can also make the recipe produce several different items with that method, simply writing different URIs.</p>
-
-
-
-<h2><a name="RecipeList"></a>Adding the recipe to the recipes list</h2>
-
-
-<p>We need to create a mixinto for the recipe list. We'll take the keys from the <code>stonehearth/jobs/mason/recipes/recipes.json</code> file:</p>
-
-
-
-<pre><code>  {
+</code></pre>
+            </li>
+         </ul>
+         <p>We can also make the recipe produce several different items with that method, simply writing different URIs.</p>
+         <h2><a name="RecipeList"></a>Adding the recipe to the recipes list</h2>
+         <p>We need to create a mixinto for the recipe list. We'll take the keys from the <code>stonehearth/jobs/mason/recipes/recipes.json</code> file:</p>
+         <pre><code>  {
      "craftable_recipes" : {
         "furniture" : {
            "recipes" : {
@@ -1351,12 +147,8 @@ We'll make the mason craft it.</p>
      }
   }
 </code></pre>
-
-<p>In this case, we're reusing an existing category from the mason's recipes (furniture). If we wanted to add our recipes in a new category of our own (that will be displayed separately in the recipes list from the workshop's UI), we'd need to add two more fields to our mixinto. Example:</p>
-
-
-
-<pre><code>  {
+         <p>In this case, we're reusing an existing category from the mason's recipes (furniture). If we wanted to add our recipes in a new category of our own (that will be displayed separately in the recipes list from the workshop's UI), we'd need to add two more fields to our mixinto. Example:</p>
+         <pre><code>  {
      "craftable_recipes" : {
         "custom_category" : {
            "ordinal": 80,
@@ -1370,61 +162,36 @@ We'll make the mason craft it.</p>
      }
   }
 </code></pre>
-
-<p>There, <strong>"custom_category"</strong> is an identifier for the recipes group. <strong>"ordinal"</strong> is a number used to order the groups in the UI, which ones will be before the other ones (if two categories have the same ordinal, the game will choose one of them to go first, it's not deterministic which one will win). And the <strong>"name"</strong> is a localized name for the group, which will be displayed in the workshop UI for that category.</p>
-
-
-
-<p>Then, don't forget to add our mixinto to the mod's manifest (remember to add commas where needed):</p>
-
-
-
-<pre><code>  ...
+         <p>There, <strong>"custom_category"</strong> is an identifier for the recipes group. <strong>"ordinal"</strong> is a number used to order the groups in the UI, which ones will be before the other ones (if two categories have the same ordinal, the game will choose one of them to go first, it's not deterministic which one will win). And the <strong>"name"</strong> is a localized name for the group, which will be displayed in the workshop UI for that category.</p>
+         <p>Then, don't forget to add our mixinto to the mod's manifest (remember to add commas where needed):</p>
+         <pre><code>  ...
   "mixintos" : {
      "stonehearth/jobs/mason/recipes/recipes.json" : "file(recipes/recipes.json)"
   }
   ...
 </code></pre>
-
-<p><img src="../../../images/common/gold.png" alt="icon"/> If you add a <a href="../../intermediate/jobs/crafting_jobs/index.html">custom crafting job</a>, the recipes for it won't need to be added via a mixinto, but rather via a property of a component.</p>
-
-
-
-<p>Lastly, let's test that the mason can craft our recipe using debugtools:</p>
-
-
-
-<ul>
-    <li>Start a new game.</li>
-    <li>Select a hearthling.</li>
-    <li>Open the default console and type <strong>promote_to mason</strong>, then press Enter.</li>
-    <li>Use the item stamper to spawn a mason workbench and some hunks of stone, or simply let the hearthlings harvest some stone.</li>
-    <li>Open the mason workbench and check that the recipe is there and shows correctly the image and text:
-    <img src="../../../images/basic/craftables/recipe_added.png" alt="recipe_added"/></li>
-    <li>Our mason doesn't have enough level to craft it, so we shift-click on him, and click on "Level Up".
-    <img src="../../../images/basic/craftables/level_up.png" alt="level_up"/></li>
-    <li>Now we can order to craft our new item and check that the iconic is generated correctly.
-    <img src="../../../images/basic/craftables/testing_crafting.png" alt="level_up"/></li>
-</ul>
-
-
-
-<h2><a name="SHED"></a>Using SHED to add recipes</h2>
-
-
-<p>As explained in the <a href="../adding_items/cloning_with_shed/index.html">creating items section</a>, we can create an item and a recipe for it in one step.
-Otherwise, we can uncheck any unwanted files that we don't want to create from the clone popup, leaving only the recipe file checked.</p>
-
-
-
-<p><img src="../../../images/common/row_alert2.png" alt="icon"/> At the time this guide was written, cloning the recipes list or single recipes from an existing job from the base mods won't make them appear in the tree view for our mod, and we'll need to edit them outside of SHED. Of course, the mixintos also have to be set up outside of SHED. If we clone the recipe with the item that it produces, the item will be shown in the tree view since an alias will be created, so we'll be able to edit it within SHED.</p>
-
-   
-</div>
-
-      </div>
-      <footer>
-</footer>
-
-   </div>
-</body>
+         <p><img src="/images/common/gold.png" alt="icon"/> If you add a <a href="../../intermediate/jobs/crafting_jobs/index.html">custom crafting job</a>, the recipes for it won't need to be added via a mixinto, but rather via a property of a component.</p>
+         <p>Lastly, let's test that the mason can craft our recipe using debugtools:</p>
+         <ul>
+            <li>Start a new game.</li>
+            <li>Select a hearthling.</li>
+            <li>Open the default console and type <strong>promote_to mason</strong>, then press Enter.</li>
+            <li>Use the item stamper to spawn a mason workbench and some hunks of stone, or simply let the hearthlings harvest some stone.</li>
+            <li>Open the mason workbench and check that the recipe is there and shows correctly the image and text:
+               <img src="/images/basic/craftables/recipe_added.png" alt="recipe_added"/>
+            </li>
+            <li>Our mason doesn't have enough level to craft it, so we shift-click on him, and click on "Level Up".
+               <img src="/images/basic/craftables/level_up.png" alt="level_up"/>
+            </li>
+            <li>Now we can order to craft our new item and check that the iconic is generated correctly.
+               <img src="/images/basic/craftables/testing_crafting.png" alt="level_up"/>
+            </li>
+         </ul>
+         <h2><a name="SHED"></a>Using SHED to add recipes</h2>
+         <p>As explained in the <a href="../adding_items/cloning_with_shed/index.html">creating items section</a>, we can create an item and a recipe for it in one step.
+            Otherwise, we can uncheck any unwanted files that we don't want to create from the clone popup, leaving only the recipe file checked.
+         </p>
+         <p><img src="/images/common/row_alert2.png" alt="icon"/> At the time this guide was written, cloning the recipes list or single recipes from an existing job from the base mods won't make them appear in the tree view for our mod, and we'll need to edit them outside of SHED. Of course, the mixintos also have to be set up outside of SHED. If we clone the recipe with the item that it produces, the item will be shown in the tree view since an alias will be created, so we'll be able to edit it within SHED.</p>
+      </main>
+   </body>
+</html>

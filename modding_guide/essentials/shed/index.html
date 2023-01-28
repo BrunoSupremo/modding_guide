@@ -1,1465 +1,189 @@
-<head>
-   <link href='./../../../css/styles.css' rel='stylesheet' type='text/css'>
-   <link rel="icon" type="image/png" href='./../../../images/favicon_logo_sh.png'>
-   <link rel="apple-touch-icon" type="image/png" href='./../../../images/favicon_logo_sh.png'>
-   <link rel="icon" type="image/png" sizes="144x144" href='./../../../images/favicon_logo_sh.png'>
-   <title>How to save time with SHED</title>
-</head>
-<body id="documentation">
-   <!-- the header of the page -->
-   <a name="top"></a>
-   <div class="inner">
-      <header>
-<div class='logo'>
-</div>
-<p>Last updated: <b>January 30th, 2019</b>. Latest version <a href="https://stonehearth.github.io/modding_guide/index.html">here</a>.</p>
-</header>
-
-      <div id="content_wrapper">
-         <div id="divTop"><a id="linkTop" href="#top">TOP</a></div>
-         <aside class="sidebar">
-   <nav>
-      <ul>
-      
-      
-
-   <li>
-      <a href='./../../.././index.html'>Stonehearth's Modding Guide</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/index.html'>Modding Guide</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/index.html'>Modding Essentials</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/managing/index.html'>Managing mods</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/managing/workshop/index.html'>Steam Workshop mods</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/managing/unmanaged/index.html'>Local mods</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/programming_languages/index.html'>Programming Languages</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/modding_scope/index.html'>What can be modded</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/tools/index.html'>Tools for modding</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/stonehearth/index.html'>The Stonehearth mod</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/json/index.html'>Small intro to JSON</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/manifest/index.html'>The manifest</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/entities_components/index.html'>Entities and components</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/mixins/index.html'>Mixins</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/mixintos_overrides/index.html'>Mixintos and overrides</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/removing/index.html'>Mixintypes</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/localization/index.html'>Localization</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/debugging/index.html'>How to debug your errors</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/debugtools/index.html'>Using debug tools</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/debugtools/debugtools_mod/index.html'>The debugtools mod</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/debugtools/default_console/index.html'>The default console</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/startermods/index.html'>Startermod example</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/shed/index.html'>How to save time with SHED</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/index.html'>Basic Modding</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/index.html'>Art Workflow</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/modeling/index.html'>Creating models</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/icons/index.html'>Creating 2D assets</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/index.html'>Creating effects</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/animations/index.html'>Animations</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/animations/anim_existing/index.html'>For existing entities</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/animations/anim_custom/index.html'>For custom entities</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/cubemitters/index.html'>Particle effects</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/animated_lights/index.html'>Light effects</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/other_effects/index.html'>Other effects</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/index.html'>Adding new items</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/entity_forms/index.html'>Entity Forms</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/cloning_manually/index.html'>Adding items manually</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/cloning_with_shed/index.html'>Adding items with SHED</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/item_scale/index.html'>Changing the scale</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/catalog/index.html'>The catalog</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/generic_resources/index.html'>Generic resources</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/craftables/index.html'>Adding recipes</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/wearables/index.html'>Adding equipment</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/wearables/armor/index.html'>Armor and hats</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/wearables/weapons/index.html'>Weapons</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/storages/index.html'>Storage items</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/color_maps/index.html'>Color and material maps</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/color_maps/shaders/index.html'>Materials and shaders</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/customization/index.html'>Adding customizations</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/crops/index.html'>Adding crops</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/renewable_resources/index.html'>Renewable resources</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/plants/index.html'>Plants and trees</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/static_scenarios/index.html'>Static scenarios</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/static_scenarios/ore_veins/index.html'>Ore veins</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/static_scenarios/landmarks/index.html'>Landmarks</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/static_scenarios/nests_ruins/index.html'>Critter nests and ruins</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/misc_json/index.html'>Miscellaneous JSON</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/misc_json/shops/index.html'>Loadouts and shops</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/localization_mod/index.html'>Translating mods</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/index.html'>Intermediate Modding</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/regions/index.html'>Collision regions</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/regions/origins/index.html'>Origins</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/regions/collision_destination/index.html'>Collision and destination</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/building_parts/index.html'>Building parts</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/commands/index.html'>Adding commands</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/buffs/index.html'>Buffs</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/thoughts/index.html'>Thoughts</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/traits/index.html'>Traits</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/biomes/index.html'>Biomes</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/biomes/seasons_weather/index.html'>Seasons and weather</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/jobs/index.html'>Adding jobs</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/jobs/crafting_jobs/index.html'>Crafting jobs</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/jobs/combat_jobs/index.html'>Combat jobs</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/kingdoms/index.html'>Kingdoms</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/monsters/index.html'>Critters and monsters</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/campaigns/index.html'>Adding campaigns</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/campaigns/encounters/index.html'>Generic encounters</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/hotloading/index.html'>Hotloading mods</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/testing/index.html'>Testing your mod</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/index.html'>Advanced Modding</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/logging/index.html'>User settings and logging</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/events/index.html'>Events</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/components_controllers/index.html'>Lua scripts</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/components_controllers/components_renderers/index.html'>Components</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/components_controllers/controllers/index.html'>Controllers</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/ai/index.html'>AI actions</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/services/index.html'>Services</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/call_handlers/index.html'>Call handlers</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/ui/index.html'>UI</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/cpp/index.html'>C++ functions</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-      </ul>
-   </nav>
-</aside>
-
-
-         <div id="content">
-   <div class='page_title'>How to save time with SHED</div>
-   <ul>
-    <li><a href="#SHED">What is SHED?</a></li>
-    <li><a href="#Setup">Setup SHED</a>
-    <ul>
-        <li><a href="#AdditionalSetup">Additional setup</a></li>
-    </ul></li>
-    <li><a href="#FirstRun">First time run</a></li>
-    <li><a href="#Overview">Overview</a></li>
-    <li><a href="#Basics">SHED basics</a>
-    <ul>
-        <li><a href="#Workarounds">Some workarounds and important info</a></li>
-    </ul></li>
-    <li><a href="#Troubleshooting">Some troubleshooting tips</a></li>
-</ul>
-
-
-
-<h2><a name="SHED"></a>What is SHED?</h2>
-
-
-<p>SHED is short for Stonehearth Editor. It is written in C# using WinForms, although some of its editors are made with CEF, and it also uses some Python scripts.</p>
-
-
-
-<h2><a name="Setup"></a>Setup SHED</h2>
-
-
-<p>We now offer a SHED build bundled with the game. It might not be always up-to-date and still has some bugs. You can find it inside your Stonehearth installation folder:</p>
-
-
-
-<ul>
-    <li>If you installed the game with the Humble Bundle installer, this will normally be at <code>C:\Program Files (x86)\Stonehearth</code>. </li>
-    <li>If you have installed it via Steam, then the mods folder will be at <code>C:\Program Files (x86)\Steam\steamApps\common\Stonehearth</code>. </li>
-</ul>
-
-
-
-<p>Alternatively, if you want to download and compile the latest SHED version from our public repository, follow these steps:</p>
-
-
-
-<ol>
-    <li>Get a Visual Studio version (minimum VS 2014). If you have one of the popular game engines, you might have installed already the Community version of Visual Studio, which is free. Otherwise you can find it <a href="https://www.visualstudio.com/en/downloads/">here</a>. 
-    This IDE takes very long to download and install, so be sure you want to use SHED despite its bugs (you can always make your mods with any text editor).</li>
-    <li>Download the SHED code from <a href="https://github.com/stonehearth/stonehearth-editor">here</a>. 
-    Click in the "Clone or Download" button and save it in some folder in your computer.</li>
-    <li>Open Visual Studio and go to File->Open->Project/Solution. Find the StonehearthEditor.sln file where you downloaded the code.</li>
-    <li>Select either Debug or Release and x86 or 64 bit (depending on your computer's architecture). Click on the Start button or in Build->Build Solution.</li>
-    <li>Once it has finished compiling, you can either run it from VS with the Start button, or find the exe in the respective folder.</li>
-</ol>
-
-
-
-<h3><a name="AdditionalSetup"></a>Additional setup</h3>
-
-
-<p>If you want to use the <strong>auto-localization</strong> feature (which automatically prepares the translation file for your mod so that it can be translated to other languages), you must install <a href="https://www.python.org/download/releases/2.7/">Python 2.7</a> in your computer. Make sure it is that version and not Python 3.
-Then make sure you have the Python path in your environment variables so that your computer knows where to find it.</p>
-
-
-
-<h2><a name="FirstRun"></a>First time run</h2>
-
-
-<p>Find the StonehearthEditor.exe inside the "shed" folder and run it. The first time you run SHED it will ask you to find your mods directory. Usually you would select the "mods" folder inside your Stonehearth folder.
-<img src="../../../images/essentials/shed/choose_mods_folder.png" alt="choose_mods_folder"/></p>
-
-
-
-<p>To be able to see and create any content in SHED, the mods must be in plain folders, not in .smod or .zip. If your mods folder contains .smod files, SHED will offer you to uncompress them automatically. After it finishes, you might have to click on "File > Reload" for the mods to be detected by SHED.
-<img src="../../../images/essentials/shed/ask_to_unzip.png" alt="ask_to_unzip"/>
-If you manually unzip your mods, make sure the structure is the same than when we run <a href="../managing/unmanaged/index.html#ModConflicts">uncompressed mods</a> in the game, otherwise SHED won't know how to load them from the "mods" folder.</p>
-
-
-
-<p>SHED might take a little while to appear here and / or to load / reload all the mods, so be patient.
-<img src="../../../images/essentials/shed/loading_data.png" alt="loading_data"/></p>
-
-
-
-<p>If you're going to upload your mods to the Steam Workshop, you will have already created them from the Mods menu in the game. In that case, after SHED has finished loading the base mods, go to File->Change Mod Directory:
-<img src="../../../images/essentials/shed/steam_uploads_directory.png" alt="steam_uploads_directory"/></p>
-
-
-
-<p>You can browse and select your <code>steam_uploads</code> directory for the second text box, and click on 'Apply and reload', which will reload the mods list. Your mods will appear below the list of base mods, they won't get ordered together.</p>
-
-
-
-<p>SHED expects the base mods to always be loaded, and you will also want to have them in order to clone items from them to your mods, so make sure you selected the right <code>mods</code> directory.</p>
-
-
-
-<h2><a name="Overview"></a>Overview</h2>
-
-
-<p>Let's take a look at the interface of SHED.
-The options in the main menu are:</p>
-
-
-
-<p>File:</p>
-
-
-
-<ul>
-    <li>New Mod</li>
-    <li>Save All</li>
-    <li>Reload</li>
-    <li>Change Mod Directory</li>
-</ul>
-
-
-
-<p>View:</p>
-
-
-
-<ul>
-    <li>Net Worth Visualizer</li>
-</ul>
-
-
-
-<p>Help:</p>
-
-
-
-<ul>
-    <li>About</li>
-</ul>
-
-
-
-<p><img src="../../../images/essentials/shed/menubar_options.png" alt="menubar_options"/></p>
-
-
-
-<p>Then we have the different tabs:</p>
-
-
-
-<ul>
-    <li>Manifest</li>
-    <li>Encounter Designer</li>
-    <li>Entity Stats Browser</li>
-    <li>Effects Editor</li>
-    <li>Recipe Editor</li>
-</ul>
-
-
-
-<p><img src="../../../images/essentials/shed/tabs.png" alt="tabs"/></p>
-
-
-
-<p>We'll explain some basics of working with SHED here, and specific tutorials will go in the respective section of the modding guide.</p>
-
-
-
-<h2><a name="Basics"></a>SHED basics</h2>
-
-
-<p>The "File > New Mod" option automatically creates a mod folder and a pre-filled manifest for you, but it will be created in the base mods directory (a local mod). This is useful for users that don't use Steam.</p>
-
-
-
-<p><img src="../../../images/common/row_alert2.png" alt="icon"/> If you use this option, you must enter the <strong>namespace</strong> of your mod in the text box of the dialog, not the name of your mod.</p>
-
-
-
-<p>For basic modding, we'll be normally working in the Manifest tab.
-When selecting a node on the treeview, the corresponding files will be opened in different tabs in the central area.
-<img src="../../../images/essentials/shed/node_selected.png" alt="node_selected"/>
-These are the buttons on top of the tabs:
-<img src="../../../images/essentials/shed/tab_bar_buttons.png" alt="tab_bar_buttons"/></p>
-
-
-
-<ul>
-    <li><p><strong>Open File in Text Editor</strong> : this will open the file in the text editor that you have assigned by default to open JSON files. You can change your default editor by right-clicking on a JSON file in the Windows File Explorer, clicking on "Properties", clicking on the "Change..." button and selecting the program of your choice.
-    <img src="../../../images/essentials/shed/change_default_app.png" alt="change_default_app"/></p></li>
-    <li><p><strong>Open Containing Folder</strong> : will open the folder where the current file resides.</p></li>
-    <li><p><strong>Save File</strong> : make sure to use it often when making changes to this file from within SHED.</p></li>
-    <li><p><strong>Localize This File</strong> : this will create the needed locale/en.json file if it doesn't exist, fill it with the appropiate strings and adjust your JSON file to point to them. Instructions on how to setup your file for this option to work correctly <a href="../../basic/adding_items/cloning_with_shed/index.html#AutoLocalization">here</a>.</p>
-
-    <p>  <img src="../../../images/common/row_alert2.png" alt="icon"/> This option might not work for all the files, so there could be some times when you will have to setup the localization of your files manually.</p></li>
-    <li><p><strong>Preview with Mixins</strong> : this will open a window showing how the game will read the file after all the mixins have been applied. It will show comments to highlight the properties that come from mixins. These comments are invalid JSON, so don't copy anything from this window.
-    <img src="../../../images/essentials/shed/mixin_preview.png" alt="mixin_preview"/></p></li>
-</ul>
-
-
-
-<p>Not all these options appear for all of the files, only the applicable ones will show up.</p>
-
-
-
-<p>On top of the tabs for the JSON files, you might also see more buttons. If you have an application assigned to open QB files by default, you can click in the buttons with the Qubicle icon to open the associated QB model. Same for the icons (.png files), though you can usually see them at the column on the right, above the dependencies.
-<img src="../../../images/essentials/shed/top_tab_buttons.png" alt="top_tab_buttons"/></p>
-
-
-
-<p>For localization strings, you can Ctrl+click on them and a dialog will appear allowing you to change the text. You can also know which text do they have by hovering over them, which is pretty convenient.
-<img src="../../../images/essentials/shed/auto_loc.png" alt="auto_loc"/></p>
-
-
-
-<p>You can right-click the nodes in the treeview on the left to get different options. These options will be different depending on the type of item selected.
-<img src="../../../images/essentials/shed/context_menu.png" alt="context_menu"/></p>
-
-
-
-<p><img src="../../../images/common/row_alert2.png" alt="icon"/> Bear in mind that cloning might still have bugs. Only JSON and Lua files with an alias will appear in the treeview of the Manifest tab.</p>
-
-
-
-<p>When there's text with a darker background, you can Ctrl-click on it and it will open the referenced file in your default editor for that file's extension. It's also a way for SHED to tell you that it recognized the text as a reference to an existing file.</p>
-
-
-
-<p>SHED will also tell us if there's some problem with one of our files. There will be an icon of a red circle with a cross in the treeview item, and for the tabs once we select it.
-<img src="../../../images/essentials/shed/error_icons.png" alt="error_icons"/></p>
-
-
-
-<p>When there are errors, there will be a text in red in the status bar of SHED. Double click on it, and a list of the affected files will show up in a dialog. Clicking on them once will show more info in the text area above, double-clicking on them will also open them in SHED so that you can modify them and fix the errors.
-<img src="../../../images/essentials/shed/error_list.png" alt="error_list"/></p>
-
-
-
-<p>If SHED complains about one of your files, but doesn't refresh the error once you fix it and save those changes, use the "File > Reload" option.</p>
-
-
-
-<h3><a name="Workarounds"></a>Some workarounds and important info</h3>
-
-
-<p>At the moment this page was last updated:</p>
-
-
-
-<ul>
-    <li><p>The recipe editor will only show your recipes if they're from a new crafter that you've made in your mod, unfortunately.</p></li>
-    <li><p>Cloning crafting jobs won't clone the recipes index correctly. You'll have to clone it separately and edit its recipes manually.</p></li>
-    <li><p>For the encounter designer to detect your campaigns, you must have created your own "gm:index" alias on your mod (SHED doesn't detect mixintos nor overrides).</p></li>
-    <li><p>If you think a file should have updated because you saved it but SHED doesn't seem to notice, reload from the File menu.</p></li>
-    <li><p>For the effect editor to find your effect files (and all the derived files, like cubemitters, etc.), you must have set them up like in the stonehearth mod (same directories under "data" and "data/horde").</p></li>
-    <li><p>Bear in mind that drastically editing files outside of SHED while SHED is open and listing them might cause it to crash, especially if what you did was deleting the files or moving them.</p></li>
-</ul>
-
-
-
-<h2><a name="Troubleshooting"></a>Some troubleshooting tips</h2>
-
-
-
-<ul>
-    <li><p>If SHED becomes unresponsive, don't click on it. Let it run for a little while. There are many actions that cause it to reload a huge amount of files, and it's not optimized for that. So many times it will take some time to load or refresh.</p></li>
-    <li><p>If an error pops up besides SHED becoming unresponsive, you can try to click on "Continue". But if it still feels unstable, try to restart it. Worst case scenario: if you can't close SHED, open the Task Manager, right click on the "StonehearthEditor" process and click on "End Task".</p></li>
-    <li><p>If the Effects editor looks strange, and you can't use the CEF editor on the right side because it glitches, make sure that your monitor's display settings do not have a zoom higher / lower than 100%. Setting it to 100% and restarting SHED should get rid of that bugginess and allow you to use the effects editor comfortably.</p></li>
-</ul>
-
-   
-</div>
-
-      </div>
-      <footer>
-</footer>
-
-   </div>
-</body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
+        <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
+        <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+        <title>How to save time with SHED</title>
+    </head>
+    <body>
+        <script src="/menus.js"></script>
+        <main>
+            <h1>How to save time with SHED</h1>
+            <ul>
+                <li><a href="#SHED">What is SHED?</a></li>
+                <li>
+                    <a href="#Setup">Setup SHED</a>
+                    <ul>
+                        <li><a href="#AdditionalSetup">Additional setup</a></li>
+                    </ul>
+                </li>
+                <li><a href="#FirstRun">First time run</a></li>
+                <li><a href="#Overview">Overview</a></li>
+                <li>
+                    <a href="#Basics">SHED basics</a>
+                    <ul>
+                        <li><a href="#Workarounds">Some workarounds and important info</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Troubleshooting">Some troubleshooting tips</a></li>
+            </ul>
+            <h2><a name="SHED"></a>What is SHED?</h2>
+            <p>SHED is short for Stonehearth Editor. It is written in C# using WinForms, although some of its editors are made with CEF, and it also uses some Python scripts.</p>
+            <h2><a name="Setup"></a>Setup SHED</h2>
+            <p>We now offer a SHED build bundled with the game. It might not be always up-to-date and still has some bugs. You can find it inside your Stonehearth installation folder:</p>
+            <ul>
+                <li>If you installed the game with the Humble Bundle installer, this will normally be at <code>C:\Program Files (x86)\Stonehearth</code>. </li>
+                <li>If you have installed it via Steam, then the mods folder will be at <code>C:\Program Files (x86)\Steam\steamApps\common\Stonehearth</code>. </li>
+            </ul>
+            <p>Alternatively, if you want to download and compile the latest SHED version from our public repository, follow these steps:</p>
+            <ol>
+                <li>Get a Visual Studio version (minimum VS 2014). If you have one of the popular game engines, you might have installed already the Community version of Visual Studio, which is free. Otherwise you can find it <a href="https://www.visualstudio.com/en/downloads/">here</a>. 
+                    This IDE takes very long to download and install, so be sure you want to use SHED despite its bugs (you can always make your mods with any text editor).
+                </li>
+                <li>Download the SHED code from <a href="https://github.com/stonehearth/stonehearth-editor">here</a>. 
+                    Click in the "Clone or Download" button and save it in some folder in your computer.
+                </li>
+                <li>Open Visual Studio and go to File->Open->Project/Solution. Find the StonehearthEditor.sln file where you downloaded the code.</li>
+                <li>Select either Debug or Release and x86 or 64 bit (depending on your computer's architecture). Click on the Start button or in Build->Build Solution.</li>
+                <li>Once it has finished compiling, you can either run it from VS with the Start button, or find the exe in the respective folder.</li>
+            </ol>
+            <h3><a name="AdditionalSetup"></a>Additional setup</h3>
+            <p>If you want to use the <strong>auto-localization</strong> feature (which automatically prepares the translation file for your mod so that it can be translated to other languages), you must install <a href="https://www.python.org/download/releases/2.7/">Python 2.7</a> in your computer. Make sure it is that version and not Python 3.
+                Then make sure you have the Python path in your environment variables so that your computer knows where to find it.
+            </p>
+            <h2><a name="FirstRun"></a>First time run</h2>
+            <p>Find the StonehearthEditor.exe inside the "shed" folder and run it. The first time you run SHED it will ask you to find your mods directory. Usually you would select the "mods" folder inside your Stonehearth folder.
+                <img src="/images/essentials/shed/choose_mods_folder.png" alt="choose_mods_folder"/>
+            </p>
+            <p>To be able to see and create any content in SHED, the mods must be in plain folders, not in .smod or .zip. If your mods folder contains .smod files, SHED will offer you to uncompress them automatically. After it finishes, you might have to click on "File > Reload" for the mods to be detected by SHED.
+                <img src="/images/essentials/shed/ask_to_unzip.png" alt="ask_to_unzip"/>
+                If you manually unzip your mods, make sure the structure is the same than when we run <a href="../managing/unmanaged/index.html#ModConflicts">uncompressed mods</a> in the game, otherwise SHED won't know how to load them from the "mods" folder.
+            </p>
+            <p>SHED might take a little while to appear here and / or to load / reload all the mods, so be patient.
+                <img src="/images/essentials/shed/loading_data.png" alt="loading_data"/>
+            </p>
+            <p>If you're going to upload your mods to the Steam Workshop, you will have already created them from the Mods menu in the game. In that case, after SHED has finished loading the base mods, go to File->Change Mod Directory:
+                <img src="/images/essentials/shed/steam_uploads_directory.png" alt="steam_uploads_directory"/>
+            </p>
+            <p>You can browse and select your <code>steam_uploads</code> directory for the second text box, and click on 'Apply and reload', which will reload the mods list. Your mods will appear below the list of base mods, they won't get ordered together.</p>
+            <p>SHED expects the base mods to always be loaded, and you will also want to have them in order to clone items from them to your mods, so make sure you selected the right <code>mods</code> directory.</p>
+            <h2><a name="Overview"></a>Overview</h2>
+            <p>Let's take a look at the interface of SHED.
+                The options in the main menu are:
+            </p>
+            <p>File:</p>
+            <ul>
+                <li>New Mod</li>
+                <li>Save All</li>
+                <li>Reload</li>
+                <li>Change Mod Directory</li>
+            </ul>
+            <p>View:</p>
+            <ul>
+                <li>Net Worth Visualizer</li>
+            </ul>
+            <p>Help:</p>
+            <ul>
+                <li>About</li>
+            </ul>
+            <p><img src="/images/essentials/shed/menubar_options.png" alt="menubar_options"/></p>
+            <p>Then we have the different tabs:</p>
+            <ul>
+                <li>Manifest</li>
+                <li>Encounter Designer</li>
+                <li>Entity Stats Browser</li>
+                <li>Effects Editor</li>
+                <li>Recipe Editor</li>
+            </ul>
+            <p><img src="/images/essentials/shed/tabs.png" alt="tabs"/></p>
+            <p>We'll explain some basics of working with SHED here, and specific tutorials will go in the respective section of the modding guide.</p>
+            <h2><a name="Basics"></a>SHED basics</h2>
+            <p>The "File > New Mod" option automatically creates a mod folder and a pre-filled manifest for you, but it will be created in the base mods directory (a local mod). This is useful for users that don't use Steam.</p>
+            <p><img src="/images/common/row_alert2.png" alt="icon"/> If you use this option, you must enter the <strong>namespace</strong> of your mod in the text box of the dialog, not the name of your mod.</p>
+            <p>For basic modding, we'll be normally working in the Manifest tab.
+                When selecting a node on the treeview, the corresponding files will be opened in different tabs in the central area.
+                <img src="/images/essentials/shed/node_selected.png" alt="node_selected"/>
+                These are the buttons on top of the tabs:
+                <img src="/images/essentials/shed/tab_bar_buttons.png" alt="tab_bar_buttons"/>
+            </p>
+            <ul>
+                <li>
+                    <p><strong>Open File in Text Editor</strong> : this will open the file in the text editor that you have assigned by default to open JSON files. You can change your default editor by right-clicking on a JSON file in the Windows File Explorer, clicking on "Properties", clicking on the "Change..." button and selecting the program of your choice.
+                        <img src="/images/essentials/shed/change_default_app.png" alt="change_default_app"/>
+                    </p>
+                </li>
+                <li>
+                    <p><strong>Open Containing Folder</strong> : will open the folder where the current file resides.</p>
+                </li>
+                <li>
+                    <p><strong>Save File</strong> : make sure to use it often when making changes to this file from within SHED.</p>
+                </li>
+                <li>
+                    <p><strong>Localize This File</strong> : this will create the needed locale/en.json file if it doesn't exist, fill it with the appropiate strings and adjust your JSON file to point to them. Instructions on how to setup your file for this option to work correctly <a href="../../basic/adding_items/cloning_with_shed/index.html#AutoLocalization">here</a>.</p>
+                    <p>  <img src="/images/common/row_alert2.png" alt="icon"/> This option might not work for all the files, so there could be some times when you will have to setup the localization of your files manually.</p>
+                </li>
+                <li>
+                    <p><strong>Preview with Mixins</strong> : this will open a window showing how the game will read the file after all the mixins have been applied. It will show comments to highlight the properties that come from mixins. These comments are invalid JSON, so don't copy anything from this window.
+                        <img src="/images/essentials/shed/mixin_preview.png" alt="mixin_preview"/>
+                    </p>
+                </li>
+            </ul>
+            <p>Not all these options appear for all of the files, only the applicable ones will show up.</p>
+            <p>On top of the tabs for the JSON files, you might also see more buttons. If you have an application assigned to open QB files by default, you can click in the buttons with the Qubicle icon to open the associated QB model. Same for the icons (.png files), though you can usually see them at the column on the right, above the dependencies.
+                <img src="/images/essentials/shed/top_tab_buttons.png" alt="top_tab_buttons"/>
+            </p>
+            <p>For localization strings, you can Ctrl+click on them and a dialog will appear allowing you to change the text. You can also know which text do they have by hovering over them, which is pretty convenient.
+                <img src="/images/essentials/shed/auto_loc.png" alt="auto_loc"/>
+            </p>
+            <p>You can right-click the nodes in the treeview on the left to get different options. These options will be different depending on the type of item selected.
+                <img src="/images/essentials/shed/context_menu.png" alt="context_menu"/>
+            </p>
+            <p><img src="/images/common/row_alert2.png" alt="icon"/> Bear in mind that cloning might still have bugs. Only JSON and Lua files with an alias will appear in the treeview of the Manifest tab.</p>
+            <p>When there's text with a darker background, you can Ctrl-click on it and it will open the referenced file in your default editor for that file's extension. It's also a way for SHED to tell you that it recognized the text as a reference to an existing file.</p>
+            <p>SHED will also tell us if there's some problem with one of our files. There will be an icon of a red circle with a cross in the treeview item, and for the tabs once we select it.
+                <img src="/images/essentials/shed/error_icons.png" alt="error_icons"/>
+            </p>
+            <p>When there are errors, there will be a text in red in the status bar of SHED. Double click on it, and a list of the affected files will show up in a dialog. Clicking on them once will show more info in the text area above, double-clicking on them will also open them in SHED so that you can modify them and fix the errors.
+                <img src="/images/essentials/shed/error_list.png" alt="error_list"/>
+            </p>
+            <p>If SHED complains about one of your files, but doesn't refresh the error once you fix it and save those changes, use the "File > Reload" option.</p>
+            <h3><a name="Workarounds"></a>Some workarounds and important info</h3>
+            <p>At the moment this page was last updated:</p>
+            <ul>
+                <li>
+                    <p>The recipe editor will only show your recipes if they're from a new crafter that you've made in your mod, unfortunately.</p>
+                </li>
+                <li>
+                    <p>Cloning crafting jobs won't clone the recipes index correctly. You'll have to clone it separately and edit its recipes manually.</p>
+                </li>
+                <li>
+                    <p>For the encounter designer to detect your campaigns, you must have created your own "gm:index" alias on your mod (SHED doesn't detect mixintos nor overrides).</p>
+                </li>
+                <li>
+                    <p>If you think a file should have updated because you saved it but SHED doesn't seem to notice, reload from the File menu.</p>
+                </li>
+                <li>
+                    <p>For the effect editor to find your effect files (and all the derived files, like cubemitters, etc.), you must have set them up like in the stonehearth mod (same directories under "data" and "data/horde").</p>
+                </li>
+                <li>
+                    <p>Bear in mind that drastically editing files outside of SHED while SHED is open and listing them might cause it to crash, especially if what you did was deleting the files or moving them.</p>
+                </li>
+            </ul>
+            <h2><a name="Troubleshooting"></a>Some troubleshooting tips</h2>
+            <ul>
+                <li>
+                    <p>If SHED becomes unresponsive, don't click on it. Let it run for a little while. There are many actions that cause it to reload a huge amount of files, and it's not optimized for that. So many times it will take some time to load or refresh.</p>
+                </li>
+                <li>
+                    <p>If an error pops up besides SHED becoming unresponsive, you can try to click on "Continue". But if it still feels unstable, try to restart it. Worst case scenario: if you can't close SHED, open the Task Manager, right click on the "StonehearthEditor" process and click on "End Task".</p>
+                </li>
+                <li>
+                    <p>If the Effects editor looks strange, and you can't use the CEF editor on the right side because it glitches, make sure that your monitor's display settings do not have a zoom higher / lower than 100%. Setting it to 100% and restarting SHED should get rid of that bugginess and allow you to use the effects editor comfortably.</p>
+                </li>
+            </ul>
+        </main>
+    </body>
+</html>

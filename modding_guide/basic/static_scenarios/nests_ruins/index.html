@@ -1,1216 +1,27 @@
-<head>
-   <link href='./../../../../css/styles.css' rel='stylesheet' type='text/css'>
-   <link rel="icon" type="image/png" href='./../../../../images/favicon_logo_sh.png'>
-   <link rel="apple-touch-icon" type="image/png" href='./../../../../images/favicon_logo_sh.png'>
-   <link rel="icon" type="image/png" sizes="144x144" href='./../../../../images/favicon_logo_sh.png'>
-   <title>Critter nests and ruins</title>
-</head>
-<body id="documentation">
-   <!-- the header of the page -->
-   <a name="top"></a>
-   <div class="inner">
-      <header>
-<div class='logo'>
-</div>
-<p>Last updated: <b>January 30th, 2019</b>. Latest version <a href="https://stonehearth.github.io/modding_guide/index.html">here</a>.</p>
-</header>
-
-      <div id="content_wrapper">
-         <div id="divTop"><a id="linkTop" href="#top">TOP</a></div>
-         <aside class="sidebar">
-   <nav>
-      <ul>
-      
-      
-
-   <li>
-      <a href='./../../../.././index.html'>Stonehearth's Modding Guide</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/index.html'>Modding Guide</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/index.html'>Modding Essentials</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/managing/index.html'>Managing mods</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/managing/workshop/index.html'>Steam Workshop mods</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/managing/unmanaged/index.html'>Local mods</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/programming_languages/index.html'>Programming Languages</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/modding_scope/index.html'>What can be modded</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/tools/index.html'>Tools for modding</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/stonehearth/index.html'>The Stonehearth mod</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/json/index.html'>Small intro to JSON</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/manifest/index.html'>The manifest</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/entities_components/index.html'>Entities and components</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/mixins/index.html'>Mixins</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/mixintos_overrides/index.html'>Mixintos and overrides</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/removing/index.html'>Mixintypes</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/localization/index.html'>Localization</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/debugging/index.html'>How to debug your errors</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/debugtools/index.html'>Using debug tools</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/debugtools/debugtools_mod/index.html'>The debugtools mod</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/debugtools/default_console/index.html'>The default console</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/startermods/index.html'>Startermod example</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/essentials/shed/index.html'>How to save time with SHED</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/index.html'>Basic Modding</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/art/index.html'>Art Workflow</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/art/modeling/index.html'>Creating models</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/art/icons/index.html'>Creating 2D assets</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/art/vfx/index.html'>Creating effects</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/art/vfx/animations/index.html'>Animations</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/art/vfx/animations/anim_existing/index.html'>For existing entities</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/art/vfx/animations/anim_custom/index.html'>For custom entities</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/art/vfx/cubemitters/index.html'>Particle effects</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/art/vfx/animated_lights/index.html'>Light effects</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/art/vfx/other_effects/index.html'>Other effects</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/adding_items/index.html'>Adding new items</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/adding_items/entity_forms/index.html'>Entity Forms</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/adding_items/cloning_manually/index.html'>Adding items manually</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/adding_items/cloning_with_shed/index.html'>Adding items with SHED</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/adding_items/item_scale/index.html'>Changing the scale</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/catalog/index.html'>The catalog</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/generic_resources/index.html'>Generic resources</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/craftables/index.html'>Adding recipes</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/wearables/index.html'>Adding equipment</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/wearables/armor/index.html'>Armor and hats</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/wearables/weapons/index.html'>Weapons</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/storages/index.html'>Storage items</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/color_maps/index.html'>Color and material maps</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/color_maps/shaders/index.html'>Materials and shaders</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/customization/index.html'>Adding customizations</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/crops/index.html'>Adding crops</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/renewable_resources/index.html'>Renewable resources</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/plants/index.html'>Plants and trees</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/static_scenarios/index.html'>Static scenarios</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/static_scenarios/ore_veins/index.html'>Ore veins</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/static_scenarios/landmarks/index.html'>Landmarks</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/static_scenarios/nests_ruins/index.html'>Critter nests and ruins</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/misc_json/index.html'>Miscellaneous JSON</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/misc_json/shops/index.html'>Loadouts and shops</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/basic/localization_mod/index.html'>Translating mods</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/index.html'>Intermediate Modding</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/regions/index.html'>Collision regions</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/regions/origins/index.html'>Origins</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/regions/collision_destination/index.html'>Collision and destination</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/building_parts/index.html'>Building parts</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/commands/index.html'>Adding commands</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/buffs/index.html'>Buffs</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/thoughts/index.html'>Thoughts</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/traits/index.html'>Traits</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/biomes/index.html'>Biomes</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/biomes/seasons_weather/index.html'>Seasons and weather</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/jobs/index.html'>Adding jobs</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/jobs/crafting_jobs/index.html'>Crafting jobs</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/jobs/combat_jobs/index.html'>Combat jobs</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/kingdoms/index.html'>Kingdoms</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/monsters/index.html'>Critters and monsters</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/campaigns/index.html'>Adding campaigns</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/campaigns/encounters/index.html'>Generic encounters</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/hotloading/index.html'>Hotloading mods</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/intermediate/testing/index.html'>Testing your mod</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/advanced/index.html'>Advanced Modding</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/advanced/logging/index.html'>User settings and logging</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/advanced/events/index.html'>Events</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/advanced/components_controllers/index.html'>Lua scripts</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/advanced/components_controllers/components_renderers/index.html'>Components</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/advanced/components_controllers/controllers/index.html'>Controllers</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/advanced/ai/index.html'>AI actions</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/advanced/services/index.html'>Services</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/advanced/call_handlers/index.html'>Call handlers</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/advanced/ui/index.html'>UI</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../../.././modding_guide/advanced/cpp/index.html'>C++ functions</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-      </ul>
-   </nav>
-</aside>
-
-
-         <div id="content">
-   <div class='page_title'>Critter nests and ruins</div>
-   <p><h2><a name="CritterNests"></a> Critter nests</h2></p>
-
-<p>It's very easy to add your own critter nest to the game.
-This type of scenario is implemented inside <code>stonehearth/scenarios/static/critter_nest</code>, via a JSON file and a script.</p>
-
-
-
-<p>Then, we reuse critter_nest.json as a mixin in other scenarios (beetle_nest, deer_nest, etc).</p>
-
-
-
-<p>Let's copy <code>stonehearth/scenarios/static/ostrich_nest</code> to our mod and rename it.</p>
-
-
-
-<p>Then we have to modify the JSON file:</p>
-
-
-
-<pre><code>  {
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <title>Critter nests and ruins</title>
+   </head>
+   <body>
+      <script src="/menus.js"></script>
+      <main>
+         <h1>Critter nests and ruins</h1>
+         <p>
+         <h2><a name="CritterNests"></a> Critter nests</h2>
+         </p>
+         <p>It's very easy to add your own critter nest to the game.
+            This type of scenario is implemented inside <code>stonehearth/scenarios/static/critter_nest</code>, via a JSON file and a script.
+         </p>
+         <p>Then, we reuse critter_nest.json as a mixin in other scenarios (beetle_nest, deer_nest, etc).</p>
+         <p>Let's copy <code>stonehearth/scenarios/static/ostrich_nest</code> to our mod and rename it.</p>
+         <p>Then we have to modify the JSON file:</p>
+         <pre><code>  {
      "mixins" : "stonehearth/scenarios/static/critter_nest/critter_nest.json",
      "name" : "jelly_nest",
      "habitat_types" : ["forest", "plains", "foothills"],
@@ -1225,63 +36,66 @@ This type of scenario is implemented inside <code>stonehearth/scenarios/static/c
      }
   }
 </code></pre>
-
-
-<ol>
-    <li><p>Adjust the path to the critter mixin so that it's absolute, otherwise the game will try to find it inside your mod.</p></li>
-    <li><p>Give this scenario a <strong>"name"</strong>.</p></li>
-    <li><p>Inside the <strong>"habitat_types"</strong> array we can have one or more habitats where this scenario will spawn. The possible values are:</p>
-
-<pre><code>"plains" / "foothills" / "forest" / "mountains" / "water"
-</code></pre></li>
-    <li><p>Optionally, we can specify the biomes where we want this scenario to spawn. If there's no <strong>"biomes"</strong> array, the critter nest will spawn in all the biomes, even the modded ones.  </p></li>
-    <li><p>There are more optional properties which have a default value in <code>critter_nest.json</code> in case we don't include them in our JSON file:</p>
-    <ul>
-        <li><p><strong>"weight" : 10</strong> -- so that it can spawn more frequently than other critter nests.</p></li>
-        <li><p><strong>"size" : { "width" : 16, "length" : 16 }</strong> -- the area that the critter nest will occupy.</p></li>
-        <li><p><strong>"unique" : false</strong> -- more than one critter nest can spawn in the same map.</p></li>
-        <li><p>Inside <strong>"data"</strong>, the only mandatory property is the <strong>"critter_type"</strong> (an array with the aliases of our critters).</p>
-
-        <p>  The <strong>"num_critters"</strong> has a default of <strong>"min" : 1</strong> / <strong>"max" : 3</strong>. There's also <strong>"critter_length" : 1</strong>, which is the default margin around the critters when they spawn, we can also tweak that value for our nest.</p></li>
-    </ul></li>
-    <li><p>Create a mixinto to scenario_index.json to add your critter nest:</p>
-
-<pre><code>"mixintos" : {
+         <ol>
+            <li>
+               <p>Adjust the path to the critter mixin so that it's absolute, otherwise the game will try to find it inside your mod.</p>
+            </li>
+            <li>
+               <p>Give this scenario a <strong>"name"</strong>.</p>
+            </li>
+            <li>
+               <p>Inside the <strong>"habitat_types"</strong> array we can have one or more habitats where this scenario will spawn. The possible values are:</p>
+               <pre><code>"plains" / "foothills" / "forest" / "mountains" / "water"
+</code></pre>
+            </li>
+            <li>
+               <p>Optionally, we can specify the biomes where we want this scenario to spawn. If there's no <strong>"biomes"</strong> array, the critter nest will spawn in all the biomes, even the modded ones.  </p>
+            </li>
+            <li>
+               <p>There are more optional properties which have a default value in <code>critter_nest.json</code> in case we don't include them in our JSON file:</p>
+               <ul>
+                  <li>
+                     <p><strong>"weight" : 10</strong> -- so that it can spawn more frequently than other critter nests.</p>
+                  </li>
+                  <li>
+                     <p><strong>"size" : { "width" : 16, "length" : 16 }</strong> -- the area that the critter nest will occupy.</p>
+                  </li>
+                  <li>
+                     <p><strong>"unique" : false</strong> -- more than one critter nest can spawn in the same map.</p>
+                  </li>
+                  <li>
+                     <p>Inside <strong>"data"</strong>, the only mandatory property is the <strong>"critter_type"</strong> (an array with the aliases of our critters).</p>
+                     <p>  The <strong>"num_critters"</strong> has a default of <strong>"min" : 1</strong> / <strong>"max" : 3</strong>. There's also <strong>"critter_length" : 1</strong>, which is the default margin around the critters when they spawn, we can also tweak that value for our nest.</p>
+                  </li>
+               </ul>
+            </li>
+            <li>
+               <p>Create a mixinto to scenario_index.json to add your critter nest:</p>
+               <pre><code>"mixintos" : {
    "stonehearth:scenarios:scenario_index" : "file(scenarios/scenario_index.json)"
 }
 </code></pre>
-
-<p>  The mixinto will look like this for our example:</p>
-
-<pre><code>{
+               <p>  The mixinto will look like this for our example:</p>
+               <pre><code>{
    "static" : {
       "scenarios" : [
          "file(static/jelly_nest/jelly_nest.json)"
       ]
    }
 }
-</code></pre></li>
-    <li><p>Test your critter nest. You might need to promote a combat unit to clear the fog of war faster. Since there are other critter nests, it might take a while until you find the one for your custom critters (you can increase the weight of the scenario for testing).
-    <img src="../../../../images/basic/static_scenarios/critter_nest.png" alt="critter_nest"/></p></li>
-</ol>
-
-
-<p>You can remove the other default scenarios by using methods such as mixintypes, but mind that it might affect other biomes that players are using.</p>
-
-
-
-<h2><a name="Ruins"></a>Ruins</h2>
-
-
-<p>In the game the bunny statues spawn as static scenarios. We could also have added them in each of the biome files as part of the entities that spawn, but this way they can spawn in any biome automatically.</p>
-
-
-
-<p>We can copy <code>stonehearth/scenarios/static/terrain/rabbit_clan_statue</code> to our mod and rename it.</p>
-
-
-
-<pre><code>  {
+</code></pre>
+            </li>
+            <li>
+               <p>Test your critter nest. You might need to promote a combat unit to clear the fog of war faster. Since there are other critter nests, it might take a while until you find the one for your custom critters (you can increase the weight of the scenario for testing).
+                  <img src="/images/basic/static_scenarios/critter_nest.png" alt="critter_nest"/>
+               </p>
+            </li>
+         </ol>
+         <p>You can remove the other default scenarios by using methods such as mixintypes, but mind that it might affect other biomes that players are using.</p>
+         <h2><a name="Ruins"></a>Ruins</h2>
+         <p>In the game the bunny statues spawn as static scenarios. We could also have added them in each of the biome files as part of the entities that spawn, but this way they can spawn in any biome automatically.</p>
+         <p>We can copy <code>stonehearth/scenarios/static/terrain/rabbit_clan_statue</code> to our mod and rename it.</p>
+         <pre><code>  {
      "mixins" : "stonehearth/scenarios/static/entity_cluster/entity_cluster.json",
      "name" : "bunny_altar",
      "category" : "ruins",
@@ -1303,50 +117,51 @@ This type of scenario is implemented inside <code>stonehearth/scenarios/static/c
      }
   }
 </code></pre>
-
-<p>These are the properties we need to change:</p>
-
-
-
-<ol>
-    <li><p>Make sure to edit the <strong>"mixins"</strong> changing the path to be absolute, otherwise the game will try to find <code>entity_cluster.json</code> inside our mod.</p></li>
-    <li><p>Give the scenario a <strong>"name"</strong>. The properties are pretty similar to those of the <a href="#CritterNests">critter nest</a> scenarios.</p></li>
-    <li><p>Change the <strong>"size"</strong> (by default it will be 16x16 if we don't include it).</p></li>
-    <li><p>Optionally give it a <strong>"weight"</strong> (by default it will be 10), so that it has more priority over other "ruins" scenarios.</p></li>
-    <li><p>Edit the <strong>"habitat_types"</strong>, which can be <strong>"forest"</strong>, <strong>"plains"</strong>, <strong>"foothills"</strong>, <strong>"mountains"</strong> and/or <strong>"water"</strong>.</p></li>
-    <li><p>Inside <strong>"data"</strong> (which will be used by the <code>entity_cluster.lua</code> script) we have an array with the <strong>"entity_type"</strong>, containing the alias of our ruin, an <strong>"entity_footprint_length"</strong> used to give a margin around our entity, and the <strong>"quantity"</strong> of entities to spawn.</p></li>
-    <li><p>Then, add a mixinto to scenario_index.json to add your scenario:</p>
-
-<pre><code>"mixintos" : {
+         <p>These are the properties we need to change:</p>
+         <ol>
+            <li>
+               <p>Make sure to edit the <strong>"mixins"</strong> changing the path to be absolute, otherwise the game will try to find <code>entity_cluster.json</code> inside our mod.</p>
+            </li>
+            <li>
+               <p>Give the scenario a <strong>"name"</strong>. The properties are pretty similar to those of the <a href="#CritterNests">critter nest</a> scenarios.</p>
+            </li>
+            <li>
+               <p>Change the <strong>"size"</strong> (by default it will be 16x16 if we don't include it).</p>
+            </li>
+            <li>
+               <p>Optionally give it a <strong>"weight"</strong> (by default it will be 10), so that it has more priority over other "ruins" scenarios.</p>
+            </li>
+            <li>
+               <p>Edit the <strong>"habitat_types"</strong>, which can be <strong>"forest"</strong>, <strong>"plains"</strong>, <strong>"foothills"</strong>, <strong>"mountains"</strong> and/or <strong>"water"</strong>.</p>
+            </li>
+            <li>
+               <p>Inside <strong>"data"</strong> (which will be used by the <code>entity_cluster.lua</code> script) we have an array with the <strong>"entity_type"</strong>, containing the alias of our ruin, an <strong>"entity_footprint_length"</strong> used to give a margin around our entity, and the <strong>"quantity"</strong> of entities to spawn.</p>
+            </li>
+            <li>
+               <p>Then, add a mixinto to scenario_index.json to add your scenario:</p>
+               <pre><code>"mixintos" : {
    "stonehearth:scenarios:scenario_index" : "file(scenarios/scenario_index.json)"
 }
 </code></pre>
-
-<p>  The mixinto will look like this for our example:</p>
-
-<pre><code>{
+               <p>  The mixinto will look like this for our example:</p>
+               <pre><code>{
    "static" : {
       "scenarios" : [
          "file(static/terrain/bunny_altar/bunny_altar.json)"
       ]
    }
 }
-</code></pre></li>
-    <li><p>Finally, let's test that our ruins can appear in any biome (we can restrict in which biomes we want it to appear by using the <strong>"biomes"</strong> array).
-    <img src="../../../../images/basic/static_scenarios/ruins.png" alt="ruins"/></p></li>
-</ol>
-
-
-
-<p>In the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1357451622">Silent Woods</a> mod, a new category of scenario was added, and the entity_cluster script was reused to spawn the fireflies. They're only visible at night because they use the lamp component:
-<img src="../../../../images/basic/static_scenarios/fireflies.png" alt="fireflies"/></p>
-
-   
-</div>
-
-      </div>
-      <footer>
-</footer>
-
-   </div>
-</body>
+</code></pre>
+            </li>
+            <li>
+               <p>Finally, let's test that our ruins can appear in any biome (we can restrict in which biomes we want it to appear by using the <strong>"biomes"</strong> array).
+                  <img src="/images/basic/static_scenarios/ruins.png" alt="ruins"/>
+               </p>
+            </li>
+         </ol>
+         <p>In the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1357451622">Silent Woods</a> mod, a new category of scenario was added, and the entity_cluster script was reused to spawn the fireflies. They're only visible at night because they use the lamp component:
+            <img src="/images/basic/static_scenarios/fireflies.png" alt="fireflies"/>
+         </p>
+      </main>
+   </body>
+</html>

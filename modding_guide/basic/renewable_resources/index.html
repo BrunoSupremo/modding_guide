@@ -1,1223 +1,41 @@
-<head>
-   <link href='./../../../css/styles.css' rel='stylesheet' type='text/css'>
-   <link rel="icon" type="image/png" href='./../../../images/favicon_logo_sh.png'>
-   <link rel="apple-touch-icon" type="image/png" href='./../../../images/favicon_logo_sh.png'>
-   <link rel="icon" type="image/png" sizes="144x144" href='./../../../images/favicon_logo_sh.png'>
-   <title>Renewable resources</title>
-</head>
-<body id="documentation">
-   <!-- the header of the page -->
-   <a name="top"></a>
-   <div class="inner">
-      <header>
-<div class='logo'>
-</div>
-<p>Last updated: <b>January 30th, 2019</b>. Latest version <a href="https://stonehearth.github.io/modding_guide/index.html">here</a>.</p>
-</header>
-
-      <div id="content_wrapper">
-         <div id="divTop"><a id="linkTop" href="#top">TOP</a></div>
-         <aside class="sidebar">
-   <nav>
-      <ul>
-      
-      
-
-   <li>
-      <a href='./../../.././index.html'>Stonehearth's Modding Guide</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/index.html'>Modding Guide</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/index.html'>Modding Essentials</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/managing/index.html'>Managing mods</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/managing/workshop/index.html'>Steam Workshop mods</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/managing/unmanaged/index.html'>Local mods</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/programming_languages/index.html'>Programming Languages</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/modding_scope/index.html'>What can be modded</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/tools/index.html'>Tools for modding</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/stonehearth/index.html'>The Stonehearth mod</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/json/index.html'>Small intro to JSON</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/manifest/index.html'>The manifest</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/entities_components/index.html'>Entities and components</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/mixins/index.html'>Mixins</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/mixintos_overrides/index.html'>Mixintos and overrides</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/removing/index.html'>Mixintypes</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/localization/index.html'>Localization</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/debugging/index.html'>How to debug your errors</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/debugtools/index.html'>Using debug tools</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/debugtools/debugtools_mod/index.html'>The debugtools mod</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/debugtools/default_console/index.html'>The default console</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/startermods/index.html'>Startermod example</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/essentials/shed/index.html'>How to save time with SHED</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/index.html'>Basic Modding</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/index.html'>Art Workflow</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/modeling/index.html'>Creating models</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/icons/index.html'>Creating 2D assets</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/index.html'>Creating effects</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/animations/index.html'>Animations</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/animations/anim_existing/index.html'>For existing entities</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/animations/anim_custom/index.html'>For custom entities</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/cubemitters/index.html'>Particle effects</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/animated_lights/index.html'>Light effects</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/art/vfx/other_effects/index.html'>Other effects</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/index.html'>Adding new items</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/entity_forms/index.html'>Entity Forms</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/cloning_manually/index.html'>Adding items manually</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/cloning_with_shed/index.html'>Adding items with SHED</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/adding_items/item_scale/index.html'>Changing the scale</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/catalog/index.html'>The catalog</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/generic_resources/index.html'>Generic resources</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/craftables/index.html'>Adding recipes</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/wearables/index.html'>Adding equipment</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/wearables/armor/index.html'>Armor and hats</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/wearables/weapons/index.html'>Weapons</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/storages/index.html'>Storage items</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/color_maps/index.html'>Color and material maps</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/color_maps/shaders/index.html'>Materials and shaders</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/customization/index.html'>Adding customizations</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/crops/index.html'>Adding crops</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/renewable_resources/index.html'>Renewable resources</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/plants/index.html'>Plants and trees</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/static_scenarios/index.html'>Static scenarios</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/static_scenarios/ore_veins/index.html'>Ore veins</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/static_scenarios/landmarks/index.html'>Landmarks</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/static_scenarios/nests_ruins/index.html'>Critter nests and ruins</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/misc_json/index.html'>Miscellaneous JSON</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/misc_json/shops/index.html'>Loadouts and shops</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/basic/localization_mod/index.html'>Translating mods</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/index.html'>Intermediate Modding</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/regions/index.html'>Collision regions</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/regions/origins/index.html'>Origins</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/regions/collision_destination/index.html'>Collision and destination</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/building_parts/index.html'>Building parts</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/commands/index.html'>Adding commands</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/buffs/index.html'>Buffs</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/thoughts/index.html'>Thoughts</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/traits/index.html'>Traits</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/biomes/index.html'>Biomes</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/biomes/seasons_weather/index.html'>Seasons and weather</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/jobs/index.html'>Adding jobs</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/jobs/crafting_jobs/index.html'>Crafting jobs</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/jobs/combat_jobs/index.html'>Combat jobs</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/kingdoms/index.html'>Kingdoms</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/monsters/index.html'>Critters and monsters</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/campaigns/index.html'>Adding campaigns</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/campaigns/encounters/index.html'>Generic encounters</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/hotloading/index.html'>Hotloading mods</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/intermediate/testing/index.html'>Testing your mod</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/index.html'>Advanced Modding</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/logging/index.html'>User settings and logging</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/events/index.html'>Events</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/components_controllers/index.html'>Lua scripts</a>
-
-
-
-   <ul>
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/components_controllers/components_renderers/index.html'>Components</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/components_controllers/controllers/index.html'>Controllers</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/ai/index.html'>AI actions</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/services/index.html'>Services</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/call_handlers/index.html'>Call handlers</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/ui/index.html'>UI</a>
-
-
-
-
-
-</li>
-
-   
-      
-
-   <li>
-      <a href='./../../.././modding_guide/advanced/cpp/index.html'>C++ functions</a>
-
-
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-   
-   </ul>
-
-
-
-</li>
-
-      </ul>
-   </nav>
-</aside>
-
-
-         <div id="content">
-   <div class='page_title'>Renewable resources</div>
-   <p><p>By renewable resources we mean any item like the berry bushes or the sheep, which once harvested, will regrow after some time and we'll be able to harvest it again.</p></p>
-
-
-<ul>
-    <li><a href="#RenewableResources">Renewable resources</a></li>
-    <li><a href="#NonRenewableResources">Non-renewable resources</a></li>
-    <li><a href="#PlantableSeeds">Plantable seeds</a></li>
-    <li><a href="#Notes">Final notes</a></li>
-</ul>
-
-
-
-<h2><a name="RenewableResources"></a>Creating a renewable resource</h2>
-
-
-<p>This is how we made the bioluminescent mushroom ("Nightdew") from the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1357451622">"Silent Woods" tutorial mod</a>:</p>
-
-
-
-<ol>
-    <li><p>We copied an existing renewable resource (the berry bush) to our mod.</p></li>
-    <li><p>We renamed the folders and files.</p></li>
-    <li><p>We edited the QB models and reexported them.</p></li>
-    <li><p>We edited the JSON files and added the localization strings to our locale file.
-  These are the fields that we need to fill for the renewable_resource_node component in nightdew.json:</p>
-
-<pre><code>...
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href='/css/styles.css' rel='stylesheet' type='text/css'>
+      <link rel="icon" type="image/png" href='/images/favicon_logo_sh.png'>
+      <link rel="apple-touch-icon" type="image/png" href='/images/favicon_logo_sh.png'>
+      <link rel="icon" type="image/png" sizes="144x144" href='/images/favicon_logo_sh.png'>
+      <title>Renewable resources</title>
+   </head>
+   <body>
+      <script src="/menus.js"></script>
+      <main>
+         <h1>Renewable resources</h1>
+         <p>By renewable resources we mean any item like the berry bushes or the sheep, which once harvested, will regrow after some time and we'll be able to harvest it again.</p>
+         <ul>
+            <li><a href="#RenewableResources">Renewable resources</a></li>
+            <li><a href="#NonRenewableResources">Non-renewable resources</a></li>
+            <li><a href="#PlantableSeeds">Plantable seeds</a></li>
+            <li><a href="#Notes">Final notes</a></li>
+         </ul>
+         <h2><a name="RenewableResources"></a>Creating a renewable resource</h2>
+         <p>This is how we made the bioluminescent mushroom ("Nightdew") from the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1357451622">"Silent Woods" tutorial mod</a>:</p>
+         <ol>
+            <li>
+               <p>We copied an existing renewable resource (the berry bush) to our mod.</p>
+            </li>
+            <li>
+               <p>We renamed the folders and files.</p>
+            </li>
+            <li>
+               <p>We edited the QB models and reexported them.</p>
+            </li>
+            <li>
+               <p>We edited the JSON files and added the localization strings to our locale file.
+                  These are the fields that we need to fill for the renewable_resource_node component in nightdew.json:
+               </p>
+               <pre><code>...
 "stonehearth:renewable_resource_node": {
    "resource": "silent_woods:resources:biolumin_essence:essence",
    "category": "harvest",
@@ -1247,19 +65,28 @@
 },
 ...
 </code></pre>
-
-<ul>
-    <li><p><strong>"resource"</strong> : the full alias of the item that we want to spawn when we harvest this entity. It can be an item from your mod, or from another mod.</p></li>
-    <li><p><strong>"category"</strong> : most of the time it will be "harvest", but you may want a different value for it. For example, for shearing sheep, the category is "herding". This makes it so that only the shepherd can harvest it (because only the shepherd has the herding task group for their AI, which allows to harvest renewable resources that have the "herding" category).</p></li>
-    <li><p><strong>"renewal_time"</strong> : how much time it takes for the resource to renew itself. Examples of <a href="../misc_json/index.html#TimeExpressions">time expressions</a>: "1d" (one day), "36h" (36 hours), "6m" (6 minutes), "22h+2h" (22 hours plus some random amount of time between 0 and 2 hours).</p></li>
-    <li><p><strong>"unripe_description"</strong> : localized description that will appear in the unit frame after the entity has been harvested and until the resource is renewed.</p></li>
-    <li><p><strong>"harvest_overlay_effect"</strong> : the full alias of the effect that plays while the entity is marked for harvesting. In this case we're reusing the harvest plant overlay effect from the stonehearth mod, which shows a little plant icon above the entity.</p></li>
-    <li><p><strong>"resource_loot_table"</strong> : this field is optional. We can use it to spawn other extra resources with a chance every time we spawn the main resource. Its value is a <a href="../misc_json/index.html#LootTables">loot table</a>.</p></li>
-</ul>
-
-<p>  Also, we made sure to include a model variant called <strong>"depleted"</strong> in this file (the default model is declared in the JSON file for the ghost instead). Once the entity is harvested, its model will be automatically swapped to the depleted variant:</p>
-
-<pre><code>"model_variants": {
+               <ul>
+                  <li>
+                     <p><strong>"resource"</strong> : the full alias of the item that we want to spawn when we harvest this entity. It can be an item from your mod, or from another mod.</p>
+                  </li>
+                  <li>
+                     <p><strong>"category"</strong> : most of the time it will be "harvest", but you may want a different value for it. For example, for shearing sheep, the category is "herding". This makes it so that only the shepherd can harvest it (because only the shepherd has the herding task group for their AI, which allows to harvest renewable resources that have the "herding" category).</p>
+                  </li>
+                  <li>
+                     <p><strong>"renewal_time"</strong> : how much time it takes for the resource to renew itself. Examples of <a href="../misc_json/index.html#TimeExpressions">time expressions</a>: "1d" (one day), "36h" (36 hours), "6m" (6 minutes), "22h+2h" (22 hours plus some random amount of time between 0 and 2 hours).</p>
+                  </li>
+                  <li>
+                     <p><strong>"unripe_description"</strong> : localized description that will appear in the unit frame after the entity has been harvested and until the resource is renewed.</p>
+                  </li>
+                  <li>
+                     <p><strong>"harvest_overlay_effect"</strong> : the full alias of the effect that plays while the entity is marked for harvesting. In this case we're reusing the harvest plant overlay effect from the stonehearth mod, which shows a little plant icon above the entity.</p>
+                  </li>
+                  <li>
+                     <p><strong>"resource_loot_table"</strong> : this field is optional. We can use it to spawn other extra resources with a chance every time we spawn the main resource. Its value is a <a href="../misc_json/index.html#LootTables">loot table</a>.</p>
+                  </li>
+               </ul>
+               <p>  Also, we made sure to include a model variant called <strong>"depleted"</strong> in this file (the default model is declared in the JSON file for the ghost instead). Once the entity is harvested, its model will be automatically swapped to the depleted variant:</p>
+               <pre><code>"model_variants": {
    "depleted": {
       "models": [
          "file(nightdew_empty.qb)"
@@ -1267,55 +94,42 @@
    }
 }
 </code></pre>
-
-<p>  <img src="../../../images/common/row_alert2.png" alt="icon"/>If we add a <strong>"durability"</strong> field to the renewable_resource_node component, we'll be able to harvest the entity N times, after which it will get destroyed. If we don't include it we'll be able to keep harvesting it indefinitely every time it regrows.</p></li>
-    <li><p>We added an alias for our mushroom in our mod's manifest:</p>
-<pre><code>"plants:nightdew": "file(entities/plants/nightdew/nightdew.json)"
-</code></pre></li>
-    <li><p>We created the resource that it drops, by copying and editing an existing resource from <code>stonehearth/entities/resources</code>, and added the alias to our manifest:</p>
-<pre><code>"resources:biolumin_essence:essence": "file(entities/resources/biolumin_essence/essence)"
-</code></pre></li>
-    <li><p>Finally, we added the plant to the biome (as seen <a href="../plants/index.html#Plants">here</a>. How to create your own biome is explained <a href="../../intermediate/biomes/index.html">here</a>) and included some <a href="../color_maps/index.html#RenderMaterials">material maps</a> so that the mushroom glows. Make sure to test that it can be correctly harvested and that it renews its resource.
-    <img src="../../../images/basic/color_maps/render_materials.png" alt="render_materials"/></p></li>
-</ol>
-
-
-
-<h2><a name="NonRenewableResources"></a>Creating non-renewable resources</h2>
-
-
-<p>We can also create items that do not renew their resource, and disappear once harvested (such as the trees, boulders, and some of the existing plants). To do that we'd use the <strong>resource_node component</strong> in our entity's JSON file, instead of the renewable_resource_node component. </p>
-
-
-
-<p>Normally the non-renewable resources have a <strong>"durability"</strong> field, which is the times that it will be harvested before disappearing. Example from <code>small_oak_tree.json</code>:</p>
-
-
-
-<pre><code>  "stonehearth:resource_node": {
+               <p>  <img src="/images/common/row_alert2.png" alt="icon"/>If we add a <strong>"durability"</strong> field to the renewable_resource_node component, we'll be able to harvest the entity N times, after which it will get destroyed. If we don't include it we'll be able to keep harvesting it indefinitely every time it regrows.</p>
+            </li>
+            <li>
+               <p>We added an alias for our mushroom in our mod's manifest:</p>
+               <pre><code>"plants:nightdew": "file(entities/plants/nightdew/nightdew.json)"
+</code></pre>
+            </li>
+            <li>
+               <p>We created the resource that it drops, by copying and editing an existing resource from <code>stonehearth/entities/resources</code>, and added the alias to our manifest:</p>
+               <pre><code>"resources:biolumin_essence:essence": "file(entities/resources/biolumin_essence/essence)"
+</code></pre>
+            </li>
+            <li>
+               <p>Finally, we added the plant to the biome (as seen <a href="../plants/index.html#Plants">here</a>. How to create your own biome is explained <a href="../../intermediate/biomes/index.html">here</a>) and included some <a href="../color_maps/index.html#RenderMaterials">material maps</a> so that the mushroom glows. Make sure to test that it can be correctly harvested and that it renews its resource.
+                  <img src="/images/basic/color_maps/render_materials.png" alt="render_materials"/>
+               </p>
+            </li>
+         </ol>
+         <h2><a name="NonRenewableResources"></a>Creating non-renewable resources</h2>
+         <p>We can also create items that do not renew their resource, and disappear once harvested (such as the trees, boulders, and some of the existing plants). To do that we'd use the <strong>resource_node component</strong> in our entity's JSON file, instead of the renewable_resource_node component. </p>
+         <p>Normally the non-renewable resources have a <strong>"durability"</strong> field, which is the times that it will be harvested before disappearing. Example from <code>small_oak_tree.json</code>:</p>
+         <pre><code>  "stonehearth:resource_node": {
      "resource": "stonehearth:resources:wood:oak_log",
      "durability": 6
   }
 </code></pre>
-
-<p>Trees reuse the <code>tree.json</code> mixin, which has these other fields for the resource_node component:</p>
-
-
-<pre><code>  "stonehearth:resource_node": {
+         <p>Trees reuse the <code>tree.json</code> mixin, which has these other fields for the resource_node component:</p>
+         <pre><code>  "stonehearth:resource_node": {
      "harvest_overlay_effect": "stonehearth:effects:chop_overlay_effect",
      "harvester_effect": "chop",
      "description": "chop_tree"
   }
 </code></pre>
-<p>It includes a <strong>"harvest_overlay_effect"</strong> (same than for renewable resources), and a <strong>"harvester_effect"</strong> field, so that hearthlings play the chop animation when harvesting them. The <strong>"description"</strong> field is there for legacy reasons, so don't change its value.</p>
-
-
-
-<p>We can also use the resource_loot_table for implementing the number of drops, instead of the durability. This is an example from <code>wintermoss.json</code>:</p>
-
-
-
-<pre><code>  ...
+         <p>It includes a <strong>"harvest_overlay_effect"</strong> (same than for renewable resources), and a <strong>"harvester_effect"</strong> field, so that hearthlings play the chop animation when harvesting them. The <strong>"description"</strong> field is there for legacy reasons, so don't change its value.</p>
+         <p>We can also use the resource_loot_table for implementing the number of drops, instead of the durability. This is an example from <code>wintermoss.json</code>:</p>
+         <pre><code>  ...
   "stonehearth:resource_node": {
      "resource": "stonehearth:resources:fiber:wintermoss_bundle",
      "category": "harvest",
@@ -1357,37 +171,26 @@
   },
   ...
 </code></pre>
-
-<p>The resource <a href="../misc_json/index.html#LootTables">loot table</a> will drop 1 or 2 wintermoss bundles, and sometimes 1 seed, if we're lucky. After that, the wintermoss will disappear even though we only harvested it once.</p>
-
-
-
-<h2><a name="PlantableSeeds"></a>Creating seeds for plants</h2>
-
-
-<p>How to create seeds for crops is explained <a href="../crops/index.html#Seeds">here</a>.
-Seeds for wild plants will have grow stages, similar to those of the crops. In the game, you can move seeds you just planted, but if they're seeds for trees or certain other plants, you won't be able to move them anymore once they grow for the first time. Of course, you can change this behavior in the components of your modded entities.</p>
-
-
-
-<p>Let's see how to create seeds. It involves many files depending on how many growing stages we want between the seed and the full grown plant, but they're just JSON and QB models, the process is exactly the same than with any other entity.</p>
-
-
-
-<p>We'll use the wintermoss from the stonehearth mod as an example:</p>
-
-
-
-<ol>
-    <li><p>First we find an existing plant from which we want to copy the seeds. In this case, notice that we'll have 4 growing stages plus the ripe wintermoss:
-      <img src="../../../images/basic/renewable_resources/evolve_stages.png" alt="evolve_stages"/></p></li>
-    <li><p>First let's modify the files inside the "seed" folder:
-  <img src="../../../images/basic/renewable_resources/seed_files.png" alt="seed_files"/>
-  We rename them to reference our plant's name, leaving the suffix of the name untouched so we know what does each file reference.</p>
-
-<p>  wintermoss_plant_seed_iconic.json :</p>
-
-<pre><code>{
+         <p>The resource <a href="../misc_json/index.html#LootTables">loot table</a> will drop 1 or 2 wintermoss bundles, and sometimes 1 seed, if we're lucky. After that, the wintermoss will disappear even though we only harvested it once.</p>
+         <h2><a name="PlantableSeeds"></a>Creating seeds for plants</h2>
+         <p>How to create seeds for crops is explained <a href="../crops/index.html#Seeds">here</a>.
+            Seeds for wild plants will have grow stages, similar to those of the crops. In the game, you can move seeds you just planted, but if they're seeds for trees or certain other plants, you won't be able to move them anymore once they grow for the first time. Of course, you can change this behavior in the components of your modded entities.
+         </p>
+         <p>Let's see how to create seeds. It involves many files depending on how many growing stages we want between the seed and the full grown plant, but they're just JSON and QB models, the process is exactly the same than with any other entity.</p>
+         <p>We'll use the wintermoss from the stonehearth mod as an example:</p>
+         <ol>
+            <li>
+               <p>First we find an existing plant from which we want to copy the seeds. In this case, notice that we'll have 4 growing stages plus the ripe wintermoss:
+                  <img src="/images/basic/renewable_resources/evolve_stages.png" alt="evolve_stages"/>
+               </p>
+            </li>
+            <li>
+               <p>First let's modify the files inside the "seed" folder:
+                  <img src="/images/basic/renewable_resources/seed_files.png" alt="seed_files"/>
+                  We rename them to reference our plant's name, leaving the suffix of the name untouched so we know what does each file reference.
+               </p>
+               <p>  wintermoss_plant_seed_iconic.json :</p>
+               <pre><code>{
    "mixins": "stonehearth:mixins:item_properties",
    "type": "entity",
    "components": {
@@ -1417,12 +220,9 @@ Seeds for wild plants will have grow stages, similar to those of the crops. In t
    }
 }
 </code></pre>
-
-<p>  <a name="InitialDecay"></a>Here we reference the model for the iconic of the seeds, the material tags for storage filters, and a category for other uses. We also add <strong>"stonehearth:food_decay"</strong> data in the "entity_data" so that seeds that are not planted in a week are automatically destroyed (this is controlled by the food_decay service - the decay is calculated as a range between the "min" and "max" values, which are numbers that represent in-game hours, in this case 24h * 7d = 168).</p>
-
-<p>  wintermoss_plant_seed_ghost.json :</p>
-
-<pre><code>{
+               <p>  <a name="InitialDecay"></a>Here we reference the model for the iconic of the seeds, the material tags for storage filters, and a category for other uses. We also add <strong>"stonehearth:food_decay"</strong> data in the "entity_data" so that seeds that are not planted in a week are automatically destroyed (this is controlled by the food_decay service - the decay is calculated as a range between the "min" and "max" values, which are numbers that represent in-game hours, in this case 24h * 7d = 168).</p>
+               <p>  wintermoss_plant_seed_ghost.json :</p>
+               <pre><code>{
    "mixins": "stonehearth:mixins:placed_object",
    "type": "entity",
    "components": {
@@ -1456,12 +256,9 @@ Seeds for wild plants will have grow stages, similar to those of the crops. In t
    }
 }
 </code></pre>
-
-<p>  Here we adjust the model for the ghost (we use the model of the full grown plant, so that we know how much space it will take when it finishes growing), the scale and model / region origins if needed, and the data for the catalog.</p>
-
-<p>  wintermoss_plant_seed.json :</p>
-
-<pre><code>{
+               <p>  Here we adjust the model for the ghost (we use the model of the full grown plant, so that we know how much space it will take when it finishes growing), the scale and model / region origins if needed, and the data for the catalog.</p>
+               <p>  wintermoss_plant_seed.json :</p>
+               <pre><code>{
    "type": "entity",
    "mixins": "stonehearth:mixins:placed_object",
    "components": {
@@ -1520,23 +317,25 @@ Seeds for wild plants will have grow stages, similar to those of the crops. In t
    }
 }
 </code></pre>
-
-<p>  This is the root form for the seeds. Most of these fields should be already familiar. Let's explain the new ones:</p>
-
-<ul>
-    <li><p><strong>"stonehearth:evolve": {}"</strong> -- this component is in charge of growing the seeds into a plant, as well as growing a plant stage into the next stage. It has no properties, they're defined in the <strong>"stonehearth:evolve_data"</strong> section of the "entity_data" instead, because they're reusable for all the seeds of this type of plant.</p>
-
-    <p> The properties for the evolve data are: <strong>"next_stage"</strong>, which points to the full alias of the next growth stage, in this case "stonehearth:plants:wintermoss:sprout", and <strong>"evolve_time"</strong>, which is a <a href="../misc_json/index.html#TimeExpressions">time expression</a> for how much time it takes for the seed to grow to the next stage once planted. Remember to add the aliases to your manifest if you haven't already.</p>
-
-    <p> <img src="../../../images/common/gold.png" alt="icon"/>We can also specify an array of URIs for the <strong>"next_stage"</strong> property. This way the entity will randomly evolve to one of those entities, for example, an egg that can evolve to a poyo or to a dinosaur.</p></li>
-    <li><p><strong>"stonehearth:entity_forms" : { ... }</strong> -- as a reminder, here we added two optional fields: <strong>"placeable_on_ground"</strong>, which allows this item to be placed on the ground, and <strong>"hide_undeploy_ui"</strong>, which will hide the undeploy button from the unit frame once the entity is placed down.</p></li>
-    <li><p><strong>"mob" : { ... }</strong> -- the <strong>"mob_collision_type" : "clutter"</strong> means that this entity can overlap with other entities and hearthlings can walk through it.</p></li>
-</ul></li>
-    <li><p>Once we finished with the seed files, we can do the same for the next growth/evolve stage, in this case, "sprout".</p>
-
-<p>  As you can see, for the stages between seeds and full grown plant we only need one file, because the plant won't be undeployable while it's growing, so we don't need iconic / ghost files for it. So let's just change the fields we need to point to our files:</p>
-
-<pre><code>{
+               <p>  This is the root form for the seeds. Most of these fields should be already familiar. Let's explain the new ones:</p>
+               <ul>
+                  <li>
+                     <p><strong>"stonehearth:evolve": {}"</strong> -- this component is in charge of growing the seeds into a plant, as well as growing a plant stage into the next stage. It has no properties, they're defined in the <strong>"stonehearth:evolve_data"</strong> section of the "entity_data" instead, because they're reusable for all the seeds of this type of plant.</p>
+                     <p> The properties for the evolve data are: <strong>"next_stage"</strong>, which points to the full alias of the next growth stage, in this case "stonehearth:plants:wintermoss:sprout", and <strong>"evolve_time"</strong>, which is a <a href="../misc_json/index.html#TimeExpressions">time expression</a> for how much time it takes for the seed to grow to the next stage once planted. Remember to add the aliases to your manifest if you haven't already.</p>
+                     <p> <img src="/images/common/gold.png" alt="icon"/>We can also specify an array of URIs for the <strong>"next_stage"</strong> property. This way the entity will randomly evolve to one of those entities, for example, an egg that can evolve to a poyo or to a dinosaur.</p>
+                  </li>
+                  <li>
+                     <p><strong>"stonehearth:entity_forms" : { ... }</strong> -- as a reminder, here we added two optional fields: <strong>"placeable_on_ground"</strong>, which allows this item to be placed on the ground, and <strong>"hide_undeploy_ui"</strong>, which will hide the undeploy button from the unit frame once the entity is placed down.</p>
+                  </li>
+                  <li>
+                     <p><strong>"mob" : { ... }</strong> -- the <strong>"mob_collision_type" : "clutter"</strong> means that this entity can overlap with other entities and hearthlings can walk through it.</p>
+                  </li>
+               </ul>
+            </li>
+            <li>
+               <p>Once we finished with the seed files, we can do the same for the next growth/evolve stage, in this case, "sprout".</p>
+               <p>  As you can see, for the stages between seeds and full grown plant we only need one file, because the plant won't be undeployable while it's growing, so we don't need iconic / ghost files for it. So let's just change the fields we need to point to our files:</p>
+               <pre><code>{
    "type": "entity",
    "mixins": "stonehearth:mixins:placed_object",
    "components": {
@@ -1571,31 +370,23 @@ Seeds for wild plants will have grow stages, similar to those of the crops. In t
    }
 }
 </code></pre>
-
-<p>  They are similar to those for the seed root form. We declare the alias for the next stage (remember to add it to your manifest).</p></li>
-    <li><p>Repeat for the next stages, in this case "stem" and "bud".</p>
-
-<p>  Bud will then point to the full alias of the grown wintermoss plant (wintermoss.json), completing the growth cycle:</p>
-
-<pre><code>...
+               <p>  They are similar to those for the seed root form. We declare the alias for the next stage (remember to add it to your manifest).</p>
+            </li>
+            <li>
+               <p>Repeat for the next stages, in this case "stem" and "bud".</p>
+               <p>  Bud will then point to the full alias of the grown wintermoss plant (wintermoss.json), completing the growth cycle:</p>
+               <pre><code>...
 "stonehearth:evolve_data": {
    "next_stage": "stonehearth:plants:wintermoss",
    "evolve_time": "7h+2h"
 },
 ...
-</code></pre></li>
-</ol>
-
-
-
-<h3><a name="Notes"></a>Final notes</h3>
-
-
-<p>The evolve component and the decay service can be used for anything that needs to change after some time, for example poyos and sheep use the evolve component to grow after they're born:</p>
-
-
-
-<pre><code>  ...
+</code></pre>
+            </li>
+         </ol>
+         <h3><a name="Notes"></a>Final notes</h3>
+         <p>The evolve component and the decay service can be used for anything that needs to change after some time, for example poyos and sheep use the evolve component to grow after they're born:</p>
+         <pre><code>  ...
   "stonehearth:evolve_data": {
      "current_stage": "young",
      "next_stage": "stonehearth:sheep",
@@ -1604,19 +395,8 @@ Seeds for wild plants will have grow stages, similar to those of the crops. In t
   },
   ...
 </code></pre>
-
-<p>In this case we also specify a "current_stage" and an "evolve_effect", which are used in other Lua files.</p>
-
-
-
-<p>The growing component is mostly used for <a href="../crops/index.html">crops</a> instead.</p>
-
-   
-</div>
-
-      </div>
-      <footer>
-</footer>
-
-   </div>
-</body>
+         <p>In this case we also specify a "current_stage" and an "evolve_effect", which are used in other Lua files.</p>
+         <p>The growing component is mostly used for <a href="../crops/index.html">crops</a> instead.</p>
+      </main>
+   </body>
+</html>
