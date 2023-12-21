@@ -34,7 +34,7 @@ nav a {
 nav a.active, nav a:hover {
 	color: #F14E32;
 }
-nav a.current_page::before, nav a.current_page::after {
+nav a[aria-current="page"]::before, nav a[aria-current="page"]::after {
 	content: " >> ";
 	font-family: monospace;
 	font-weight: bold;

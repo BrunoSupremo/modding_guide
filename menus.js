@@ -132,16 +132,20 @@ document.currentScript.outerHTML=`
 			<a href="/modding_guide/modding_guide/advanced/ui/index.html">UI</a>
 			<a href="/modding_guide/modding_guide/advanced/cpp/index.html">C++ functions</a>
 		</div>
+		<a href="/modding_guide/modding_guide/ace/index.html">ACE Modding</a>
+		<div>
+			<a href="/modding_guide/modding_guide/ace/vegetables/index.html">Vegetables</a>
+		</div>
 	</section>
 </nav>
 <footer>
-	Last updated: <b>January 26th, 2023</b>
+	Last updated: <b>December 20th, 2023</b>
 </footer>
 `
 
 let currentLinks = document.querySelectorAll('nav a')
 currentLinks.forEach(function(link) {
 	if(link.href == location.href){
-		link.classList.add("current_page");
+		link.setAttribute('aria-current', 'page');
 	}
 });

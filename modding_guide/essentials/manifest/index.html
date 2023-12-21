@@ -53,9 +53,8 @@
      }
   }
 </code></pre>
-            <p>Here you can change the name to any name you want (e.g.: "Candy Land"). You MUSN'T change the version number.
-                As for the namespace, it's usually some abbreviated form of the name, and we tend to keep it lowercase to avoid typos.
-                It can only contain alphanumeric characters, hyphens and underscores. Usually the namespace matches the folder's name.
+            <p>Here you can change the name to any name you want (e.g.: "Candy Land"). You must keep the version number as 3, as explained below.
+                As for the namespace, it can only contain alphanumeric characters and underscores. Usually the namespace matches the folder's name.
             </p>
             <p>And that's it. Your first mod is complete. Run Stonehearth, open the Mods menu, and you should see your mod listed there by name and with its namespace in small next to it. This mod doesn't do anything yet, but first we need to learn the structure of the manifest and how to work with the files.</p>
             <h2><a name="TheManifest"></a>What is the manifest?</h2>
@@ -64,17 +63,17 @@
             <ol>
                 <li>
                     <p>The <strong>namespace</strong> of the mod. <br/>
-                        This will be used to distinguish the identifiers of your mod's content from other mod's content. You will be using it in your files so try to keep it short and unique. It can only contain alphanumeric characters, hyphens and underscores, using spaces or other characters is not allowed.
+                        This will be used to distinguish the identifiers of your mod's content from other mod's content. You will be using it in your files so try to keep it short and unique. It can only contain alphanumeric characters and underscores, using spaces or other characters is not allowed.
                     </p>
                 </li>
                 <li>
                     <p>The <strong>version</strong>. <br/>
-                        <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> The <code>"version"</code> key of the "info" section refers to the modding API version, not to your mod version. It is used to outdate automatically old mods when the API version is changed. To make your mod compatible with the current version of the game, always ensure that it has the same value than the one in the current <code>stonehearth</code> mod.
+                        <img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> The <code>"version"</code> key of the "info" section refers to the modding API version of the game itself, not to your mod version. It was used to outdate automatically old mods when the API version was changed. To make your mod compatible with the current version of the game, always ensure that it has the same value than the one in the current <code>stonehearth</code> mod, which is 3 now.
                     </p>
                 </li>
                 <li>
                     <p>The <strong>name</strong> of the mod. <br/>
-                        A name or title for your mod. In the past, the name had to match exactly the folder's name, but now you can use any character for the name, as long as you use the namespace for your aliases.
+                        A name or title for your mod. You can use any character for the name, as long as you use the namespace for your aliases.
                     </p>
                 </li>
             </ol>
