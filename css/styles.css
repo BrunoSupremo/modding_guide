@@ -46,13 +46,15 @@ nav section > a, nav > a{
 	font-weight: bold;
 }
 nav section div{
-	margin-left: .5em;
-	padding-left: .5em;
-	border-left: 1px dashed;
-	border-bottom: 1px dashed;
 	display: flex;
 	flex-direction: column;
+	width: fit-content;
+	margin-left: .5em;
 	margin-bottom: .25em;
+	padding-inline: .5em;
+	border-left: 1px dashed;
+	border-bottom: 1px dashed;
+	border-radius: 0 .5em;
 }
 
 footer{

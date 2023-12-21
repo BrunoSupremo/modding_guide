@@ -139,7 +139,7 @@ document.currentScript.outerHTML=`
 	</section>
 </nav>
 <footer>
-	Last updated: <b>December 20th, 2023</b>
+	Last updated: <b>December 21th, 2023</b>
 </footer>
 `
 
