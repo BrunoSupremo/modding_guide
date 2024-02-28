@@ -139,13 +139,13 @@ document.currentScript.outerHTML=`
 	</section>
 </nav>
 <footer>
-	Last updated: <b>December 21th, 2023</b>
+	Last updated: <b>February 28th, 2024</b>
 </footer>
 `
 
 let currentLinks = document.querySelectorAll('nav a')
 currentLinks.forEach(function(link) {
-	if(link.href == location.href){
+	if(link.href == location.href.replace(location.hash,"")){
 		link.setAttribute('aria-current', 'page');
 	}
 });

@@ -38,6 +38,7 @@ nav a[aria-current="page"]::before, nav a[aria-current="page"]::after {
 	content: " >> ";
 	font-family: monospace;
 	font-weight: bold;
+	font-size: 1.5em;
 }
 
 nav section > a, nav > a{
