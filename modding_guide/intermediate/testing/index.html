@@ -72,7 +72,7 @@
 }
 </code></pre>
                     <p>  The <strong>"main_mod"</strong> key tells the game which mod should be loaded as the main mod. In this case, we'll load the Microworld mod first, which will skip the logo / main menu screens and will load directly a small world. Make sure to invalidate this key whenever you want to play the game again (<code>"_main_mod" : "microworld"</code>), or use the Esc menu to go back to the Main menu or load a savefile.</p>
-                    <p>  The <strong>"world"</strong> option inside the settings for the microworld mod points to <code>"harvest_test"</code> in this case (by default it will run the <code>mini_game</code> world). All the test worlds, located inside the <code>microworld/worlds</code> directory, end their names by <code>_world.lua</code>. You must follow that naming convention in order for the mod to run the test. For instance, if your test world is called <code>mytest_world.lua</code>, in the user_settings you will specify it as <code>"mytest"</code>.</p>
+                    <p>  The <strong>"world"</strong> option inside the settings for the microworld mod points to <code>"harvest_test"</code> in this case (by default it will run the <code>mini_game</code> world). All the test worlds, located inside the <code>microworld/worlds</code> directory, end their names by <code>_world.lua</code>. You must follow that naming convention in order for the mod to run the test. For instance, if your test world is called <code>mytest_world.lua</code>, in the user_settings you will specify it as <code>"mytest"</code>. In other words, the file must end with _world, but the entry in the json must not.</p>
                 </li>
                 <li>
                     <p>Finally, start the game.</p>
@@ -328,6 +328,7 @@ end
                 </li>
                 <li>
                     <p>Replace [PATH_TO_MODS_FOLDER] with the path to your stonehearth mods folder.</p>
+                    <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/>Only extracted mods in the mods folder will be profiled. Those in other folders, or in .smod format will be skipped.</p>
                 </li>
                 <li>
                     <p>Load up the game you want to profile.</p>
