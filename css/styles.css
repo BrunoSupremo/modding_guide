@@ -30,6 +30,7 @@ nav {
 }
 nav a {
 	color: #413932;
+	text-decoration: none;
 }
 nav a.active, nav a:hover {
 	color: #F14E32;
@@ -49,6 +50,7 @@ nav section > a, nav > a{
 nav section div{
 	display: flex;
 	flex-direction: column;
+	gap: .2em;
 	width: fit-content;
 	margin-left: .5em;
 	margin-bottom: .25em;
@@ -71,8 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-	color: #0388A6;
-	text-decoration: none;
+	color: #037E9A;
 	transition: 0.2s;
 }
 
@@ -144,8 +145,8 @@ blockquote{
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	bottom: 2em;
-	right: 2em;
+	bottom: 1em;
+	right: 1em;
 	width: 65px;
 	height: 65px;
 	font-size: 1.5em;

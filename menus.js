@@ -1,6 +1,6 @@
 document.currentScript.outerHTML=`
 <header>
-	<img src="/modding_guide/images/stonehearth-logo.png"/>
+	<a href="/modding_guide/index.html"><img alt="Stonehearth Logo" src="/modding_guide/images/stonehearth-logo.png"/></a>
 </header>
 <a id="go_to_the_top_button" href="#top">TOP</a>
 <nav>
