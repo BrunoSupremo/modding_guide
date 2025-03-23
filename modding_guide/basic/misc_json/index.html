@@ -52,7 +52,7 @@
          <p>to represent an amount of realtime milliseconds (notice that this one is not a string).</p>
          <p>When editing copied files from the stonehearth mod always make sure you're using the correct type of value for each field.</p>
          <h2><a name="LootTables"></a>Loot tables</h2>
-         <p>The chance of getting anything when you kill, harvest or mine something is given by a loot table. Loot tables work based on something called a <a href="#WeightedSets">weight</a>.<sup><a href="#ref-1">[1]</a></sup></p>
+         <p>The chance of getting anything when you kill, harvest or mine something is given by a loot table. Loot tables work based on something called a <a href="#WeightedSets">weight</a>.</p>
          <p>The loot_drops component has these fields:</p>
          <ul>
             <li>
@@ -158,14 +158,12 @@
 </code></pre>
          <h2><a name="WeightedSets"></a>Weighted sets</h2>
          <p>We use weighted sets in many of the JSON files. With them we can give more priority or more chances for an entry to be chosen when we draw a random one (for example, choosing a random weather, a random encounter, random loot...).</p>
-         <p>Weights are a handy way to assign a probability of something without assigning a strict probability. A probability is a value between 0 (never happen) and 1 (always happens). So if you are using probability the numbers in your table have to add up to 1 always. So if you add something new or pull something out, you have to calculate your numbers all over again.<sup><a href="#ref-1">[1]</a></sup></p>
+         <p>Weights are a handy way to assign a probability of something without assigning a strict probability. A probability is a value between 0 (never happen) and 1 (always happens). So if you are using probability the numbers in your table have to add up to 1 always. So if you add something new or pull something out, you have to calculate your numbers all over again.</p>
          <p>Weights are a bit different! A weight merely states how likely something is relative to something else.</p>
          <p>Say you want A to drop 5 times as often as B. B has an arbitrary weight of 2. Therefore A must have a weight of 10, 5 times as much as B. So currently, we have a total weight of 12. 2/12 times we see B and 10/12 times we see A.</p>
-         <p>What if we want to add item C with a weight of 8 (4 times as common as B)? Now we have a total weight of 20, giving 10/20 times we'll see A, 2/20 times we'll see B and 8/20 times we'll see C. The relative chance of each item dropping is preserved, but the chance of A and B dropping is now less than it was before. This is important.<sup><a href="#ref-1">[1]</a></sup></p>
+         <p>What if we want to add item C with a weight of 8 (4 times as common as B)? Now we have a total weight of 20, giving 10/20 times we'll see A, 2/20 times we'll see B and 8/20 times we'll see C. The relative chance of each item dropping is preserved, but the chance of A and B dropping is now less than it was before. This is important.</p>
          <p><img src="/modding_guide/images/basic/misc_json/weights.png" alt="weights"/></p>
          <p>Check the numbers in the file you're mixinto'ing to before adjusting this weight. If your number is too low, your item will not drop much (if at all). If your number is too high, it will outweight every other item and nothing else will drop!</p>
-         <h3>References</h3>
-         <p><a name='ref-1'>[1]</a>: From <a href="https://discourse.stonehearth.net/t/tutorial-adding-mining-resources-updated-for-alpha-18/16994">https://discourse.stonehearth.net/t/tutorial-adding-mining-resources-updated-for-alpha-18/16994</a></p>
       </main>
    </body>
 </html>

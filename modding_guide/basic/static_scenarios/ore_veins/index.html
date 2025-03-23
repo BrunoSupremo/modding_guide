@@ -113,9 +113,9 @@
 }
 </code></pre>
                <p>  This is a <a href="../../misc_json/index.html#LootTables">loot table</a> that lists terrain types and the items that can drop when we mine them.</p>
-               <p>  This bit of data is telling us to add our resource to the "rock" loot table and give it a weight of 50. Check the numbers in <code>stonehearth/services/server/mining/mining_loot_tables.json</code> before adjusting this weight. If your number is too low, your resource will not drop much (if at all). If your number is too high, it will outweight every other resource and nothing else will drop!<sup><a href="#ref-1">[1]</a></sup></p>
+               <p>  This bit of data is telling us to add our resource to the "rock" loot table and give it a weight of 50. Check the numbers in <code>stonehearth/services/server/mining/mining_loot_tables.json</code> before adjusting this weight. If your number is too low, your resource will not drop much (if at all). If your number is too high, it will outweight every other resource and nothing else will drop!</p>
                <p>  There are other loot tables in the <code>mining_loot_tables</code> that you can add your resource to if you so desire. Rock is just the most logical one to start with.</p>
-               <p>  There exist files in the biomes folder called <code>temperate_mining_loot_table.json</code>, <code>desert_mining_loot_table.json</code> and <code>arctic_mining_loot_table.json</code>. These files are for any additional mining loot tables you want to add that are specific to that biome type only. You can mixinto to them in this same way to make your resource dependent on the biome. The generic one we used will be applied for all the biomes. <sup><a href="#ref-1">[1]</a></sup></p>
+               <p>  There exist files in the biomes folder called <code>temperate_mining_loot_table.json</code>, <code>desert_mining_loot_table.json</code> and <code>arctic_mining_loot_table.json</code>. These files are for any additional mining loot tables you want to add that are specific to that biome type only. You can mixinto to them in this same way to make your resource dependent on the biome. The generic one we used will be applied for all the biomes. </p>
                <p>  The keys inside <strong>"mineable_blocks"</strong> correspond to values from the <strong>"kind"</strong> keys in <code>stonehearth/data/terrain/terrain_blocks.json</code>. That way the resources will drop no matter which color of rock, grass, etc we mine.</p>
             </li>
             <li>
@@ -237,9 +237,6 @@
                </p>
             </li>
          </ol>
-         <h3>References</h3>
-         <p><a name='ref-1'>[1]</a>: From <a href="https://discourse.stonehearth.net/t/tutorial-adding-mining-resources-updated-for-alpha-18/16994">https://discourse.stonehearth.net/t/tutorial-adding-mining-resources-updated-for-alpha-18/16994</a></p>
-         <p>Older tutorial: <a href="https://discourse.stonehearth.net/t/tutorial-adding-mining-resources/10658">https://discourse.stonehearth.net/t/tutorial-adding-mining-resources/10658</a></p>
       </main>
    </body>
 </html>

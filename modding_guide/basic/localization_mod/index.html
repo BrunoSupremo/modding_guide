@@ -64,7 +64,7 @@
          <p>The files that are pointed to are the en-XA.json / en-DEV.json files under the translations folder. These are the files that contain all the translated strings.</p>
          <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> For your translation mod, copy the "en.json" from <code>stonehearth/locales</code>, the examples provided with this example mod don't contain all the strings from the latest version of the game. Copy the en.json from the rayyas_children and northern_alliance mods too, and from any other mod you wish to translate.</p>
          <h2><a name="I18NData"></a>How to translate en.json</h2>
-         <p>Only translate strings that come after a colon (':') in the JSON file. You can more easily edit the JSON with tools like <a href="https://brunosupremo.github.io/Stonehearth-Translator/">Stonehearth-Translator</a> or community member thk's <a href="https://discourse.stonehearth.net/t/tkhs-translation-helper-program-downloadable/5086">Json Translate Helper</a>.</p>
+         <p>Only translate strings that come after a colon (':') in the JSON file. You can more easily edit the JSON with tools like <a href="https://brunosupremo.github.io/Stonehearth-Translator/">Stonehearth-Translator</a>.</p>
          <p><img src="/modding_guide/images/common/row_alert2.png" alt="icon"/> Do not modify the strings that come on the left side of a ':', those are the string addresses used by the game. Also, do not modify strings that are surrounded by brackets ('[' or ']').</p>
          <p>Example:</p>
          <pre><code>    ...
@@ -117,7 +117,7 @@
                </ul>
             </li>
             <li>
-               <p>The fonts of the game can be found in <code>stonehearth/ui/root/css/fonts</code>. Once you find the folder corresponding to the font you want to change, check which formats does it use (woff, ttf, eot, svg...). You can use an online tool like <a href="https://onlinefontconverter.com/">this one</a> to convert fonts<sup><a href="#ref-1">[1]</a></sup>, if you're missing a file for a specific format.</p>
+               <p>The fonts of the game can be found in <code>stonehearth/ui/root/css/fonts</code>. Once you find the folder corresponding to the font you want to change, check which formats does it use (woff, ttf, eot, svg...). You can use an online tool like <a href="https://onlinefontconverter.com/">this one</a> to convert fonts, if you're missing a file for a specific format.</p>
             </li>
             <li>
                <p>Override the fonts: copy your new fonts into your mod and create overrides in your manifest for each of the font files you want to replace (.woff, .ttf, .eot, .svg).</p>
@@ -145,8 +145,6 @@
 </code></pre>
          <p>This tells the game that if the main stonehearth game is running in a language for which your mod doesn't have support, it will know to load the english translation file by default.</p>
          <p>If a localization path doesn't exist in your en.json file because you spelled it wrong somewhere, it will display in the game as is ("i18n(my_namespace:my_broken_item.my_display_name)"). More on localization <a href="../../essentials/localization/index.html">here</a>.</p>
-         <h3>References</h3>
-         <p><a name='ref-1'>[1]</a>: From <a href="https://discourse.stonehearth.net/t/first-steps-for-translation/21077">https://discourse.stonehearth.net/t/first-steps-for-translation/21077</a></p>
       </main>
    </body>
 </html>

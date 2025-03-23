@@ -14,7 +14,6 @@ document.currentScript.outerHTML=`
 				<a href="/modding_guide/modding_guide/essentials/managing/unmanaged/index.html">Local mods</a>
 			</div>
 			<a href="/modding_guide/modding_guide/essentials/programming_languages/index.html">Programming Languages</a>
-			<a href="/modding_guide/modding_guide/essentials/modding_scope/index.html">What can be modded</a>
 			<a href="/modding_guide/modding_guide/essentials/tools/index.html">Tools for modding</a>
 			<a href="/modding_guide/modding_guide/essentials/stonehearth/index.html">The Stonehearth mod</a>
 			<a href="/modding_guide/modding_guide/essentials/json/index.html">Small intro to JSON</a>
@@ -139,7 +138,7 @@ document.currentScript.outerHTML=`
 	</section>
 </nav>
 <footer>
-	Last updated: <b>April 4th, 2024</b>
+	Last updated: <b>March 4th, 2025</b>
 </footer>
 `
 

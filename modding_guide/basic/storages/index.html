@@ -107,7 +107,7 @@
          <p>The rig will be composed by a set of bones which will determine where to display each item. The number of bones corresponds to the capacity of the storage, plus some mandatory helper bones.</p>
          <p>The file that controls the rendering of the contents is <code>stonehearth/renderers/storage/storage_renderer.lua</code>. This file initializes the bones according to the rig, attaches the iconics to them, and updates the display as the items are put down or picked up. More on rigs and animations in <a href="../art/vfx/animations/index.html">their section of the guide</a>. For the storage renderer, the bones need to be named in a certain way (prefixed by "ATTITEM", check storage_renderer.lua). If you copy an existing input / output box and reuse or extend its rig you won't have to worry about this.</p>
          <h2><a name="Filters"></a>Filters</h2>
-         <p>By default all storages have the filters defined in <code>stonehearth/ui/data/stockpile_filters.json</code>. Input boxes have their filters defined in <code>stonehearth/ui/data/input_box_filters.json</code>. We can add our own new filter to those lists with a mixinto<sup><a href="#ref-1">[1]</a></sup>, or we can create our own list of filters and use it on existing or modded items.</p>
+         <p>By default all storages have the filters defined in <code>stonehearth/ui/data/stockpile_filters.json</code>. Input boxes have their filters defined in <code>stonehearth/ui/data/input_box_filters.json</code>. We can add our own new filter to those lists with a mixinto, or we can create our own list of filters and use it on existing or modded items.</p>
          <p>Let's create a new filter list and add an alias for it in our manifest:</p>
          <pre><code>  ...
   "aliases" : {
@@ -211,8 +211,6 @@
 </code></pre>
          <p>We can add this entity data to any entity that we would like the footmen to patrol. It must have <strong>"auto_patrol"</strong> set to true. The <strong>"patrol_pattern"</strong> is not really take into account at the moment. For the existing entities, it is set to "perimeter", but if the patrollable entity is small (e.g.: a small_crate), the combat units will only "visit" the entity, not turn around it.</p>
          <p>This is good for cases where you have many of these objects in the game, to prevent small loops of patrolling.</p>
-         <h3>References</h3>
-         <p><a name='ref-1'>[1]</a>: Example mod from a community member that adds many storage filters to the default lists <a href="https://discourse.stonehearth.net/t/mod-better-storage-v1-2-a23/21449">https://discourse.stonehearth.net/t/mod-better-storage-v1-2-a23/21449</a></p>
       </main>
    </body>
 </html>
